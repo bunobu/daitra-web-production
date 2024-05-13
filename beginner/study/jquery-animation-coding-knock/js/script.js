@@ -26,7 +26,11 @@ accordionList.each(function (index, element) {
  * TOPへ戻るボタン
  */
 jQuery("#js-button-top").on("click", () => {
-  jQuery("body, html").animate({
-    scrollTop: 0,
-  });
+  // ブラウザによってはbody, htmlが対象になる方が異なる
+  jQuery("html, body").animate(
+    {
+      scrollTop: 0,
+    },
+    500
+  );
 });
