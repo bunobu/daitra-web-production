@@ -11,3 +11,13 @@ document.getElementById("js-button-alert").addEventListener("click", () => {
 jQuery("#js-button-alert").on("click", () => {
   alert("jQuery - ボタンがクリックされました！");
 });
+
+/**
+ * アコーディオンメニュー
+ */
+const accordionList = jQuery(".js-accordion");
+accordionList.each(function (index, element) {
+  jQuery(element).on("click", () => {
+    jQuery(element).next().slideToggle();
+  });
+});
