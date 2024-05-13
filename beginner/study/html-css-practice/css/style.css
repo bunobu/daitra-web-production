@@ -1,0 +1,13 @@
+h2 {
+  color: red;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.7;
+}
