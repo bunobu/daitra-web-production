@@ -8,6 +8,6 @@ document.getElementById("js-button-alert").addEventListener("click", () => {
 });
 
 // jQueryでの実装
-$("#js-button-alert").on("click", () => {
+jQuery("#js-button-alert").on("click", () => {
   alert("jQuery - ボタンがクリックされました！");
 });
