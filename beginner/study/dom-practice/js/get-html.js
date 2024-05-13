@@ -8,6 +8,7 @@ const title2 = document.getElementById("js-title");
  * Class名で取得
  */
 const text1 = document.querySelector(".text").outerHTML;
+const text2 = document.getElementsByClassName("text");
 
 // すべてのClassを取得
 const elements = document.querySelectorAll(".text");
@@ -19,6 +20,7 @@ for (const element of elements) {
  * タグで取得
  */
 const h1 = document.querySelector("h1").outerHTML;
+const h1a = document.getElementsByTagName("h1");
 
 /**
  * 属性で取得
