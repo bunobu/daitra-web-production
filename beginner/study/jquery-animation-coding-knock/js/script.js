@@ -21,3 +21,12 @@ accordionList.each(function (index, element) {
     jQuery(element).next().slideToggle();
   });
 });
+
+/**
+ * TOPへ戻るボタン
+ */
+jQuery("#js-button-top").on("click", () => {
+  jQuery("body, html").animate({
+    scrollTop: 0,
+  });
+});
