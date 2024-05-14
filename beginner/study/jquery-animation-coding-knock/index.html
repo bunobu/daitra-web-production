@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueryを学ぼう | 練習問題</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__logo">JavaScript・jQueryを学ぼう！</h1>
+      <div class="header__button">
+        <button type="button" class="button-drawer" id="js-button-drawer">
+          <span class="button-drawer__bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="drawer" id="js-drawer">
+      <a href="#" class="drawer__menu">メニュー１</a>
+      <a href="#" class="drawer__menu">メニュー２</a>
+      <a href="#" class="drawer__menu">メニュー３</a>
+      <a href="#" class="drawer__menu">メニュー４</a>
+    </div>
+
+    <main class="main">
+      <section class="section">
+        <div class="inner">
+          <h2 class="section-title">ボタンクリックでアラートを表示しよう</h2>
+          <div class="star-wrap">&#9733;&#9734;&#9734;&#9734;&#9734;</div>
+          <button type="button" id="js-button-alert" class="button">ボタン</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <h2 class="section-title">アコーディオンメニューを作ろう</h2>
+          <div class="star-wrap">&#9733;&#9733;&#9734;&#9734;&#9734;</div>
+          <div class="accordion">
+            <button type="button" class="accordion__title js-accordion">よくある質問</button>
+            <p class="accordion__content">よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。</p>
+          </div>
+          <div class="accordion">
+            <button type="button" class="accordion__title js-accordion">よくある質問</button>
+            <p class="accordion__content">よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。</p>
+          </div>
+          <div class="accordion">
+            <button type="button" class="accordion__title js-accordion">よくある質問</button>
+            <p class="accordion__content">よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。よくある質問の回答が入ります。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <h2 class="section-title">トップへ戻るボタンを作ろう</h2>
+          <div class="star-wrap">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
+          <button type="button" id="js-button-top" class="button">トップへ戻る</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <h2 class="section-title">ドロワーメニューを作ろう</h2>
+          <div class="star-wrap">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <h2 class="section-title">フォームに入力された値をアラートに表示しよう</h2>
+          <div class="star-wrap">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <form action="#" id="js-form-name" class="form">
+            <div class="form__input">
+              <input type="text" id="js-input-name" class="input" placeholder="山田 太郎">
+              <p class="error-message"></p>
+            </div>
+            <button type="submit" class="form__button button-form">送信</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
