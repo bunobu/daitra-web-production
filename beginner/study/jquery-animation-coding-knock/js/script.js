@@ -43,3 +43,25 @@ jQuery("#js-button-drawer").on("click", function () {
   jQuery("#js-drawer").slideToggle();
   jQuery("body").toggleClass("is-fixed");
 });
+
+/**
+ * Formに入力された値をアラートに表示する
+ */
+jQuery("#js-form-name").on("submit", function (e) {
+  e.preventDefault();
+
+  const nameInput = jQuery("#js-input-name");
+  const yourName = nameInput.val();
+
+  // 入力内容が空
+  if (!yourName) {
+    nameInput.next(".error-message").text("必須項目です");
+    return;
+  }
+
+  // 入力内容があった場合
+  nameInput.next(".error-message").text("");
+  alert(`${yourName}さん`);
+
+  return false;
+});
