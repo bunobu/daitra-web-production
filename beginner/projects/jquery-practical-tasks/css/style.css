@@ -1,0 +1,338 @@
+/* 共通クラス */
+body {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #3c301e;
+}
+
+img {
+  width: 100%;
+}
+
+.inner {
+  padding: 0 40px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading-l {
+  color: #fff;
+}
+
+.section-heading-main {
+  display: block;
+  font-size: 40px;
+}
+
+.section-heading-sub {
+  display: block;
+  font-size: 12px;
+}
+
+/* ヘッダー */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(241, 238, 228, 0.25);
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+}
+
+.header-logo {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.header-nav {
+  margin-top: 10px;
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.header-nav-link {
+  color: #fff;
+}
+
+/* ファーストビュー */
+
+.fv-picture img {
+  width: 100%;
+}
+
+/* Aboutセクション */
+.about {
+  padding: 40px 0;
+  background-color: #f1eee4;
+}
+
+.about-text-contents {
+  margin-top: 20px;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.about-text + .about-text {
+  margin-top: 16px;
+}
+
+/* Menuセクション */
+.menu {
+  background-color: #f1eee4;
+  padding: 80px 0;
+}
+
+.menu-item + .menu-item {
+  margin-top: 62px;
+}
+
+.menu-text-contents {
+  text-align: center;
+  padding: 16px 10px;
+}
+
+.menu-name-main {
+  font-size: 18px;
+  display: block;
+}
+
+.menu-name-sub {
+  color: #a98c5f;
+  font-size: 12px;
+  display: block;
+  margin-top: 8px;
+}
+
+.menu-text {
+  font-size: 14px;
+  color: #a98c5f;
+  margin-top: 16px;
+}
+
+/* Shopセクション */
+.shop {
+  background-image: url("../img/sp/bg-shop.png");
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.shop-inner {
+  padding: 0 20px;
+}
+
+.shop-text {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Form */
+.form {
+  margin-top: 40px;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  border: none;
+  padding: 14px;
+}
+
+.form-submit {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin: 10px auto 0;
+  width: 120px;
+  padding: 12px 10px;
+  color: #fff;
+  background-color: #a98c5f;
+}
+
+/* Footer */
+.footer {
+  color: #fff;
+  background-color: #3c301e;
+  text-align: center;
+  padding-top: 46px;
+}
+
+.footer-logo {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 12px;
+}
+
+.footer-nav-list {
+  padding: 0 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.sns-img {
+  width: 56px;
+}
+
+.footer-nav-link-text {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.footer-copy-wrapper {
+  border-top: 1px solid rgba(241, 238, 228, 0.25);
+  padding: 12px;
+  margin-top: 46px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+}
+
+/* ダブレット、PCサイズの表示 */
+@media screen and (min-width: 768px) {
+  /* 共通クラス */
+  body {
+    letter-spacing: 0.05em;
+    color: #3c301e;
+  }
+
+  .inner {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+
+  .section-heading-main {
+    font-size: 64px;
+  }
+
+  /* Header */
+  .header {
+    padding: 16px;
+  }
+
+  .header-inner {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    margin: 0;
+  }
+
+  .header-nav-list {
+    gap: 40px;
+  }
+
+  .header-nav-link {
+    transition: opacity 0.3s;
+  }
+
+  .header-nav-link:hover {
+    opacity: 0.7;
+  }
+
+  /* About */
+  .about {
+    padding: 100px 0;
+  }
+
+  .about-contents {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .about-img {
+    width: 300px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  .about-text + .about-text {
+    margin-top: 30px;
+  }
+
+  .about-text-contents {
+    margin-top: 0;
+  }
+
+  /* Menu */
+  .menu {
+    padding: 0 0 100px;
+  }
+
+  .menu-list {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-item + .menu-item {
+    margin-top: 0;
+  }
+
+  /* Shop */
+  .shop {
+    padding: 60px 0;
+    background-image: url("../img/bg-shop.png");
+  }
+  .shop-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Form */
+  .form {
+    display: flex;
+    gap: 20px;
+  }
+
+  .form-submit {
+    margin-top: 0;
+  }
+
+  .form-submit:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    cursor: pointer;
+  }
+
+  /* Footer */
+  .footer-text {
+    margin-top: 12px;
+  }
+
+  .footer-nav-list {
+    gap: 40px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+  }
+}
