@@ -49,7 +49,23 @@
               <a href="#about" class="header-nav-link">About</a>
             </li>
             <li class="header-nav-item">
-              <a href="#menu" class="header-nav-link">Menu</a>
+              <div class="header-nav-link js-header-nav-menu is-slide-active">
+                Menu
+              </div>
+              <ul class="header-nav-list-sub js-header-nav-menu-sub">
+                <li class="header-nav-item-sub">
+                  <a class="header-nav-link-sub" href="#new">新発売</a>
+                </li>
+                <li class="header-nav-item-sub">
+                  <a class="header-nav-link-sub" href="#recommend">おすすめ</a>
+                </li>
+                <li class="header-nav-item-sub">
+                  <a class="header-nav-link-sub" href="#limitedtime"
+                    >期間限定</a
+                  >
+                </li>
+              </ul>
+              <!-- </div> -->
             </li>
             <li class="header-nav-item">
               <a href="#shop" class="header-nav-link">Shop</a>
@@ -100,7 +116,7 @@
         </h2>
         <div class="menu-contents">
           <ul class="menu-list">
-            <li class="menu-item">
+            <li id="recommend" class="menu-item">
               <div class="menu-img">
                 <img src="./img/menu1.png" alt="おすすめ ストロベリーケーキ" />
               </div>
@@ -112,7 +128,7 @@
                 <p class="menu-text"># 旬のあまおうトッピング</p>
               </div>
             </li>
-            <li class="menu-item">
+            <li id="new" class="menu-item">
               <div class="menu-img">
                 <img src="./img/menu2.png" alt="新発売 ブルーベリーケーキ" />
               </div>
@@ -124,7 +140,7 @@
                 <p class="menu-text"># フランス産チーズをブレンド</p>
               </div>
             </li>
-            <li class="menu-item">
+            <li id="limitedtime" class="menu-item">
               <div class="menu-img">
                 <img src="./img/menu3.png" alt="おすすめ チョコレートケーキ" />
               </div>
@@ -207,5 +223,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
