@@ -29,5 +29,20 @@ device.on("scroll", function () {
   }
 });
 
+const menuModalToggle = () => {
+  $(".js-menu-img").on("click", function () {
+    $(".menu-modal-bg").html($(this).prop("outerHTML"));
+    $(".menu-modal-bg").fadeIn(300);
+
+    $("body").css("overflow", "hidden");
+  });
+
+  $(".menu-modal-bg").on("click", function () {
+    $(".menu-modal-bg").fadeOut(300);
+    $("body").css("overflow", "initial");
+  });
+};
+
 headerNavMenuToggle();
 topBackFunc();
+menuModalToggle();
