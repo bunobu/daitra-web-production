@@ -1,0 +1,151 @@
+/* >>> 変数 */
+$link-color-active: #da1e32;
+$link-color-base: #333;
+$link-font-size: 16px;
+/* <<< 変数 */
+
+/* >>> extend 定義したスタイルを使い回す */
+.button {
+  color: #333;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  text-decoration: none;
+}
+/* <<< extend 定義したスタイルを使い回す */
+
+/* >>> mixin 引数を使ったスタイルの使いまわし */
+@mixin button($font-size) {
+  color: #333;
+  font-size: $font-size;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  text-decoration: none;
+}
+/* <<< mixin 引数を使ったスタイルの使いまわし */
+
+/* >>> 課題1 - Sassで装飾してみよう */
+
+// .listsクラスに対してulの標準ドットやpadding,marginを打ち消して、横並びにする
+
+// .lists {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   gap: 10px;
+// }
+/* <<< 課題1 - Sassで装飾してみよう */
+
+/* >>> 子要素の入れ子 */
+// .lists {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+
+//   li {
+//     width: 25%;
+//     text-align: center;
+//   }
+// }
+/* <<< 子要素の入れ子 */
+
+/* >>> 孫要素の入れ子 */
+// .lists {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+
+//   li {
+//     width: 25%;
+//     text-align: center;
+
+//     a {
+//       color: #333;
+//       font-size: 16px;
+//     }
+//   }
+// }
+/* <<< 孫要素の入れ子 */
+
+/* >>> 疑似要素の書き方 */
+.lists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  li {
+    width: 25%;
+    text-align: center;
+
+    a {
+      color: $link-color-base;
+      font-size: $link-font-size;
+      // @extend .button;
+      @include button(16px);
+
+      &:hover {
+        color: $link-color-active;
+      }
+      &.active {
+        color: $link-color-active;
+        font-size: $link-font-size + 10px;
+      }
+    }
+  }
+}
+
+/* <<< 疑似要素の書き方 */
+
+/* >>> ブレイクポイントのmixinについて */
+
+// サンプルコード
+//マップ型変数breakpointsを定義
+$breakpoints: (
+  //キー　　値
+  "sp": "screen and (max-width: 767px)",
+  //767px以下（スマホ）用の表示
+  "pc": "screen and (min-width: 768px)" //768px以上（タブレット・PC）用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォルト値はsp
+@mixin mq($breakpoint: sp) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+//使用例
+.header {
+  height: 100px; //ＰＣ用の表示
+
+  @include mq(sp) {
+    height: 60px; //スマホの時だけ高さを60pxに！
+  }
+}
+
+/*このように @media screen and (width: 767px) { } を書かなくても、
+PC用のcssを書きながらスマホ用の表示を書き足すことができます！ */
+
+/* <<< ブレイクポイントのmixinについて */
+
+/* >>> functionについて */
+// 関数の定義
+@function activeFontSize($base-size) {
+  @return $base-size + 2px;
+}
+
+// 関数の呼び出し
+p {
+  font-size: activeFontSize($link-font-size);
+}
+/* <<< functionについて */
