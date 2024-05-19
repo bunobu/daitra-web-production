@@ -26,6 +26,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .lists li {
@@ -53,4 +55,21 @@
 
 /* <<< 疑似要素の書き方 */
 /* >>> ブレイクポイントのmixinについて */
-/* <<< ブレイクポイントのmixinについて *//*# sourceMappingURL=style.css.map */
+.header {
+  height: 100px;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+}
+
+/*このように @media screen and (width: 767px) { } を書かなくても、
+PC用のcssを書きながらスマホ用の表示を書き足すことができます！ */
+/* <<< ブレイクポイントのmixinについて */
+/* >>> functionについて */
+p {
+  font-size: 18px;
+}
+
+/* <<< functionについて */
