@@ -11,7 +11,21 @@
 // }
 /* <<< 課題1 - Sassで装飾してみよう */
 
-/* >>> 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする */
+/* >>> 子要素の入れ子 */
+// .lists {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+
+//   li {
+//     width: 25%;
+//     text-align: center;
+//   }
+// }
+/* <<< 子要素の入れ子 */
+
+/* >>> 孫要素の入れ子 */
 .lists {
   list-style: none;
   padding: 0;
@@ -21,6 +35,11 @@
   li {
     width: 25%;
     text-align: center;
+
+    a {
+      color: #333;
+      font-size: 16px;
+    }
   }
 }
-/* <<< 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする */
+/* <<< 孫要素の入れ子 */

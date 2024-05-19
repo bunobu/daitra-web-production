@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /* >>> 課題1 - Sassで装飾してみよう */
 /* <<< 課題1 - Sassで装飾してみよう */
-/* >>> 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする */
+/* >>> 子要素の入れ子 */
+/* <<< 子要素の入れ子 */
+/* >>> 孫要素の入れ子 */
 .lists {
   list-style: none;
   padding: 0;
@@ -12,5 +14,9 @@
   width: 25%;
   text-align: center;
 }
+.lists li a {
+  color: #333;
+  font-size: 16px;
+}
 
-/* <<< 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする *//*# sourceMappingURL=style.css.map */
+/* <<< 孫要素の入れ子 *//*# sourceMappingURL=style.css.map */
