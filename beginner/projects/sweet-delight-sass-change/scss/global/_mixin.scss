@@ -1,0 +1,8 @@
+// メディククエリ用のmixinを定義
+@use "./variable" as v;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get(v.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
