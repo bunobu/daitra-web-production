@@ -1,6 +1,5 @@
-$breakpoints: (
-  // 767px(スマホ用の表示)
-  "sp": "screen and (max-width:767px)",
-  // 767px(PC用の表示)
-  "pc": "screen and (min-width:768px)"
-);
+$font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+
+$color-base: #3c301e;
+
+$letter-spacing-base: 0.05em;

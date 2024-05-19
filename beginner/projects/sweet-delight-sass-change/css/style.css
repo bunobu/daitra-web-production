@@ -70,3 +70,51 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* >>> 共通スタイル */
+body {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: #3c301e;
+}
+
+img {
+  width: 100%;
+}
+
+.inner {
+  padding: 0 40px;
+}
+@media screen and (min-width:768px) {
+  .inner {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading-l {
+  color: #fff;
+}
+
+.section-heading-main {
+  display: block;
+  font-size: 40px;
+}
+@media screen and (min-width:768px) {
+  .section-heading-main {
+    font-size: 64px;
+  }
+}
+
+.section-heading-sub {
+  display: block;
+  font-size: 12px;
+}
+
+/* <<< 共通スタイル */
