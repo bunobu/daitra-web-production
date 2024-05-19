@@ -1,3 +1,5 @@
+@use "../global/" as g;
+
 /* >>> header */
 .header {
   position: fixed;
@@ -7,11 +9,27 @@
   width: 100%;
   text-align: center;
   padding: 12px;
+  @include g.mq("pc") {
+    padding: 16px;
+  }
+}
+
+.header-inner {
+  @include g.mq("pc") {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header-logo {
   width: 200px;
   margin: 0 auto;
+  @include g.mq("pc") {
+    margin: 0;
+  }
 }
 
 .header-nav {
@@ -22,9 +40,20 @@
   display: flex;
   justify-content: center;
   gap: 22px;
+  @include g.mq("pc") {
+    gap: 40px;
+  }
 }
 
 .header-nav-link {
   color: #fff;
+  @include g.mq("pc") {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
+
 /* <<< header */

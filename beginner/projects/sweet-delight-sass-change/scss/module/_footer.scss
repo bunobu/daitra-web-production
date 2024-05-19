@@ -1,3 +1,5 @@
+@use "../global/" as g;
+
 /* >>> Footer */
 .footer {
   color: #fff;
@@ -13,6 +15,9 @@
 
 .footer-text {
   font-size: 12px;
+  @include g.mq("pc") {
+    margin-top: 12px;
+  }
 }
 
 .footer-nav-list {
@@ -21,6 +26,9 @@
   display: flex;
   justify-content: center;
   gap: 24px;
+  @include g.mq("pc") {
+    gap: 40px;
+  }
 }
 
 .sns-img {
@@ -40,5 +48,8 @@
 
 .footer-copyright {
   font-size: 12px;
+  @include g.mq("pc") {
+    font-size: 13px;
+  }
 }
 /* <<< Footer */
