@@ -103,3 +103,42 @@ $link-font-size: 16px;
 }
 
 /* <<< 疑似要素の書き方 */
+
+/* >>> ブレイクポイントのmixinについて */
+//　従来のメディアクエリ
+@media screen and( min-width:768px) {
+}
+
+// Sassのmixinを使う
+
+// サンプルコード
+//マップ型変数breakpointsを定義
+$breakpoints: (
+  //キー　　値
+  "sp": "screen and (max-width: 767px)",
+  //767px以下（スマホ）用の表示
+  "pc": "screen and (min-width: 768px)" //768px以上（タブレット・PC）用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォルト値はsp
+@mixin mq($breakpoint: sp) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+//使用例
+.header {
+  height: 100px; //ＰＣ用の表示
+
+  @include mq(sp) {
+    height: 60px; //スマホの時だけ高さを60pxに！
+  }
+}
+
+/*このように @media screen and (width: 767px) { } を書かなくても、
+PC用のcssを書きながらスマホ用の表示を書き足すことができます！ */
+
+/* <<< ブレイクポイントのmixinについて */
