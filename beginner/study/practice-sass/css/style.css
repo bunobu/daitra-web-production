@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* >>> 変数 */
 /* <<< 変数 */
-/* >>> 定義したスタイルを使い回す */
-.button, .lists li a {
+/* >>> extend 定義したスタイルを使い回す */
+.button {
   color: #333;
   font-size: 16px;
   display: inline-block;
@@ -12,7 +12,9 @@
   text-decoration: none;
 }
 
-/* <<< 定義したスタイルを使い回す */
+/* <<< extend 定義したスタイルを使い回す */
+/* >>> mixin 引数を使ったスタイルの使いまわし */
+/* <<< mixin 引数を使ったスタイルの使いまわし */
 /* >>> 課題1 - Sassで装飾してみよう */
 /* <<< 課題1 - Sassで装飾してみよう */
 /* >>> 子要素の入れ子 */
@@ -33,6 +35,13 @@
 .lists li a {
   color: #333;
   font-size: 16px;
+  color: #333;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  text-decoration: none;
 }
 .lists li a:hover {
   color: #da1e32;
