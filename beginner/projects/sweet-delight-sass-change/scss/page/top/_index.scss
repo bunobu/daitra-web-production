@@ -1,0 +1,167 @@
+@use "../../global/" as g;
+/* >>> TOPページ */
+
+/* ファーストビュー */
+.fv-picture img {
+  width: 100%;
+}
+
+/* Aboutセクション */
+.about {
+  padding: 40px 0;
+  background-color: #f1eee4;
+  @include g.mq("pc") {
+    padding: 100px 0;
+  }
+}
+
+.about-contents {
+  @include g.mq("pc") {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+.about-text-contents {
+  margin-top: 20px;
+  @include g.mq("pc") {
+    margin-top: 0;
+  }
+}
+
+.about-img {
+  @include g.mq("pc") {
+    width: 300px;
+  }
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 2;
+  @include g.mq("pc") {
+    font-size: 15px;
+  }
+}
+
+.about-text + .about-text {
+  margin-top: 16px;
+  @include g.mq("pc") {
+    margin-top: 30px;
+  }
+}
+
+/* Menuセクション */
+.menu {
+  background-color: #f1eee4;
+  padding: 80px 0;
+  @include g.mq("pc") {
+    padding: 0 0 100px;
+  }
+}
+
+.menu-list {
+  @include g.mq("pc") {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.menu-item + .menu-item {
+  margin-top: 62px;
+  @include g.mq("pc") {
+    margin-top: 0;
+  }
+}
+
+.menu-text-contents {
+  text-align: center;
+  padding: 16px 10px;
+}
+
+.menu-name-main {
+  font-size: 18px;
+  display: block;
+}
+
+.menu-name-sub {
+  color: #a98c5f;
+  font-size: 12px;
+  display: block;
+  margin-top: 8px;
+}
+
+.menu-text {
+  font-size: 14px;
+  color: #a98c5f;
+  margin-top: 16px;
+}
+
+/* Shopセクション */
+.shop {
+  background-image: url("../img/sp/bg-shop.png");
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 0;
+  @include g.mq("pc") {
+    padding: 60px 0;
+    background-image: url("../img/bg-shop.png");
+  }
+}
+
+.shop-inner {
+  padding: 0 20px;
+  @include g.mq("pc") {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.shop-text {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Form */
+.form {
+  margin-top: 40px;
+  @include g.mq("pc") {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  border: none;
+  padding: 14px;
+}
+
+.form-submit {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin: 10px auto 0;
+  width: 120px;
+  padding: 12px 10px;
+  color: #fff;
+  background-color: #a98c5f;
+
+  @include g.mq("pc") {
+    margin-top: 0;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+/* <<< TOPページ */

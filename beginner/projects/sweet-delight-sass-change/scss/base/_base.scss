@@ -1,0 +1,44 @@
+@use "../global/" as g;
+
+/* >>> 共通スタイル */
+body {
+  font-family: g.$font-family;
+  letter-spacing: g.$letter-spacing-base;
+  color: g.$color-base;
+}
+
+img {
+  width: 100%;
+}
+
+.inner {
+  padding: 0 40px;
+  @include g.mq("pc") {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading-l {
+  color: #fff;
+}
+
+.section-heading-main {
+  display: block;
+  font-size: 40px;
+  @include g.mq("pc") {
+    font-size: 64px;
+  }
+}
+
+.section-heading-sub {
+  display: block;
+  font-size: 12px;
+}
+/* <<< 共通スタイル */
