@@ -1,11 +1,16 @@
 @charset "UTF-8";
 /* >>> 課題1 - Sassで装飾してみよう */
+/* <<< 課題1 - Sassで装飾してみよう */
+/* >>> 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする */
 .lists {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 10px;
+}
+.lists li {
+  width: 25%;
+  text-align: center;
 }
 
-/* <<< 課題1 - Sassで装飾してみよう *//*# sourceMappingURL=style.css.map */
+/* <<< 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする *//*# sourceMappingURL=style.css.map */

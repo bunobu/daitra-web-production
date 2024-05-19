@@ -2,11 +2,25 @@
 
 // .listsクラスに対してulの標準ドットやpadding,marginを打ち消して、横並びにする
 
+// .lists {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   gap: 10px;
+// }
+/* <<< 課題1 - Sassで装飾してみよう */
+
+/* >>> 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする */
 .lists {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 10px;
+
+  li {
+    width: 25%;
+    text-align: center;
+  }
 }
-/* <<< 課題1 - Sassで装飾してみよう */
+/* <<< 課題2 - .listsの子要素liに対して横幅25%で文字を中央揃えにする */
