@@ -4,6 +4,18 @@ $link-color-base: #333;
 $link-font-size: 16px;
 /* <<< 変数 */
 
+/* >>> 定義したスタイルを使い回す */
+.button {
+  color: #333;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  text-decoration: none;
+}
+/* <<< 定義したスタイルを使い回す */
+
 /* >>> 課題1 - Sassで装飾してみよう */
 
 // .listsクラスに対してulの標準ドットやpadding,marginを打ち消して、横並びにする
@@ -64,6 +76,8 @@ $link-font-size: 16px;
     a {
       color: $link-color-base;
       font-size: $link-font-size;
+      @extend .button;
+
       &:hover {
         color: $link-color-active;
       }
