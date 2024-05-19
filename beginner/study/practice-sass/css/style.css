@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* >>> 変数 */
+/* <<< 変数 */
 /* >>> 課題1 - Sassで装飾してみよう */
 /* <<< 課題1 - Sassで装飾してみよう */
 /* >>> 子要素の入れ子 */
@@ -25,6 +27,7 @@
 }
 .lists li a.active {
   color: #da1e32;
+  font-size: 26px;
 }
 
 /* <<< 疑似要素の書き方 *//*# sourceMappingURL=style.css.map */
