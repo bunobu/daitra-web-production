@@ -4,6 +4,8 @@
 /* >>> 子要素の入れ子 */
 /* <<< 子要素の入れ子 */
 /* >>> 孫要素の入れ子 */
+/* <<< 孫要素の入れ子 */
+/* >>> 疑似要素の書き方 */
 .lists {
   list-style: none;
   padding: 0;
@@ -18,5 +20,11 @@
   color: #333;
   font-size: 16px;
 }
+.lists li a:hover {
+  color: #da1e32;
+}
+.lists li a.active {
+  color: #da1e32;
+}
 
-/* <<< 孫要素の入れ子 *//*# sourceMappingURL=style.css.map */
+/* <<< 疑似要素の書き方 *//*# sourceMappingURL=style.css.map */
