@@ -83,7 +83,7 @@ body {
 
 body {
   color: red;
-  font-family: sans-serif;
+  font-family: "Oswald", "Noto Sans JP", sans-serif;
 }
 
 @media screen and (min-width:768px) {
