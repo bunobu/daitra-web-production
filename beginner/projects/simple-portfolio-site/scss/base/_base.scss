@@ -8,15 +8,8 @@ body {
 }
 
 body {
-  color: g.$color-red;
   font-family: g.$font-family;
-}
-
-.test-base {
-  @include g.mq() {
-    height: 60px;
-    color: g.$color-red;
-  }
+  color: g.$cl-black;
 }
 
 /* <<< base - サイト共通のスタイル */

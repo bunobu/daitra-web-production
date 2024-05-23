@@ -82,54 +82,8 @@ body {
 }
 
 body {
-  color: red;
   font-family: "Oswald", "Noto Sans JP", sans-serif;
-}
-
-@media screen and (min-width:768px) {
-  .test-base {
-    height: 60px;
-    color: red;
-  }
+  color: #333;
 }
 
 /* <<< base - サイト共通のスタイル */
-.test-plugin {
-  font-size: 16px;
-}
-@media screen and (min-width:768px) {
-  .test-plugin {
-    font-size: 20px;
-    color: red;
-  }
-}
-
-.test-component {
-  font-size: 16px;
-}
-@media screen and (min-width:768px) {
-  .test-component {
-    font-size: 20px;
-    color: red;
-  }
-}
-
-.test-module {
-  font-size: 16px;
-}
-@media screen and (min-width:768px) {
-  .test-module {
-    font-size: 20px;
-    color: red;
-  }
-}
-
-.test-page {
-  font-size: 16px;
-}
-@media screen and (min-width:768px) {
-  .test-page {
-    font-size: 20px;
-    color: red;
-  }
-}
