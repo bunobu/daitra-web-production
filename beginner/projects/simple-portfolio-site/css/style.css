@@ -201,6 +201,38 @@ body.is-fixed {
   margin-top: 24px;
 }
 
+.section {
+  padding: 48px 0;
+}
+
+.section__inner {
+  padding: 0 32px;
+}
+
+.section__head {
+  margin-bottom: 32px;
+}
+
+.section__head-main {
+  display: block;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+
+.section__head-sub {
+  display: block;
+  font-size: 11px;
+}
+
+.section__lead-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.section__contents {
+  margin-top: 40px;
+}
+
 .fv {
   position: relative;
 }
@@ -226,4 +258,30 @@ body.is-fixed {
   margin-top: 12px;
   display: block;
   font-size: 14px;
+}
+
+.service__item + .service__item {
+  margin-top: 32px;
+}
+
+.service__item-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 14px;
+}
+
+.service__item-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.service__item-text {
+  font-size: 14px;
+  line-height: 1.6;
 }
