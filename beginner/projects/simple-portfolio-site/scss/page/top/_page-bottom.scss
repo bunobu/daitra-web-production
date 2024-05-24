@@ -1,0 +1,19 @@
+@use "../../global/" as g;
+
+.page-bottom {
+  color: g.$white;
+}
+
+.page-bottom__item {
+  padding: 40px;
+
+  &--contact {
+    background-color: g.$bg-gray-l;
+  }
+  &--twitter {
+    background-color: g.$bg-dark;
+  }
+}
+
+.page-bottom__button {
+}

@@ -8,6 +8,10 @@
 
 .section__head {
   margin-bottom: 32px;
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .section__head-main {
