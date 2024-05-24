@@ -11,6 +11,10 @@ body {
   font-family: g.$font-family;
   color: g.$cl-black;
   font-size: g.$base-font-size;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 /* <<< base - サイト共通のスタイル */

@@ -34,9 +34,14 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: inherit;
+
+  &.is-active {
+    background-image: url("../img/bg_menu-close.png");
+  }
 }
 
 .header__contents {
+  display: none;
   height: calc(100vh - 88px);
   border-top: 1px solid g.$white;
   padding-top: 60px;

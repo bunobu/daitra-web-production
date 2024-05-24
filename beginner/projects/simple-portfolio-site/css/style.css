@@ -98,6 +98,9 @@ body {
   color: #333;
   font-size: 16px;
 }
+body.is-fixed {
+  overflow: hidden;
+}
 
 /* <<< base - サイト共通のスタイル */
 .button {
@@ -183,8 +186,12 @@ body {
   background-size: 100% auto;
   background-color: inherit;
 }
+.header__menu-button.is-active {
+  background-image: url("../img/bg_menu-close.png");
+}
 
 .header__contents {
+  display: none;
   height: calc(100vh - 88px);
   border-top: 1px solid #fff;
   padding-top: 60px;
