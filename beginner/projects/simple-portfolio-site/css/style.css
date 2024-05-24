@@ -334,3 +334,64 @@ body.is-fixed {
   -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
+.flow {
+  background-color: #fafafa;
+}
+
+.flow__list {
+  margin-top: 64px;
+}
+
+.flow__item {
+  position: relative;
+  border: 1px solid #808080;
+  padding: 46px 14px 24px;
+}
+
+.flow__item + .flow__item {
+  margin-top: 46px;
+}
+
+.flow__item-num {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 24px;
+  background-color: #4a4a4a;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flow__item-img {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flow__item-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.flow__item-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
