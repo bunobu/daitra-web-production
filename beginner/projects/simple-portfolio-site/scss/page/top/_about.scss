@@ -1,0 +1,31 @@
+@use "../../global/" as g;
+
+.about {
+}
+.about__container {
+}
+.about__img {
+  img {
+    box-shadow: 0 4px 15px rgba(g.$black, 0.15);
+  }
+}
+
+.about__text-contents {
+}
+
+.about__text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about__text + .about__text {
+  margin-top: 1em;
+}
+
+.works__item-img {
+  margin-bottom: 12px;
+
+  img {
+    box-shadow: 0 4px 15px rgba(g.$black, 0.15);
+  }
+}
