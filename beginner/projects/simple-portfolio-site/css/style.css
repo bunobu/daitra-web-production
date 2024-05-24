@@ -395,3 +395,16 @@ body.is-fixed {
   font-size: 14px;
   line-height: 1.6;
 }
+
+.message__img {
+  margin-bottom: 32px;
+}
+.message__img img {
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.message__text {
+  font-size: 16px;
+  line-height: 1.6;
+}
