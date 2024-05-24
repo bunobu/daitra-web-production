@@ -1,1 +1,18 @@
 @use "../global" as g;
+
+.button {
+}
+
+.button__icon {
+}
+
+.button__icon-path {
+  fill: g.$white;
+
+  &--contact {
+    fill: g.$bg-dark;
+  }
+}
+
+.button__text {
+}

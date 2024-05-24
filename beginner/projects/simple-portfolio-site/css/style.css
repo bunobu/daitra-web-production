@@ -99,3 +99,9 @@ body {
 }
 
 /* <<< base - サイト共通のスタイル */
+.button__icon-path {
+  fill: #fff;
+}
+.button__icon-path--contact {
+  fill: #4a4a4a;
+}
