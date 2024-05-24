@@ -6,9 +6,29 @@
   padding: 6px 10px 6px 30px;
   width: 160px;
   margin: 0 auto;
+  @include g.mq("pc") {
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+
+    &:hover {
+      background-color: g.$white;
+
+      .button__icon-path {
+        fill: g.$bg-dark;
+      }
+
+      .button__text {
+        color: g.$bg-dark;
+      }
+    }
+  }
 
   &--bg {
     background-color: g.$white;
+    @include g.mq("pc") {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     .button__text {
       color: g.$bg-dark;

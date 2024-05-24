@@ -7,10 +7,23 @@
   left: 0;
   width: 100%;
   z-index: 999;
+
+  @include g.mq("pc") {
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+  }
 }
 
 .header__container {
   position: relative;
+
+  @include g.mq("pc") {
+    position: sticky;
+    width: 160px;
+    margin: 0 auto;
+    top: 50px;
+  }
 }
 
 .header__logo {
@@ -18,6 +31,12 @@
   padding: 14px 24px;
   font-size: 20px;
   color: g.$white;
+
+  @include g.mq("pc") {
+    font-size: 30px;
+    letter-spacing: 0.12em;
+    line-height: 1;
+  }
 }
 
 .header__menu-button {
@@ -35,6 +54,10 @@
   background-size: 100% auto;
   background-color: inherit;
 
+  @include g.mq("pc") {
+    display: none;
+  }
+
   &.is-active {
     background-image: url("../img/bg_menu-close.png");
   }
@@ -45,6 +68,11 @@
   height: calc(100vh - 88px);
   border-top: 1px solid g.$white;
   padding-top: 60px;
+
+  @include g.mq("pc") {
+    display: block;
+    border: none;
+  }
 }
 
 .header__nav-item + .header__nav-item {

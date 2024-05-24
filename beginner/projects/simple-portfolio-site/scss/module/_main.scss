@@ -1,0 +1,6 @@
+@use "../global/" as g;
+.main {
+  @include g.mq("pc") {
+    flex-basis: 79.2%;
+  }
+}

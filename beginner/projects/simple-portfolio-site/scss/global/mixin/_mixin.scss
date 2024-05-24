@@ -1,4 +1,4 @@
-// メディク絵利用のmixを定義
+// メディクエリのmixinを定義
 @use "../setting" as g;
 
 @mixin mq($breakpoint: pc) {
