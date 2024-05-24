@@ -261,7 +261,7 @@ body.is-fixed {
 }
 
 .service__item + .service__item {
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .service__item-img {
@@ -284,4 +284,31 @@ body.is-fixed {
 .service__item-text {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.works {
+  background-color: #fafafa;
+}
+
+.works__item + .works__item {
+  margin-top: 40px;
+}
+
+.works__item-img {
+  margin-bottom: 12px;
+}
+.works__item-img img {
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.works__item-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.works__item-link {
+  text-decoration: underline;
+  font-size: 14px;
 }
