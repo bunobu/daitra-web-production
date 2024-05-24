@@ -1,0 +1,47 @@
+@use "../global/" as g;
+
+.header {
+  background-color: g.$bg-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header__container {
+  position: relative;
+}
+
+.header__logo {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 20px;
+  color: g.$white;
+}
+
+.header__menu-button {
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 30px;
+  height: 36px;
+  overflow: hidden;
+  color: transparent;
+  background-image: url("../img/bg_menu.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: inherit;
+}
+
+.header__contents {
+  height: calc(100vh - 88px);
+  border-top: 1px solid g.$white;
+  padding-top: 60px;
+}
+
+.header__nav-item + .header__nav-item {
+  margin-top: 24px;
+}
