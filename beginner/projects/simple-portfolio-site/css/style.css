@@ -205,6 +205,7 @@ body.is-fixed {
 
 .header__container {
   position: relative;
+  width: 100%;
 }
 @media screen and (min-width:768px) {
   .header__container {
@@ -306,6 +307,11 @@ body.is-fixed {
     font-size: 60px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section__head-main {
+    font-size: 54px;
+  }
+}
 
 .section__head-sub {
   display: block;
@@ -354,10 +360,17 @@ body.is-fixed {
     background-image: url("../img/bg_fv.png");
     bottom: 100px;
     left: 0;
-    width: 627px;
+    max-width: 627px;
     height: 174px;
     padding-top: 24px;
     padding-left: 96px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .fv__contents {
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
 }
 
@@ -439,6 +452,7 @@ body.is-fixed {
 .works__item-img img {
   -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .works__item-name {
@@ -468,6 +482,7 @@ body.is-fixed {
 .about__img img {
   -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .about__text {
@@ -499,6 +514,12 @@ body.is-fixed {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .flow__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 16px;
   }
 }
 
@@ -579,6 +600,7 @@ body.is-fixed {
 .message__img img {
   -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .message__text {

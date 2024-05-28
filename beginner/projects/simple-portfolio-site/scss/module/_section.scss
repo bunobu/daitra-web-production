@@ -27,8 +27,13 @@
   display: block;
   font-size: 40px;
   letter-spacing: 0.1em;
+
   @include g.mq("pc") {
     font-size: 60px;
+  }
+
+  @include g.mq("tab") {
+    font-size: 54px;
   }
 }
 

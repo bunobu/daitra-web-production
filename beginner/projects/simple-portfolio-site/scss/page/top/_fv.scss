@@ -24,10 +24,15 @@
     background-image: url("../img/bg_fv.png");
     bottom: 100px;
     left: 0;
-    width: 627px;
+    max-width: 627px;
     height: 174px;
     padding-top: 24px;
     padding-left: 96px;
+  }
+
+  @include g.mq("tab") {
+    bottom: 50%;
+    transform: translateY(50%);
   }
 }
 
