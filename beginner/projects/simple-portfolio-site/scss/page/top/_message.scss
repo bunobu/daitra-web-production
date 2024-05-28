@@ -4,6 +4,11 @@
 }
 
 .message__container {
+  @include g.mq("pc") {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
 }
 
 .message__img {

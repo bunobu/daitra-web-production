@@ -560,6 +560,19 @@ body.is-fixed {
   line-height: 1.6;
 }
 
+@media screen and (min-width:768px) {
+  .message__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 40px;
+  }
+}
+
 .message__img {
   margin-bottom: 32px;
 }
