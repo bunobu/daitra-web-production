@@ -4,6 +4,12 @@
   position: relative;
 }
 
+.fv__img {
+  img {
+    width: 100%;
+  }
+}
+
 .fv__contents {
   position: absolute;
   bottom: 26px;
@@ -13,6 +19,16 @@
   background: url("../img/sp/bg_fv.png") center center no-repeat;
   background-size: 100% auto;
   padding: 32px;
+
+  @include g.mq("pc") {
+    background-image: url("../img/bg_fv.png");
+    bottom: 100px;
+    left: 0;
+    width: 627px;
+    height: 174px;
+    padding-top: 24px;
+    padding-left: 96px;
+  }
 }
 
 .fv__heading {

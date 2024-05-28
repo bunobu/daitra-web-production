@@ -4,10 +4,18 @@
 }
 
 .works__list {
+  @include g.mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
 }
 
 .works__item + .works__item {
   margin-top: 40px;
+  @include g.mq("pc") {
+    margin: 0;
+  }
 }
 
 .works__item-img {
