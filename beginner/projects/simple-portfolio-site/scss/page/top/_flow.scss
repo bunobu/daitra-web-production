@@ -6,6 +6,11 @@
 
 .flow__list {
   margin-top: 64px;
+  @include g.mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
 }
 
 .flow__item {
@@ -16,6 +21,9 @@
 
 .flow__item + .flow__item {
   margin-top: 46px;
+  @include g.mq("pc") {
+    margin: 0;
+  }
 }
 
 .flow__item-num {

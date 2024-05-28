@@ -494,6 +494,13 @@ body.is-fixed {
 .flow__list {
   margin-top: 64px;
 }
+@media screen and (min-width:768px) {
+  .flow__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
 
 .flow__item {
   position: relative;
@@ -503,6 +510,11 @@ body.is-fixed {
 
 .flow__item + .flow__item {
   margin-top: 46px;
+}
+@media screen and (min-width:768px) {
+  .flow__item + .flow__item {
+    margin: 0;
+  }
 }
 
 .flow__item-num {
