@@ -589,6 +589,12 @@ body.is-fixed {
 .page-bottom {
   color: #fff;
 }
+@media screen and (min-width:768px) {
+  .page-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .page-bottom__item {
   padding: 40px;
@@ -598,4 +604,9 @@ body.is-fixed {
 }
 .page-bottom__item--twitter {
   background-color: #4a4a4a;
+}
+@media screen and (min-width:768px) {
+  .page-bottom__item {
+    padding: 54px 10px;
+  }
 }

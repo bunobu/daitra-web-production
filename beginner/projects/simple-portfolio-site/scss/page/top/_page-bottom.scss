@@ -2,6 +2,10 @@
 
 .page-bottom {
   color: g.$white;
+  @include g.mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .page-bottom__item {
@@ -12,6 +16,10 @@
   }
   &--twitter {
     background-color: g.$bg-dark;
+  }
+
+  @include g.mq("pc") {
+    padding: 54px 10px;
   }
 }
 
