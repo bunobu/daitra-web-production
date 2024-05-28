@@ -1,0 +1,52 @@
+@use "../global/" as g;
+
+.section {
+  padding: 48px 0;
+}
+
+.section__inner {
+  padding: 0 32px;
+  @include g.mq("pc") {
+    max-width: calc(880px + 32px * 2);
+    margin: 0 auto;
+  }
+}
+
+.section__head {
+  margin-bottom: 32px;
+  @include g.mq("pc") {
+    margin-bottom: 24px;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.section__head-main {
+  display: block;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+
+  @include g.mq("pc") {
+    font-size: 60px;
+  }
+
+  @include g.mq("tab") {
+    font-size: 54px;
+  }
+}
+
+.section__head-sub {
+  display: block;
+  font-size: 11px;
+}
+
+.section__lead-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.section__contents {
+  margin-top: 40px;
+}

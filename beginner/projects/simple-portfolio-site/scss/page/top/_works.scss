@@ -1,0 +1,38 @@
+@use "../../global/" as g;
+.works {
+  background-color: g.$bg-light;
+}
+
+.works__list {
+  @include g.mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+}
+
+.works__item + .works__item {
+  margin-top: 40px;
+  @include g.mq("pc") {
+    margin: 0;
+  }
+}
+
+.works__item-img {
+  margin-bottom: 12px;
+
+  img {
+    box-shadow: 0 4px 15px rgba(g.$black, 0.15);
+    width: 100%;
+  }
+}
+
+.works__item-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.works__item-link {
+  text-decoration: underline;
+  font-size: 14px;
+}

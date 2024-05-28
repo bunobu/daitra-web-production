@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- noindex -->
+    <meta name="”robots”" content="”noindex”" />
+
+    <!-- site desc -->
+    <title>ポートフォリオサイト</title>
+    <meta
+      name="description"
+      content="Nobuのポートフォリオサイトです。【Webサイトの制作】&nbsp;/&nbsp;【Webサイトの修正】&nbsp;/&nbsp;【コーディングに関するお問い合わせ】&nbsp;などお気軽にご相談ください。"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Original Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo">Nobu's<br />Portfolio</div>
+          <button id="js-button-drawer" class="header__menu-button">
+            Menu
+          </button>
+
+          <div id="js-drawer" class="header__contents">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="#service" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="24"
+                        height="15"
+                        viewBox="0 0 24 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path"
+                          d="M10.2075 0.428596L8.29125 2.33175C7.7175 2.48818 7.185 2.77495 6.735 3.16974L5.7375 4.05241C5.355 4.39133 4.85625 4.57755 4.3425 4.57755H3.6V9.34475C4.365 9.3671 5.0925 9.67622 5.63625 10.2163L6.97125 11.5421L7.23375 11.8028L8.24625 12.8084C8.47875 13.0393 8.86125 13.0393 9.09375 12.8084C9.1575 12.7451 9.20625 12.6706 9.2325 12.5924C9.3375 12.3056 9.58125 12.0896 9.88125 12.0226C10.1813 11.9555 10.4963 12.0449 10.7138 12.2647L11.1188 12.6594C11.5538 13.0915 12.2588 13.0915 12.69 12.6594C12.8925 12.4583 13.0013 12.2013 13.0125 11.9369C13.0275 11.6092 13.2225 11.3187 13.5225 11.1771C13.8225 11.0356 14.1713 11.0654 14.4375 11.2554C14.79 11.5049 15.2813 11.4714 15.5963 11.1585C15.9488 10.8084 15.9488 10.2423 15.5963 9.89596L12.7538 7.07288L11.4112 8.30193C10.3875 9.24047 8.81625 9.25537 7.77375 8.33545C6.585 7.28517 6.55875 5.45278 7.71375 4.36899L10.3425 1.90345C11.37 0.94256 12.7275 0.40625 14.1413 0.40625C15.495 0.40625 16.8038 0.901592 17.8125 1.79172L18.9413 2.78985H20.4H21.9H23.4C23.73 2.78985 24 3.05801 24 3.38575V11.1325C24 11.7917 23.4638 12.3243 22.8 12.3243H21.6C21.1575 12.3243 20.7675 12.0859 20.5613 11.7284H17.3775C17.25 11.9779 17.0813 12.2162 16.8713 12.4248C16.23 13.0617 15.3413 13.3112 14.5088 13.1734C14.3738 13.4453 14.19 13.6985 13.9613 13.9257C12.9375 14.9425 11.3363 15.043 10.1963 14.2274C9.255 15.0021 7.8525 14.9537 6.97125 14.0747L5.9625 13.0691L5.7 12.8084L4.365 11.4825C4.15875 11.2777 3.88875 11.1585 3.6 11.1362C3.6 11.7917 3.06 12.3243 2.4 12.3243H1.2C0.53625 12.3243 0 11.7917 0 11.1325V3.38575C0 3.05801 0.27 2.78985 0.6 2.78985H2.1H3.6H4.3425C4.4175 2.78985 4.48875 2.76378 4.54125 2.71536L5.535 1.83641C6.58125 0.91649 7.9275 0.40625 9.32625 0.40625H9.7125C9.8775 0.40625 10.0463 0.413699 10.2075 0.428596ZM20.4 9.94065V4.57755H18.6C18.3788 4.57755 18.165 4.49561 18.0038 4.35036L16.62 3.12877C15.9375 2.52542 15.0563 2.19395 14.1413 2.19395C13.1888 2.19395 12.2738 2.55522 11.58 3.20326L8.95125 5.66879C8.565 6.03378 8.5725 6.6483 8.97 6.9984C9.31875 7.30752 9.8475 7.30007 10.1888 6.98722L12.885 4.51424C13.2488 4.17904 13.8188 4.20139 14.1563 4.56638C14.4938 4.93137 14.4713 5.49375 14.1038 5.82894L14.0738 5.85874L16.8638 8.62967C17.2388 9.00211 17.4825 9.46021 17.5913 9.93693H20.4V9.94065ZM2.4 10.5366C2.4 10.3785 2.33679 10.2269 2.22426 10.1152C2.11174 10.0034 1.95913 9.94065 1.8 9.94065C1.64087 9.94065 1.48826 10.0034 1.37574 10.1152C1.26321 10.2269 1.2 10.3785 1.2 10.5366C1.2 10.6946 1.26321 10.8462 1.37574 10.9579C1.48826 11.0697 1.64087 11.1325 1.8 11.1325C1.95913 11.1325 2.11174 11.0697 2.22426 10.9579C2.33679 10.8462 2.4 10.6946 2.4 10.5366ZM22.2 11.1325C22.3591 11.1325 22.5117 11.0697 22.6243 10.9579C22.7368 10.8462 22.8 10.6946 22.8 10.5366C22.8 10.3785 22.7368 10.2269 22.6243 10.1152C22.5117 10.0034 22.3591 9.94065 22.2 9.94065C22.0409 9.94065 21.8883 10.0034 21.7757 10.1152C21.6632 10.2269 21.6 10.3785 21.6 10.5366C21.6 10.6946 21.6632 10.8462 21.7757 10.9579C21.8883 11.0697 22.0409 11.1325 22.2 11.1325Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Service -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#works" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="21"
+                        height="16"
+                        viewBox="0 0 21 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path"
+                          d="M4.2 0.635498C3.04172 0.635498 2.1 1.57078 2.1 2.72115V11.0638H4.2V2.72115H16.8V11.0638H18.9V2.72115C18.9 1.57078 17.9583 0.635498 16.8 0.635498H4.2ZM0.63 12.1066C0.282187 12.1066 0 12.3868 0 12.7323C0 14.114 1.12875 15.2351 2.52 15.2351H18.48C19.8712 15.2351 21 14.114 21 12.7323C21 12.3868 20.7178 12.1066 20.37 12.1066H0.63Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Works -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#about" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="17"
+                        height="18"
+                        viewBox="0 0 17 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path"
+                          d="M13.8125 7.04143C13.8125 8.55504 13.3178 9.95324 12.4844 11.0876L16.6879 15.2657C17.1029 15.6779 17.1029 16.3473 16.6879 16.7595C16.2729 17.1717 15.5988 17.1717 15.1838 16.7595L10.9803 12.5814C9.83808 13.4124 8.43027 13.9005 6.90625 13.9005C3.09121 13.9005 0 10.8304 0 7.04143C0 3.25246 3.09121 0.182373 6.90625 0.182373C10.7213 0.182373 13.8125 3.25246 13.8125 7.04143ZM6.90625 11.79C7.53413 11.79 8.15587 11.6672 8.73595 11.4285C9.31604 11.1899 9.84312 10.8401 10.2871 10.3992C10.7311 9.95824 11.0833 9.43476 11.3235 8.85863C11.5638 8.28251 11.6875 7.66502 11.6875 7.04143C11.6875 6.41784 11.5638 5.80035 11.3235 5.22423C11.0833 4.64811 10.7311 4.12463 10.2871 3.68368C9.84312 3.24273 9.31604 2.89296 8.73595 2.65432C8.15587 2.41568 7.53413 2.29285 6.90625 2.29285C6.27837 2.29285 5.65663 2.41568 5.07654 2.65432C4.49646 2.89296 3.96938 3.24273 3.5254 3.68368C3.08142 4.12463 2.72923 4.64811 2.48895 5.22423C2.24867 5.80035 2.125 6.41784 2.125 7.04143C2.125 7.66502 2.24867 8.28251 2.48895 8.85863C2.72923 9.43476 3.08142 9.95824 3.5254 10.3992C3.96938 10.8401 4.49646 11.1899 5.07654 11.4285C5.65663 11.6672 6.27837 11.79 6.90625 11.79Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">About -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#flow" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path"
+                          d="M8.43454 7.15642C8.7598 7.47765 8.7598 8.00275 8.43455 8.32398L3.65356 13.0459C3.13521 13.5578 2.25649 13.1906 2.25649 12.4621L2.25649 3.01832C2.25649 2.28979 3.13521 1.92261 3.65355 2.43454L8.43454 7.15642Z"
+                        />
+                        <path
+                          class="button__icon-path"
+                          d="M15.4089 7.15642C15.7342 7.47765 15.7342 8.00275 15.4089 8.32398L10.6279 13.0459C10.1096 13.5578 9.23085 13.1906 9.23085 12.4621L9.23085 3.01832C9.23085 2.28979 10.1096 1.92261 10.6279 2.43454L15.4089 7.15642Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Work flow -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#message" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path"
+                          d="M0.502817 8.41785C-0.203433 8.81822 -0.137808 9.88587 0.615317 10.1962L4.99969 12.0119V15.2179C4.99969 15.7797 5.45594 16.2328 6.02157 16.2328C6.32469 16.2328 6.61219 16.0994 6.80594 15.8666L8.74344 13.5606L12.6153 15.1621C13.2059 15.4073 13.8903 15.0224 13.9872 14.3955L15.9872 1.4843C16.0466 1.10876 15.8809 0.730116 15.5653 0.515964C15.2497 0.301812 14.8372 0.28319 14.5028 0.472513L0.502817 8.41785ZM2.13094 9.20928L12.8028 3.15406L5.94032 10.7704L5.97782 10.8014L2.13094 9.20928ZM12.6028 13.5451L7.39657 11.388L14.0872 3.96101L12.6028 13.5451Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Message -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#contact" class="header__nav-link button button--bg">
+                    <span class="button__icon">
+                      <svg
+                        width="20"
+                        height="16"
+                        viewBox="0 0 20 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path button__icon-path--contact"
+                          d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Contact -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a
+                    href="#twitter"
+                    class="header__nav-link button button--border"
+                  >
+                    <span class="button__icon">
+                      <svg
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="button__icon-path"
+                          d="M17.9441 6.40799C17.9568 6.58444 17.9568 6.76092 17.9568 6.93736C17.9568 12.3191 13.8325 18.5201 6.29441 18.5201C3.97207 18.5201 1.81473 17.8521 0 16.6926C0.329961 16.7304 0.647187 16.743 0.989844 16.743C2.90605 16.743 4.67004 16.1002 6.07867 15.0037C4.27664 14.9659 2.76648 13.7937 2.24617 12.1805C2.5 12.2183 2.75379 12.2435 3.02031 12.2435C3.38832 12.2435 3.75637 12.193 4.09898 12.1049C2.22082 11.7267 0.812148 10.0883 0.812148 8.10949V8.05909C1.35781 8.36158 1.99238 8.55063 2.66492 8.57581C1.56086 7.84479 0.837539 6.59704 0.837539 5.18543C0.837539 4.42922 1.04055 3.73602 1.3959 3.13105C3.41367 5.60136 6.44668 7.21459 9.84766 7.39107C9.78422 7.08858 9.74613 6.77353 9.74613 6.45843C9.74613 4.21496 11.5736 2.38745 13.8451 2.38745C15.0253 2.38745 16.0913 2.87899 16.84 3.67302C17.7664 3.49658 18.6547 3.15626 19.4416 2.68994C19.137 3.63523 18.4898 4.42926 17.6395 4.93337C18.4644 4.84519 19.2639 4.61827 19.9999 4.30322C19.4416 5.10981 18.7436 5.82819 17.9441 6.40799Z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Twitter -</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="fv">
+          <picture class="fv__img">
+            <source media="(min-width: 768px)" srcset="./img/img_fv.png" />
+            <img src="./img/sp/img_fv.png" alt="" width="750" height="1100" />
+          </picture>
+          <div class="fv__contents">
+            <h1 class="fv__heading">
+              <span class="fv__heading-main">Web Corder -</span>
+              <span class="fv__heading-sub"
+                >ご覧いただきありがとうございます。<br />WEBコーダーをしているNobuと申します。</span
+              >
+            </h1>
+          </div>
+        </div>
+
+        <section id="service" class="section service">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">Service -</span>
+              <span class="section__head-sub">提供サービス</span>
+            </h2>
+            <p class="section__lead-text">
+              行っているサービス内容です。
+              【Webサイトの制作】&nbsp;/&nbsp;【Webサイトの修正】&nbsp;/&nbsp;【コーディングに関するお問い合わせ】&nbsp;などお気軽にご相談ください。
+            </p>
+            <div class="section__contents">
+              <ul class="service__list">
+                <li class="service__item">
+                  <div class="service__item-img">
+                    <img src="./img/img_service1.svg" alt="" />
+                  </div>
+                  <h3 class="service__item-name">ホームページ制作</h3>
+                  <p class="service__item-text">
+                    ご要望に応じて柔軟にご提案させていただきます。目的に合ったホームページを一緒に作り上げていきましょう！
+                  </p>
+                </li>
+                <li class="service__item">
+                  <div class="service__item-img">
+                    <img src="./img/img_service2.svg" alt="" />
+                  </div>
+                  <h3 class="service__item-name">ホームページ修正</h3>
+                  <p class="service__item-text">
+                    テキストの変更や表示崩れなど、ホームページのちょっとしたお困りごとに対応いたします。
+                  </p>
+                </li>
+                <li class="service__item">
+                  <div class="service__item-img">
+                    <img src="./img/img_service3.svg" alt="" />
+                  </div>
+                  <h3 class="service__item-name">ホームページについての相談</h3>
+                  <p class="service__item-text">
+                    【Webサイトの制作】&nbsp;/&nbsp;【Webサイトの修正】&nbsp;/&nbsp;【コーディングに関するお問い合わせ】&nbsp;などお気軽にご相談ください。
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="works" class="section works">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">Works -</span>
+              <span class="section__head-sub">実績紹介</span>
+            </h2>
+            <p class="section__lead-text">
+              これまで制作したWebサイトです。当サイトも自ら制作しています。
+            </p>
+            <div class="section__contents">
+              <ul class="works__list">
+                <li class="works__item">
+                  <div class="works__item-img">
+                    <img src="./img/img_works1.jpg" alt="" />
+                  </div>
+                  <h3 class="works__item-name">ポートフォリオサイト</h3>
+                  <a href="#" class="works__item-link">詳しく見る</a>
+                </li>
+                <li class="works__item">
+                  <div class="works__item-img">
+                    <img src="./img/img_works2.jpg" alt="" />
+                  </div>
+                  <h3 class="works__item-name">
+                    スイーツ店公式サイト（サンプル）
+                  </h3>
+                  <a href="#" class="works__item-link" target="_blank"
+                    >詳しく見る</a
+                  >
+                </li>
+                <li class="works__item">
+                  <div class="works__item-img">
+                    <img src="./img/img_works3.jpg" alt="" />
+                  </div>
+                  <h3 class="works__item-name">家具のサブスクLP（サンプル）</h3>
+                  <a href="#" class="works__item-link" target="_blank"
+                    >詳しく見る</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section about">
+          <div class="section__inner">
+            <div class="about__container">
+              <div class="about__img">
+                <img src="./img/img_about.png" alt="" />
+              </div>
+              <div class="about__text-contents">
+                <h2 class="section__head">
+                  <span class="section__head-main">About -</span>
+                  <span class="section__head-sub">自己紹介</span>
+                </h2>
+                <p class="about__text">
+                  1989年生まれ、東京在住。大学卒業後、メーカーの営業職を経験しました。現在は、家庭と両立しながらWeb制作を行っております。
+                </p>
+                <p class="about__text">
+                  趣味は、旅行、写真を撮ること、カフェ巡りです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="flow" class="section flow">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">Work flow -</span>
+              <span class="section__head-sub">制作の流れ</span>
+            </h2>
+
+            <p class="section__lead-text">
+              ご相談〜納品までの大まかな流れです。状況に応じて柔軟に対応いたします。
+            </p>
+
+            <div class="section__contents">
+              <ol class="flow__list">
+                <li class="flow__item">
+                  <p class="flow__item-num">1</p>
+                  <div class="flow__item-img">
+                    <img src="./img/img_flow1.svg" alt="" />
+                  </div>
+                  <h3 class="flow__item-name">ご相談・お見積り</h3>
+                  <p class="flow__item-text">
+                    要件や納期、予算などお気軽にご相談ください。対応内容に応じてお見積りをお送りいたします。
+                  </p>
+                </li>
+                <li class="flow__item">
+                  <p class="flow__item-num">2</p>
+                  <div class="flow__item-img">
+                    <img src="./img/img_flow2.svg" alt="" />
+                  </div>
+                  <h3 class="flow__item-name">コーディング</h3>
+                  <p class="flow__item-text">
+                    デザインカンプを元にコーディングを行います。コーディング後は品質チェックを行い調整します。
+                  </p>
+                </li>
+                <li class="flow__item">
+                  <p class="flow__item-num">3</p>
+                  <div class="flow__item-img">
+                    <img src="./img/img_flow3.svg" alt="" />
+                  </div>
+                  <h3 class="flow__item-name">確認</h3>
+                  <p class="flow__item-text">
+                    お客様にコーディングしたサイトをご確認頂きます。不足部分の修正と対応を行います。
+                  </p>
+                </li>
+                <li class="flow__item">
+                  <p class="flow__item-num">4</p>
+                  <div class="flow__item-img">
+                    <img src="./img/img_flow4.svg" alt="" />
+                  </div>
+                  <h3 class="flow__item-name">納品</h3>
+                  <p class="flow__item-text">
+                    コーディング後のファイル一式を納品いたします。本番サーバーへのアップロードも対応可能です。
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section id="message" class="section message">
+          <div class="section__inner">
+            <div class="message__container">
+              <div class="message__img">
+                <img src="./img/img_message.png" alt="" />
+              </div>
+              <div class="message__text-contents">
+                <h2 class="section__head">
+                  <span class="section__head-main">Message -</span>
+                  <span class="section__head-sub">ご依頼をお考えの方へ</span>
+                </h2>
+                <p class="message__text">
+                  静的なHTMLコーディングからWordPress化まで対応可能です。デザインカンプの意図をしっかりと理解した上で、迅速、丁寧な対応でコーディング業務をサポートいたします。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-bottom">
+          <div
+            id="contact"
+            class="page-bottom__item page-bottom__item--contact"
+          >
+            <h2 class="section__head section__head--center">
+              <span class="section__head-main">Contact -</span>
+              <span class="section__head-sub">お問い合わせ</span>
+            </h2>
+            <a href="#" class="page-bottom__button button button--border">
+              <span class="button__icon">
+                <svg
+                  width="20"
+                  height="16"
+                  viewBox="0 0 20 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="button__icon-path"
+                    d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z"
+                  />
+                </svg>
+              </span>
+              <span class="button__text">Contact -</span>
+            </a>
+          </div>
+          <div
+            id="twitter"
+            class="page-bottom__item page-bottom__item--twitter"
+          >
+            <h2 class="section__head section__head--center">
+              <span class="section__head-main">Twitter -</span>
+              <span class="section__head-sub">ツイッター</span>
+            </h2>
+            <a href="#" class="page-bottom__button button button--border">
+              <span class="button__icon">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="button__icon-path"
+                    d="M17.9441 6.40799C17.9568 6.58444 17.9568 6.76092 17.9568 6.93736C17.9568 12.3191 13.8325 18.5201 6.29441 18.5201C3.97207 18.5201 1.81473 17.8521 0 16.6926C0.329961 16.7304 0.647187 16.743 0.989844 16.743C2.90605 16.743 4.67004 16.1002 6.07867 15.0037C4.27664 14.9659 2.76648 13.7937 2.24617 12.1805C2.5 12.2183 2.75379 12.2435 3.02031 12.2435C3.38832 12.2435 3.75637 12.193 4.09898 12.1049C2.22082 11.7267 0.812148 10.0883 0.812148 8.10949V8.05909C1.35781 8.36158 1.99238 8.55063 2.66492 8.57581C1.56086 7.84479 0.837539 6.59704 0.837539 5.18543C0.837539 4.42922 1.04055 3.73602 1.3959 3.13105C3.41367 5.60136 6.44668 7.21459 9.84766 7.39107C9.78422 7.08858 9.74613 6.77353 9.74613 6.45843C9.74613 4.21496 11.5736 2.38745 13.8451 2.38745C15.0253 2.38745 16.0913 2.87899 16.84 3.67302C17.7664 3.49658 18.6547 3.15626 19.4416 2.68994C19.137 3.63523 18.4898 4.42926 17.6395 4.93337C18.4644 4.84519 19.2639 4.61827 19.9999 4.30322C19.4416 5.10981 18.7436 5.82819 17.9441 6.40799Z"
+                  />
+                </svg>
+              </span>
+              <span class="button__text">Twitter -</span>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <small class="footer__copy"
+            >&copy; Nobu's Portfolio All rights reserved.</small
+          >
+        </footer>
+      </main>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Original Script -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

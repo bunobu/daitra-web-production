@@ -1,0 +1,52 @@
+@use "../../global/" as g;
+
+.fv {
+  position: relative;
+}
+
+.fv__img {
+  img {
+    width: 100%;
+  }
+}
+
+.fv__contents {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 100%;
+  height: 209px;
+  background: url("../img/sp/bg_fv.png") center center no-repeat;
+  background-size: 100% auto;
+  padding: 32px;
+
+  @include g.mq("pc") {
+    background-image: url("../img/bg_fv.png");
+    bottom: 100px;
+    left: 0;
+    max-width: 627px;
+    height: 174px;
+    padding-top: 24px;
+    padding-left: 96px;
+  }
+
+  @include g.mq("tab") {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+
+.fv__heading {
+}
+
+.fv__heading-main {
+  display: block;
+  font-size: 40px;
+  letter-spacing: 0.1em;
+}
+
+.fv__heading-sub {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+}

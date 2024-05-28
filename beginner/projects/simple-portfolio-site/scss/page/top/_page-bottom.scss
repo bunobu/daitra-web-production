@@ -1,0 +1,27 @@
+@use "../../global/" as g;
+
+.page-bottom {
+  color: g.$white;
+  @include g.mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.page-bottom__item {
+  padding: 40px;
+
+  &--contact {
+    background-color: g.$bg-gray-l;
+  }
+  &--twitter {
+    background-color: g.$bg-dark;
+  }
+
+  @include g.mq("pc") {
+    padding: 54px 10px;
+  }
+}
+
+.page-bottom__button {
+}

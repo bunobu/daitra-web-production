@@ -1,0 +1,7 @@
+@use "../global/" as g;
+
+.wrapper {
+  @include g.mq("pc") {
+    display: flex;
+  }
+}

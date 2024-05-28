@@ -1,0 +1,40 @@
+@use "../../global/" as g;
+
+.service {
+}
+
+.service__list {
+  @include g.mq("pc") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+}
+
+.service__item {
+}
+
+.service__item + .service__item {
+  margin-top: 40px;
+  @include g.mq("pc") {
+    margin: 0;
+  }
+}
+
+.service__item-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.service__item-name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.service__item-text {
+  font-size: 14px;
+  line-height: 1.6;
+}

@@ -1,0 +1,29 @@
+@use "../../global/" as g;
+
+.message {
+}
+
+.message__container {
+  @include g.mq("pc") {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+}
+
+.message__img {
+  margin-bottom: 32px;
+
+  img {
+    box-shadow: 0 4px 15px rgba(g.$black, 0.15);
+    width: 100%;
+  }
+}
+
+.message__text-contents {
+}
+
+.message__text {
+  font-size: 16px;
+  line-height: 1.6;
+}

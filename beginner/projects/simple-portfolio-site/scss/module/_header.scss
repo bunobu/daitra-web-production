@@ -1,0 +1,81 @@
+@use "../global/" as g;
+
+.header {
+  background-color: g.$bg-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  @include g.mq("pc") {
+    position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+  }
+}
+
+.header__container {
+  position: relative;
+  width: 100%;
+
+  @include g.mq("pc") {
+    position: sticky;
+    width: 160px;
+    margin: 0 auto;
+    top: 50px;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  padding: 14px 24px;
+  font-size: 20px;
+  color: g.$white;
+
+  @include g.mq("pc") {
+    font-size: 30px;
+    letter-spacing: 0.12em;
+    line-height: 1;
+  }
+}
+
+.header__menu-button {
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 30px;
+  height: 36px;
+  overflow: hidden;
+  color: transparent;
+  background-image: url("../img/bg_menu.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: inherit;
+
+  @include g.mq("pc") {
+    display: none;
+  }
+
+  &.is-active {
+    background-image: url("../img/bg_menu-close.png");
+  }
+}
+
+.header__contents {
+  display: none;
+  height: calc(100vh - 88px);
+  border-top: 1px solid g.$white;
+  padding-top: 60px;
+
+  @include g.mq("pc") {
+    display: block;
+    border: none;
+  }
+}
+
+.header__nav-item + .header__nav-item {
+  margin-top: 24px;
+}
