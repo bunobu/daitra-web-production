@@ -1,3 +1,13 @@
 // 色関連の設定
-$color-red: red;
-$color-pink: pink;
+// 色関連はprefixにc-をつける
+
+// color
+$c-base: #111;
+$c-sub: #fff;
+$c-accent1: #f5810e;
+$c-accent2: #fabe00;
+$c-gradation: liner-gradient(180deg, #f5810e 0%, #fabe00 100%);
+
+// background-color
+$c-background-base: #fafafa;
+$c-background-sub: #fff;

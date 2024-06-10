@@ -1,2 +1,23 @@
 // font関連の設定
-$base-font-size: 16px;
+// font関連はprefixにf-をつける
+
+// font-family
+$f-family-en: "Montserrat", sans-serif;
+$f-family-ja: "Noto Sans JP", sans-serif;
+
+// font-size
+$f-base-size: 16px;
+
+// font-weight
+$f-weight-thin: 100;
+$f-weight-extralight: 200;
+$f-weight-light: 300;
+$f-weight-regular: 400;
+$f-weight-midium: 500;
+$f-weight-semibold: 600;
+$f-weight-bold: 700;
+$f-weight-extrabold: 800;
+$f-weight-black: 900;
+
+// line-height
+$f-line-height-base: 1.7;

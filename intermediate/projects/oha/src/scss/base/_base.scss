@@ -11,21 +11,17 @@ html {
   // root-fontの設定
   font-size: 100%;
   font-size: calc(100vw * 16 / 375);
-  @include g.mq("md") {
-    font-size: 100%;
+  @include g.mq(md) {
+    font-size: g.$f-base-size;
   }
 }
 
 body {
-  color: g.$color-red;
-  font-family: sans-serif;
-}
-
-.test-base {
-  @include g.mq("md") {
-    height: 60px;
-    color: g.$color-red;
-  }
+  font-family: g.$f-family-ja;
+  font-weight: g.$f-weight-regular;
+  line-height: g.$f-line-height-base;
+  color: g.$c-base;
+  background-color: g.$c-background-base;
 }
 
 /* <<< base - サイト共通のスタイル */
