@@ -12,14 +12,31 @@
 .header__logo {
   width: g.rem(100px);
   min-height: g.rem(26);
+  @include g.mq(md) {
+    width: g.rem(135);
+  }
 }
 
 .header__nav {
   display: none;
+  @include g.mq(md) {
+    display: flex;
+    align-items: center;
+    gap: g.rem(40);
+  }
 }
 
 .header__link {
+  font-weight: g.$f-weight-bold;
+  letter-spacing: g.l-spacing(3);
 }
 
 .header__button {
+  display: block;
+  font-weight: g.$f-weight-bold;
+  letter-spacing: g.l-spacing(3);
+  padding: calc(g.rem(10) - g.rem(2)) calc(g.rem(30) - g.rem(2));
+  border: 2px solid g.$c-base;
+  border-radius: g.rem(60);
+  background-color: g.$c-sub;
 }

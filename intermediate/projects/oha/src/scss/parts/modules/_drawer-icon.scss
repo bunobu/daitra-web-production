@@ -4,6 +4,9 @@
   width: g.rem(36);
   height: g.rem(21);
   position: relative;
+  @include g.mq(md) {
+    display: none;
+  }
 }
 
 .drawer-icon__bar {

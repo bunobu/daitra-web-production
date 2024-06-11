@@ -24,4 +24,13 @@ body {
   background-color: g.$c-background-base;
 }
 
+a {
+  @include g.mq(md) {
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
 /* <<< base - サイト共通のスタイル */
