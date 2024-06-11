@@ -1,0 +1,12 @@
+@use "@global" as g;
+
+.container {
+  padding-right: g.rem(15);
+  padding-left: g.rem(15);
+  @include g.mq(md) {
+    max-width: calc(g.rem(g.$l-container-width + 30 * 2));
+    padding-right: g.rem(30);
+    padding-left: g.rem(30);
+    margin: 0 auto;
+  }
+}

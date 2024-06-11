@@ -6,7 +6,8 @@
 .header__inner {
   display: flex;
   justify-content: space-between;
-  padding: g.rem(22) g.rem(15);
+  padding-top: g.rem(22);
+  padding-bottom: g.rem(22);
 }
 
 .header__logo {
