@@ -4,7 +4,7 @@
 @use "../setting/" as s;
 
 // 関数 - pxをremに変換して、clampで最小値と最大値を設定する
-@function rem($px, $content: strip-unit(s.$base-font-size)) {
+@function rem($px, $content: strip-unit(s.$f-base-size)) {
   // @return math.div($px, $content) * 1rem;
 
   // rem変換
