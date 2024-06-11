@@ -11,6 +11,7 @@
     "lint": "npm run lint:html"
   },
   "devDependencies": {
+    "@markuplint/mustache-parser": "^4.6.4",
     "autoprefixer": "^10.4.19",
     "css-declaration-sorter": "^7.2.0",
     "markuplint": "^4.9.0",
