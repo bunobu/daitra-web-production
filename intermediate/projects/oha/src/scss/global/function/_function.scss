@@ -29,11 +29,11 @@
 }
 
 // 関数 - line-heightの計算
-@function l-height($height, $pixel) {
+@function line-height($height, $pixel) {
   @return math.div($height, $pixel);
 }
 
 // 関数 - letter-spacing計算
-@function l-spacing($spacing) {
+@function letter-spacing($spacing) {
   @return math.div($spacing, 100) * 1em;
 }
