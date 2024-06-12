@@ -99,7 +99,7 @@
   text-align: center;
   width: 100%;
   @include g.mq(md) {
-    width: calc(g.rem(600) / g.rem(1040) * 100%);
+    width: calc(g.rem(600) / g.rem(1100) * 100%);
     bottom: g.rem(-88);
     text-align: right;
   }
