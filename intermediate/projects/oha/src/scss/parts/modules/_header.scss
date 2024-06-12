@@ -9,6 +9,10 @@
   padding-top: g.rem(22);
   padding-bottom: g.rem(22);
   align-items: center;
+
+  @include g.mq(md) {
+    padding-bottom: g.rem(21);
+  }
 }
 
 .header__logo {

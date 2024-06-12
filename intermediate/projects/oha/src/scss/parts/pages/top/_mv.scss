@@ -95,12 +95,13 @@
 .mv__img {
   position: absolute;
   right: 0;
-  bottom: g.rem(-108);
+  bottom: g.rem(-113);
   text-align: center;
   width: 100%;
   @include g.mq(md) {
     width: calc(g.rem(600) / g.rem(1100) * 100%);
-    bottom: g.rem(-88);
+    right: g.rem(30);
+    bottom: g.rem(-96);
     text-align: right;
   }
 
