@@ -1,3 +1,21 @@
+@use "@global" as g;
+
 .button {
-  color: red;
+  display: inline-block;
+  font-weight: g.$f-weight-bold;
+  letter-spacing: g.letter-spacing(3);
+  padding: calc(g.rem(10) - g.rem(2)) calc(g.rem(30) - g.rem(2));
+  border: 2px solid currentColor;
+  border-radius: g.rem(60);
+  background-color: g.$c-sub;
+  font-size: g.rem(16);
+  line-height: 1.7;
+  color: g.$c-base;
+  min-width: g.rem(150);
+  text-align: center;
+
+  &--type2 {
+    background-color: g.$c-base;
+    color: g.$c-sub;
+  }
 }
