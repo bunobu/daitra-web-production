@@ -79,17 +79,6 @@
     text-align: left;
     margin-top: g.rem(30);
   }
-
-  a {
-    display: inline-block;
-    font-weight: g.$f-weight-bold;
-    color: g.$c-sub;
-    letter-spacing: g.letter-spacing(3);
-    padding: g.rem(10 - 2) g.rem(30 - 2);
-    background-color: g.$c-base;
-    border-radius: g.rem(60);
-    border: g.rem(2) solid g.$c-sub;
-  }
 }
 
 .mv__img {
