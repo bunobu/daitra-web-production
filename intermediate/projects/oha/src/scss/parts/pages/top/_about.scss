@@ -29,9 +29,9 @@
   position: relative;
   padding-top: g.rem(288);
   padding-bottom: g.rem(105);
-  margin-top: g.rem(150);
+  margin-top: g.rem(143);
   @include g.mq(md) {
-    margin-top: g.rem(176);
+    margin-top: g.rem(169);
     padding-top: g.rem(284);
     padding-bottom: g.rem(100);
   }
@@ -81,7 +81,7 @@
 }
 
 .about__pop {
-  margin-top: g.rem(40);
+  margin-top: g.rem(43);
   font-weight: g.$f-weight-bold;
   line-height: 1;
   text-align: center;
