@@ -11,7 +11,7 @@
   border-radius: g.rem(20);
   padding: g.rem(40) g.rem(12);
   @include g.mq(md) {
-    padding: g.rem(40) g.rem(105) g.rem(34);
+    padding: g.rem(40) calc(105 / 1140 * 100%) g.rem(34);
     border-radius: g.rem(30);
   }
 }
