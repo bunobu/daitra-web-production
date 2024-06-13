@@ -3,6 +3,10 @@
 .news {
   padding-top: g.rem(60);
   padding-bottom: g.rem(60);
+  @include g.mq(md) {
+    padding-top: g.rem(50);
+    padding-bottom: g.rem(50);
+  }
 }
 
 .news__card {
@@ -31,6 +35,9 @@
 
 .news__lists {
   margin-top: g.rem(28);
+  @include g.mq(md) {
+    margin-top: g.rem(30);
+  }
 }
 
 .news__list {
@@ -62,5 +69,6 @@
     display: inline-block;
     padding-bottom: g.rem(10 - 2);
     border-bottom: g.rem(2) solid g.$c-base;
+    vertical-align: bottom;
   }
 }

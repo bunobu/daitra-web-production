@@ -3,7 +3,7 @@
 .news-link {
   display: flex;
   flex-direction: column;
-  gap: g.rem(8);
+  gap: g.rem(7);
   padding-top: g.rem(10);
   padding-bottom: g.rem(10);
   @include g.mq(md) {
