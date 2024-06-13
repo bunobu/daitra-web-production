@@ -26,7 +26,7 @@
   line-height: 1;
   letter-spacing: g.letter-spacing(10);
   @include g.mq(md) {
-    font-size: g.rem(38);
+    font-size: g.rem(50);
   }
 }
 
@@ -56,6 +56,7 @@
     width: 100%;
     height: auto;
     aspect-ratio: 345 / 194;
+    vertical-align: top;
     @include g.mq(md) {
       aspect-ratio: 640 / 360;
     }
