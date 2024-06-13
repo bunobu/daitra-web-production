@@ -1,0 +1,112 @@
+@use "@global" as g;
+
+.about {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  overflow: hidden;
+  @include g.mq(md) {
+    padding-top: g.rem(50);
+    padding-bottom: g.rem(100);
+  }
+}
+
+.about__inner {
+}
+
+.about__title {
+  text-align: center;
+
+  img {
+    width: g.rem(180);
+    display: inline-block;
+    @include g.mq(md) {
+      width: g.rem(230);
+    }
+  }
+}
+
+.about__content {
+  position: relative;
+  padding-top: g.rem(288);
+  padding-bottom: g.rem(105);
+  margin-top: g.rem(150);
+  @include g.mq(md) {
+    margin-top: g.rem(176);
+    padding-top: g.rem(284);
+    padding-bottom: g.rem(100);
+  }
+
+  &::before {
+    content: "";
+    width: g.rem(1100);
+    height: g.rem(1100);
+    border-radius: 50%;
+    background: g.$c-gradation;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: g.z-index(-1);
+    @include g.mq(md) {
+      width: g.rem(800);
+      height: g.rem(800);
+    }
+  }
+}
+
+.about__img {
+  position: absolute;
+  top: g.rem(-110);
+  text-align: center;
+  width: 100%;
+  @include g.mq(md) {
+    top: g.rem(-126);
+  }
+
+  img {
+    width: g.rem(320);
+    display: inline-block;
+    @include g.mq(md) {
+      width: g.rem(330);
+    }
+  }
+}
+
+.about__text {
+  font-weight: g.$f-weight-bold;
+  font-size: g.rem(16);
+  line-height: 2.3;
+  text-align: center;
+  color: g.$c-base;
+}
+
+.about__pop {
+  margin-top: g.rem(40);
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: g.letter-spacing(8);
+  color: g.$c-base;
+  @include g.mq(md) {
+    margin-top: g.rem(42);
+  }
+}
+
+.about__button {
+  margin-top: g.rem(12);
+  @include g.mq(md) {
+    margin-top: g.rem(15);
+  }
+
+  button {
+    display: block;
+    font-weight: g.$f-weight-bold;
+    letter-spacing: g.letter-spacing(3);
+    padding: calc(g.rem(10) - g.rem(2)) calc(g.rem(30) - g.rem(2));
+    border: 2px solid g.$c-base;
+    border-radius: g.rem(60);
+    background-color: g.$c-sub;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

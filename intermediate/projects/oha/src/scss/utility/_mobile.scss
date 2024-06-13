@@ -1,8 +1,8 @@
 @use "@global" as g;
 
-.u-desktop-show {
+.mobile-hidden {
   display: none;
-  @include g.mq("md") {
+  @include g.mq(md) {
     display: block;
   }
 }
