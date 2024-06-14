@@ -41,7 +41,7 @@
   padding: g.rem(54) g.rem(40) g.rem(48);
   @include g.mq(md) {
     border-radius: g.rem(40);
-    padding: g.rem(44) g.rem(96) g.rem(56);
+    padding: g.rem(44) g.rem(10) g.rem(56);
   }
 }
 
@@ -95,6 +95,9 @@
     margin-top: g.rem(40);
     flex-direction: row;
     gap: g.rem(24);
+    max-width: g.rem(948);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
