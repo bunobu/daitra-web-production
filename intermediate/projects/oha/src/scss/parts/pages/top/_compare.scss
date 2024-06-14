@@ -28,9 +28,10 @@
 .compare__content {
   margin-top: g.rem(40);
   overflow-x: auto;
-  padding-bottom: g.rem(29 + 1.5);
+  padding-bottom: g.rem(27);
   @include g.mq() {
     margin-top: g.rem(60);
+    padding-bottom: 0;
   }
 
   &::-webkit-scrollbar {
@@ -52,10 +53,10 @@
   width: g.rem(620);
   table-layout: fixed;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
   @include g.mq(md) {
     width: g.rem(1000);
-    margin-left: auto;
-    margin-right: auto;
   }
 
   th,
@@ -89,6 +90,7 @@
       img {
         display: inline-block;
         width: g.rem(70);
+        vertical-align: middle;
         @include g.mq(md) {
           width: g.rem(123);
         }
@@ -120,6 +122,11 @@
   tbody {
     tr {
       border-top: 1.5px solid #000;
+    }
+
+    th,
+    th {
+      height: calc(60px - 1.5px);
     }
   }
 }
