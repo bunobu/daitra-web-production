@@ -504,9 +504,68 @@
           </div>
           <form action="" class="contact__form">
             <div class="contact__fields">
-              <div class="contact__field">お名前</div>
-              <div class="contact__field">メールアドレス</div>
-              <div class="contact__field">お問い合わせ項目</div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="yourName" class="form-field__label"
+                      >お名前</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      type="text"
+                      name=""
+                      id="yourName"
+                      placeholder="田中 おは次郎"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="yourEmail" class="form-field__label"
+                      >メールアドレス</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      type="email"
+                      name=""
+                      id="yourEmail"
+                      placeholder="info@oha.com"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <div class="form-field__label">お問い合わせ項目</div>
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <div class="form-field__radio-wrapper">
+                      <label class="form-field__radio">
+                        <input type="radio" name="yourName" id="" />
+                        <span class="form-field__radio-text">
+                          アプリの質問</span
+                        >
+                      </label>
+                      <label class="form-field__radio">
+                        <input type="radio" name="yourName" id="" />
+                        <span class="form-field__radio-text"> 取材の依頼</span>
+                      </label>
+                      <label class="form-field__radio">
+                        <input type="radio" name="yourName" id="" />
+                        <span class="form-field__radio-text"> その他</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="contact__field">年代</div>
               <div class="contact__field">お問い合わせ内容</div>
             </div>
