@@ -5,14 +5,22 @@
   border-radius: g.rem(20);
   padding: g.rem(10) g.rem(20) g.rem(24);
   @include g.mq(md) {
-    padding: g.rem(20) g.rem(110);
+    padding: g.rem(20) g.rem(18);
+  }
+}
+
+.merit-box__inner {
+  @include g.mq(md) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: g.rem(50);
+    max-width: g.rem(920);
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  &--reverse {
+  .merit-box--reverse & {
     @include g.mq(md) {
       flex-direction: row;
     }
