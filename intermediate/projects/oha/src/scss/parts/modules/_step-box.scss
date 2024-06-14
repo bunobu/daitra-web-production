@@ -49,7 +49,7 @@
   border-radius: g.rem(30);
   background: g.$c-sub;
   overflow: hidden;
-  padding: g.rem(50) g.rem(10) g.rem(26);
+  padding: g.rem(50 - 3) g.rem(10 - 3) g.rem(26 - 3);
   text-align: center;
 }
 
@@ -68,7 +68,8 @@
   font-weight: g.$f-weight-bold;
   line-height: 1.7;
   letter-spacing: g.letter-spacing(3);
+  margin-top: g.rem(3);
   @include g.mq(md) {
-    margin-top: g.rem(10);
+    margin-top: g.rem(4);
   }
 }
