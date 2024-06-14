@@ -30,11 +30,12 @@
 .merit-box__img {
   text-align: center;
   @include g.mq(md) {
-    width: calc(320 / 920 * 100%);
+    width: calc(350 / 920 * 100%);
   }
 
   img {
     display: inline-block;
+    vertical-align: middle;
     width: g.rem(200);
     @include g.mq(md) {
       width: g.rem(350);
@@ -46,6 +47,7 @@
   margin-top: g.rem(18);
   @include g.mq(md) {
     width: calc(520 / 920 * 100%);
+    margin-top: 0;
   }
 }
 
