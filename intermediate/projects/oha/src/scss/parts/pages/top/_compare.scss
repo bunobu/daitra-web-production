@@ -1,0 +1,137 @@
+@use "@global" as g;
+
+.compare {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  background-color: g.$c-sub;
+  @include g.mq(md) {
+    padding-top: g.rem(100);
+    padding-bottom: g.rem(100);
+  }
+}
+
+.compare__inner {
+  padding-right: g.rem(g.$l-sp-padding);
+  padding-left: g.rem(g.$l-sp-padding);
+}
+
+.compare__title {
+  font-size: g.rem(20);
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  text-align: center;
+  @include g.mq(md) {
+    font-size: g.rem(24);
+  }
+}
+
+.compare__content {
+  margin-top: g.rem(40);
+  overflow-x: auto;
+  padding-bottom: g.rem(29 + 1.5);
+  @include g.mq() {
+    margin-top: g.rem(60);
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 7px;
+    background: #d9d9d9;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #fabe00;
+    border-radius: 20px;
+  }
+}
+
+.compare__table {
+  width: g.rem(620);
+  table-layout: fixed;
+  border-collapse: collapse;
+  @include g.mq(md) {
+    width: g.rem(1000);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  th,
+  td {
+    text-align: center;
+    font-weight: g.$f-weight-bold;
+    height: g.rem(60);
+    vertical-align: middle;
+    @include g.mq(md) {
+      height: g.rem(100);
+    }
+
+    &:nth-child(1) {
+      width: g.rem(130);
+      letter-spacing: g.letter-spacing(3);
+      @include g.mq(md) {
+        width: g.rem(250);
+      }
+    }
+
+    &:nth-child(2) {
+      width: g.rem(90);
+      background: #fff9e5;
+      font-size: g.rem(16);
+      letter-spacing: g.letter-spacing(3);
+      @include g.mq(md) {
+        width: g.rem(250);
+        font-size: g.rem(25);
+      }
+
+      img {
+        display: inline-block;
+        width: g.rem(70);
+        @include g.mq(md) {
+          width: g.rem(123);
+        }
+      }
+    }
+  }
+
+  th {
+    letter-spacing: g.letter-spacing(3);
+    @include g.mq(md) {
+      font-size: g.rem(20);
+    }
+  }
+
+  td {
+    font-size: g.rem(14);
+    letter-spacing: g.letter-spacing(3);
+    @include g.mq(md) {
+      font-size: g.rem(16);
+    }
+  }
+
+  thead {
+    th {
+      letter-spacing: g.letter-spacing(10);
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 1.5px solid #000;
+    }
+  }
+}
+
+.compare__attention {
+  color: #686868;
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  text-align: center;
+  margin-top: g.rem(11);
+  @include g.mq(md) {
+    display: none;
+  }
+}
