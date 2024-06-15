@@ -30,6 +30,8 @@
   @include g.mq(md) {
     max-width: g.rem(612);
     margin-top: g.rem(50);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
