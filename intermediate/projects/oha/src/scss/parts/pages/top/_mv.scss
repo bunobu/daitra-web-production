@@ -1,0 +1,105 @@
+@use "@global" as g;
+
+.mv {
+  border-radius: g.rem(20);
+  max-width: calc(100% - g.rem(g.$l-sp-padding * 2));
+  background: g.$c-gradation;
+  margin: 0 auto;
+  @include g.mq(md) {
+    border-radius: g.rem(30);
+    max-width: calc(100% - g.rem(g.$l-pc-padding * 2));
+  }
+}
+
+.mv__inner {
+  padding: g.rem(50) g.rem(20) g.rem(255);
+  position: relative;
+  @include g.mq(md) {
+    padding-top: g.rem(110);
+    padding-bottom: g.rem(109);
+    padding-right: g.rem(g.$l-pc-padding);
+    padding-left: g.rem(g.$l-pc-padding);
+    max-width: g.rem(1040 + g.$l-pc-padding * 2);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mv__content {
+}
+
+.mv__lead {
+  :not(:first-child) {
+    margin-top: g.rem(8);
+    @include g.mq() {
+      margin-top: g.rem(14);
+    }
+  }
+}
+
+.mv__lead1,
+.mv__lead2 {
+  font-weight: g.$f-weight-bold;
+  font-size: g.rem(22);
+  line-height: 1;
+  letter-spacing: g.letter-spacing(10);
+  font-feature-settings: "palt" on;
+  border-radius: g.rem(5);
+  background-color: g.$c-sub;
+  padding: g.rem(10);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+
+  @include g.mq(md) {
+    margin: initial;
+    font-size: g.rem(38);
+    padding: g.rem(12) g.rem(16);
+  }
+}
+
+.mv__description {
+  font-weight: g.$f-weight-bold;
+  text-align: center;
+  letter-spacing: g.letter-spacing(3);
+  margin-top: g.rem(26);
+
+  @include g.mq(md) {
+    text-align: left;
+    margin-top: g.rem(20);
+    font-size: g.rem(18);
+  }
+}
+
+.mv__button {
+  margin-top: g.rem(22);
+  text-align: center;
+
+  @include g.mq(md) {
+    text-align: left;
+    margin-top: g.rem(30);
+  }
+}
+
+.mv__img {
+  position: absolute;
+  right: 0;
+  bottom: g.rem(-113);
+  text-align: center;
+  width: 100%;
+  @include g.mq(md) {
+    width: calc(g.rem(600) / g.rem(1100) * 100%);
+    right: g.rem(30);
+    bottom: g.rem(-96);
+    text-align: right;
+  }
+
+  img {
+    display: inline-block;
+    max-width: g.rem(345);
+    width: 100%;
+    @include g.mq(md) {
+      max-width: g.rem(600);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "@global" as g;
+
+.merit {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  @include g.mq(md) {
+    padding-top: g.rem(100);
+    padding-bottom: g.rem(98);
+  }
+}
+
+.merit__inner {
+}
+
+.merit__title {
+}
+
+.merit__box-wrapper {
+  margin-top: g.rem(30);
+  display: flex;
+  flex-direction: column;
+  gap: g.rem(30);
+  @include g.mq(md) {
+    margin-top: g.rem(60);
+    gap: g.rem(40);
+  }
+}
+
+.merit__box {
+}

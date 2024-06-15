@@ -1,0 +1,62 @@
+@use "@global" as g;
+
+.form-field {
+  @include g.mq(md) {
+    display: flex;
+    gap: g.rem(32);
+  }
+}
+
+.form-field__head {
+  display: flex;
+  gap: g.rem(10);
+  align-items: center;
+  @include g.mq(md) {
+    width: g.rem(180);
+    gap: g.rem(10);
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+}
+
+.form-field__label {
+  font-size: g.rem(16);
+  font-weight: g.$f-weight-bold;
+}
+
+.form-field__tag {
+  border-radius: g.rem(2);
+  background: #ee8013;
+  display: inline-block;
+  padding: g.rem(6) g.rem(8) g.rem(5);
+  color: g.$c-sub;
+  font-size: g.rem(11);
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  letter-spacing: g.letter-spacing(18);
+
+  &--option {
+    background-color: #43b549;
+  }
+}
+
+.form-field__item {
+  margin-top: g.rem(14);
+  @include g.mq(md) {
+    flex-grow: 1;
+    margin-top: 0;
+  }
+}
+
+.form-field__radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: g.rem(16);
+  @include g.mq(md) {
+    flex-direction: row;
+    gap: g.rem(30);
+  }
+}
+
+.form-field__radio {
+}

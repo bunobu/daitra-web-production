@@ -1,0 +1,31 @@
+@use "@global" as g;
+
+.section-title {
+  text-align: center;
+  display: block;
+}
+
+.section-title__en {
+  display: block;
+  font-size: g.rem(38);
+  font-family: g.$f-family-en;
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  letter-spacing: g.letter-spacing(10);
+  @include g.mq(md) {
+    font-size: g.rem(50);
+  }
+}
+
+.section-title__ja {
+  display: block;
+  font-size: g.rem(14);
+  font-family: g.$f-family-en;
+  font-weight: g.$f-weight-regular;
+  line-height: 1;
+  letter-spacing: g.letter-spacing(8);
+  margin-top: g.rem(14);
+  @include g.mq(md) {
+    font-size: g.rem(16);
+  }
+}

@@ -1,0 +1,201 @@
+@use "@global" as g;
+
+.form-text {
+  border-radius: g.rem(5);
+  border: 3px solid g.$c-base;
+  background: g.$c-sub;
+  width: 100%;
+  padding: g.rem(15 - 3) g.rem(16 - 3) g.rem(14 - 3);
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: g.$c-accent2;
+    outline: none;
+  }
+}
+
+.form-radio {
+  line-height: calc(23 / 16);
+
+  &:hover {
+    .form-radio__text::before {
+      border-color: g.$c-accent2;
+    }
+  }
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked {
+    + .form-radio__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    + .form-radio__text {
+      &::before {
+        border-color: g.$c-accent2;
+      }
+    }
+  }
+}
+
+.form-radio__text {
+  font-weight: g.$f-weight-bold;
+  position: relative;
+  padding-left: g.rem(28);
+  line-height: calc(24 / 16);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: g.rem(24);
+    height: g.rem(24);
+    border: 3px solid g.$c-base;
+    left: 0;
+    transition: border-color 0.3s;
+  }
+
+  &::after {
+    width: g.rem(10);
+    height: g.rem(10);
+    background: g.$c-accent1;
+    left: g.rem(7);
+    opacity: 0;
+  }
+}
+
+.form-select {
+  appearance: none; //ブラウザ標準のスタイルを無効化
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #111;
+  background: #fff;
+  font-weight: g.$f-weight-bold;
+  padding: g.rem(15 - 3) g.rem(46 - 3) g.rem(14 - 3) g.rem(16 - 3);
+  // selectは疑似要素が使えないので、背景画像で矢印を表示
+  // prettier-ignore
+  background: url(../img/polygon1-icon.svg) no-repeat center right 14px / 13px 10px;
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: g.$c-accent2;
+    outline: none;
+  }
+}
+
+.form-textarea {
+  border-radius: 5px;
+  border: 3px solid g.$c-base;
+  background: g.$c-sub;
+  width: 100%;
+  height: g.rem(180);
+  padding: g.rem(16 - 3);
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: g.$c-accent2;
+    outline: none;
+  }
+}
+
+.form-checkbox {
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+  line-height: 1.7;
+
+  &:hover {
+    .form-checkbox__text::before {
+      border-color: g.$c-accent2;
+    }
+  }
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked {
+    + .form-checkbox__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    + .form-checkbox__text {
+      &::before {
+        border-color: g.$c-accent2;
+        outline: line;
+      }
+    }
+  }
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: g.rem(30);
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    width: g.rem(20);
+    height: g.rem(20);
+    border-radius: 1px;
+    border: 1px solid g.$c-base;
+    transform: border-color 0.3s;
+  }
+
+  &::after {
+    background: url(../img/check1-icon.svg) no-repeat center center / contain;
+    width: g.rem(23);
+    height: g.rem(17.53);
+    left: g.rem(1);
+    margin-top: g.rem(-1.2);
+    opacity: 0;
+  }
+
+  a {
+    text-decoration-line: underline;
+    font-weight: inherit;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: g.$c-accent1;
+      text-decoration-color: currentColor;
+    }
+  }
+}

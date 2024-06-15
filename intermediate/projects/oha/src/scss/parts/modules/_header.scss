@@ -1,0 +1,47 @@
+@use "@global" as g;
+
+.header {
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: g.rem(22);
+  padding-bottom: g.rem(22);
+  align-items: center;
+
+  @include g.mq(md) {
+    padding-bottom: g.rem(21);
+  }
+}
+
+.header__logo {
+  width: g.rem(100px);
+  min-height: g.rem(26);
+  @include g.mq(md) {
+    width: g.rem(135);
+    margin-top: g.rem(3);
+  }
+}
+
+.header__nav {
+  display: none;
+  @include g.mq(md) {
+    display: flex;
+    align-items: center;
+    gap: g.rem(40);
+  }
+}
+
+.header__link {
+  font-weight: g.$f-weight-bold;
+  letter-spacing: g.letter-spacing(3);
+  transition: color 0.3s;
+
+  &:hover {
+    color: g.$c-accent2;
+  }
+}
+
+.header__button {
+}

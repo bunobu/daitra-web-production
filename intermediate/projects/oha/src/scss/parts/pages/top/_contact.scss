@@ -1,0 +1,61 @@
+@use "@global" as g;
+
+.contact {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  background: url(../img/section-bg.png) repeat top left / g.rem(529) auto;
+  @include g.mq(md) {
+    padding-top: g.rem(100);
+    padding-bottom: g.rem(100);
+  }
+}
+
+.contact__inner {
+}
+
+.contact__box {
+  border-radius: g.rem(30);
+  background: g.$c-sub;
+  padding: g.rem(60) g.rem(20);
+}
+
+.contact__title {
+}
+
+.how-to-use__title {
+}
+
+.contact__form {
+  margin-top: g.rem(30);
+  @include g.mq(md) {
+    max-width: g.rem(612);
+    margin-top: g.rem(50);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: g.rem(26);
+  @include g.mq(md) {
+    gap: g.rem(29);
+  }
+}
+
+.contact__field {
+}
+
+.contact__privacy {
+  margin-top: g.rem(29);
+  text-align: center;
+}
+
+.contact__button {
+  margin-top: g.rem(36);
+  text-align: center;
+  @include g.mq(md) {
+    margin-top: g.rem(38);
+  }
+}

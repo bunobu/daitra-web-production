@@ -1,0 +1,37 @@
+@use "@global" as g;
+
+.movie {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  background: url(../img/section-bg.png) repeat top left / g.rem(529) auto;
+  @include g.mq(md) {
+    padding-top: g.rem(100);
+    padding-bottom: g.rem(100);
+  }
+}
+
+.movie__inner {
+  padding-right: g.rem(g.$l-sp-padding);
+  padding-left: g.rem(g.$l-sp-padding);
+}
+
+.movie__iframe {
+  margin-top: g.rem(32);
+  width: 100%;
+  @include g.mq(md) {
+    margin-top: g.rem(56);
+    max-width: g.rem(640);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 345 / 194;
+    vertical-align: top;
+    @include g.mq(md) {
+      aspect-ratio: 640 / 360;
+    }
+  }
+}

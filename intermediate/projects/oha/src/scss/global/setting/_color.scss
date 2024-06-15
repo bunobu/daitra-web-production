@@ -1,0 +1,16 @@
+// 色関連の設定
+// 色関連はprefixにc-をつける
+
+// color
+$c-base: #111;
+$c-sub: #fff;
+$c-accent1: #f5810e;
+$c-accent2: #fabe00;
+$c-gradation: linear-gradient(180deg, #f8b819 0%, #efd320 100%);
+
+// background-color
+$c-background-base: #fafafa;
+$c-background-sub: #fff;
+
+// box-shadow
+$c-shadow-white: #f4f4f4;

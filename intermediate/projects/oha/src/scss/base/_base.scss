@@ -1,0 +1,36 @@
+/* >>> base - サイト共通のスタイル */
+@use "@global" as g;
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  // root-fontの設定
+  font-size: 100%;
+  font-size: calc(100vw * 16 / 375);
+  @include g.mq(md) {
+    font-size: g.rem(g.$f-base-size);
+  }
+}
+
+body {
+  font-family: g.$f-family-ja;
+  font-weight: g.$f-weight-regular;
+  line-height: g.$f-line-height-base;
+  color: g.$c-base;
+  background-color: g.$c-background-base;
+}
+
+// a:not([class]) {
+//   @include g.mq(md) {
+//     transition: opacity 0.3s;
+//     &:hover {
+//       opacity: 0.7;
+//     }
+//   }
+// }
+
+/* <<< base - サイト共通のスタイル */
