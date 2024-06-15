@@ -515,6 +515,7 @@
                   </div>
                   <div class="form-field__item">
                     <input
+                      class="form-text"
                       type="text"
                       name=""
                       id="yourName"
@@ -534,6 +535,7 @@
                   </div>
                   <div class="form-field__item">
                     <input
+                      class="form-text"
                       type="email"
                       name=""
                       id="yourEmail"
@@ -551,19 +553,32 @@
                   </div>
                   <div class="form-field__item">
                     <div class="form-field__radio-wrapper">
-                      <label class="form-field__radio">
-                        <input type="radio" name="yourName" id="" />
-                        <span class="form-field__radio-text">
-                          アプリの質問</span
-                        >
+                      <label class="form-field__radio form-radio">
+                        <input
+                          class="form-radio__input"
+                          type="radio"
+                          name="your-name"
+                          id=""
+                        />
+                        <span class="form-radio__text"> アプリの質問</span>
                       </label>
-                      <label class="form-field__radio">
-                        <input type="radio" name="yourName" id="" />
-                        <span class="form-field__radio-text"> 取材の依頼</span>
+                      <label class="form-field__radio form-radio">
+                        <input
+                          class="form-radio__input"
+                          type="radio"
+                          name="your-name"
+                          id=""
+                        />
+                        <span class="form-radio__text"> 取材の依頼</span>
                       </label>
-                      <label class="form-field__radio">
-                        <input type="radio" name="yourName" id="" />
-                        <span class="form-field__radio-text"> その他</span>
+                      <label class="form-field__radio form-radio">
+                        <input
+                          class="form-radio__input"
+                          type="radio"
+                          name="your-name"
+                          id=""
+                        />
+                        <span class="form-radio__text"> その他</span>
                       </label>
                     </div>
                   </div>
@@ -574,7 +589,7 @@
                 <div class="form-field">
                   <div class="form-field__head">
                     <label
-                      for="yourAge"
+                      for="your-age"
                       class="form-field__label form-field__label"
                       >年代</label
                     >
@@ -584,7 +599,7 @@
                   </div>
                   <div class="form-field__item">
                     <div class="form-field__radio-wrapper">
-                      <select name="yourAge" id="yourAge">
+                      <select name="your-age" id="your-age" class="form-select">
                         <option value="">選択してください</option>
                         <option value="10代">10代</option>
                         <option value="20代">20代</option>
@@ -611,6 +626,7 @@
                   <div class="form-field__item">
                     <div class="form-field__radio-wrapper">
                       <textarea
+                        class="form-textarea"
                         name="your-message"
                         id="your-message"
                         placeholder="ここに文章を入力してくださいここに文章を入力してください"

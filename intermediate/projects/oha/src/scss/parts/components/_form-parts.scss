@@ -1,0 +1,80 @@
+@use "@global" as g;
+
+.form-text {
+  border-radius: g.rem(5);
+  border: 3px solid g.$c-base;
+  background: g.$c-sub;
+  width: 100%;
+  padding: g.rem(15) g.rem(16) g.rem(14);
+}
+
+.form-radio {
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked {
+    + .form-radio__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-radio__text {
+  font-weight: g.$f-weight-bold;
+  position: relative;
+  padding-left: g.rem(28);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: g.rem(24);
+    height: g.rem(24);
+    border: 3px solid g.$c-base;
+    left: 0;
+  }
+
+  &::after {
+    width: g.rem(10);
+    height: g.rem(10);
+    background: g.$c-accent1;
+    left: g.rem(7);
+    opacity: 0;
+  }
+}
+
+.form-select {
+  appearance: none; //ブラウザ標準のスタイルを無効化
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid #111;
+  background: #fff;
+  font-weight: g.$f-weight-bold;
+  padding: g.rem(15) g.rem(46) g.rem(14) g.rem(16);
+  // selectは疑似要素が使えないので、背景画像で矢印を表示
+  // prettier-ignore
+  background: url(../img/polygon1-icon.svg) no-repeat center right 16px / 13px 10px;
+}
+
+.form-textarea {
+  border-radius: 5px;
+  border: 3px solid g.$c-base;
+  background: g.$c-sub;
+  width: 100%;
+  height: g.rem(180);
+  padding: g.rem(16);
+}
