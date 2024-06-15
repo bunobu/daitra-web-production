@@ -60,3 +60,13 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}

@@ -1,5 +1,63 @@
 // 変数まとめ
 
-.test {
-  color: rosybrown;
+$color-1: #333;
+$accent-color: #fabe00;
+
+// >>> base
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  background-color: #f5f5f5;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 40px;
+  background-color: #fff;
+}
+
+// <<< base
+
+.button-wrapper {
+  margin-top: 30px;
+}
+
+.button-type1 {
+  display: inline-block;
+  color: $color-1;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  background: $accent-color;
+  text-align: center;
+  border-radius: 3px;
+  padding: 10px 16px;
+}
+
+.button-type2 {
+  display: inline-block;
+  color: $color-1;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  padding: 10px 30px 10px 16px;
+  position: relative;
+  background: $accent-color;
+  border-radius: 3px;
+  min-width: 230px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../img/arrow.svg) no-repeat center center / contain;
+  }
 }
