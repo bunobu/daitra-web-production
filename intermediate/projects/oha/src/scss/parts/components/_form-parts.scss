@@ -15,7 +15,7 @@
   width: 1px;
   height: 1px;
   position: absolute;
-  clip: rect(0, 0, 0, 0);
+  clip-path: rect(0 0 0 0);
   overflow: hidden;
 
   &:checked {
@@ -77,4 +77,63 @@
   width: 100%;
   height: g.rem(180);
   padding: g.rem(16);
+}
+
+.form-checkbox {
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+  line-height: 1.7;
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked {
+    + .form-checkbox__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: g.rem(30);
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    width: g.rem(20);
+    height: g.rem(20);
+    border-radius: 1px;
+    border: 1px solid g.$c-base;
+  }
+
+  &::after {
+    background: url(../img/check1-icon.svg) no-repeat center center / contain;
+    width: g.rem(23);
+    height: g.rem(17.53);
+    left: g.rem(1);
+    margin-top: g.rem(-1.2);
+    opacity: 0;
+  }
+
+  a {
+    text-decoration-line: underline;
+    font-weight: inherit;
+  }
 }
