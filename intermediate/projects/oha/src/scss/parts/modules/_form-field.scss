@@ -24,6 +24,10 @@
   font-weight: g.$f-weight-bold;
   line-height: 1;
   letter-spacing: g.letter-spacing(18);
+
+  &--option {
+    background-color: #43b549;
+  }
 }
 
 .form-field__item {
@@ -52,6 +56,28 @@
         }
       }
     }
+  }
+
+  select {
+    appearance: none; //ブラウザ標準のスタイルを無効化
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #111;
+    background: #fff;
+    font-weight: g.$f-weight-bold;
+    padding: g.rem(15) g.rem(46) g.rem(14) g.rem(16);
+    // selectは疑似要素が使えないので、背景画像で矢印を表示
+    // prettier-ignore
+    background: url(../img/polygon1-icon.svg) no-repeat center right 16px / 13px 10px;
+  }
+
+  textarea {
+    border-radius: 5px;
+    border: 3px solid g.$c-base;
+    background: g.$c-sub;
+    width: 100%;
+    height: g.rem(180);
+    padding: g.rem(16);
   }
 }
 

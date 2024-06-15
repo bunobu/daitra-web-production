@@ -504,6 +504,7 @@
           </div>
           <form action="" class="contact__form">
             <div class="contact__fields">
+              <!-- お名前 input -->
               <div class="contact__field">
                 <div class="form-field">
                   <div class="form-field__head">
@@ -522,6 +523,7 @@
                   </div>
                 </div>
               </div>
+              <!-- メールアドレス input -->
               <div class="contact__field">
                 <div class="form-field">
                   <div class="form-field__head">
@@ -540,6 +542,7 @@
                   </div>
                 </div>
               </div>
+              <!-- お問い合わせ項目 radio -->
               <div class="contact__field">
                 <div class="form-field">
                   <div class="form-field__head">
@@ -566,8 +569,56 @@
                   </div>
                 </div>
               </div>
-              <div class="contact__field">年代</div>
-              <div class="contact__field">お問い合わせ内容</div>
+              <!-- 年代 select -->
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label
+                      for="yourAge"
+                      class="form-field__label form-field__label"
+                      >年代</label
+                    >
+                    <span class="form-field__tag form-field__tag--option"
+                      >任意</span
+                    >
+                  </div>
+                  <div class="form-field__item">
+                    <div class="form-field__radio-wrapper">
+                      <select name="yourAge" id="yourAge">
+                        <option value="">選択してください</option>
+                        <option value="10代">10代</option>
+                        <option value="20代">20代</option>
+                        <option value="30代">30代</option>
+                        <option value="40代">40代</option>
+                        <option value="50代">50代</option>
+                        <option value="60代">60代</option>
+                        <option value="70代">70代</option>
+                        <option value="80代">80代</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- お問い合わせ内容 textarea -->
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-message" class="form-field__label"
+                      >お問い合わせ内容</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <div class="form-field__radio-wrapper">
+                      <textarea
+                        name="your-message"
+                        id="your-message"
+                        placeholder="ここに文章を入力してくださいここに文章を入力してください"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="contact__privacy">プライバシーポリシーに同意する</div>
             <div class="contact__button">送信する</div>
