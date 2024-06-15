@@ -38,19 +38,22 @@
 .contact__fields {
   display: flex;
   flex-direction: column;
-  gap: g.rem(30);
+  gap: g.rem(26);
+  @include g.mq(md) {
+    gap: g.rem(29);
+  }
 }
 
 .contact__field {
 }
 
 .contact__privacy {
-  margin-top: g.rem(30);
+  margin-top: g.rem(29);
   text-align: center;
 }
 
 .contact__button {
-  margin-top: g.rem(30);
+  margin-top: g.rem(36);
   text-align: center;
   @include g.mq(md) {
     margin-top: g.rem(38);

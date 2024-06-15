@@ -5,10 +5,11 @@
   border: 3px solid g.$c-base;
   background: g.$c-sub;
   width: 100%;
-  padding: g.rem(15) g.rem(16) g.rem(14);
+  padding: g.rem(15 - 3) g.rem(16 - 3) g.rem(14 - 3);
 }
 
 .form-radio {
+  line-height: calc(23 / 16);
 }
 
 .form-radio__input {
@@ -31,6 +32,7 @@
   font-weight: g.$f-weight-bold;
   position: relative;
   padding-left: g.rem(28);
+  line-height: calc(24 / 16);
 
   &::before,
   &::after {
@@ -64,10 +66,10 @@
   border: 3px solid #111;
   background: #fff;
   font-weight: g.$f-weight-bold;
-  padding: g.rem(15) g.rem(46) g.rem(14) g.rem(16);
+  padding: g.rem(15 - 3) g.rem(46 - 3) g.rem(14 - 3) g.rem(16 - 3);
   // selectは疑似要素が使えないので、背景画像で矢印を表示
   // prettier-ignore
-  background: url(../img/polygon1-icon.svg) no-repeat center right 16px / 13px 10px;
+  background: url(../img/polygon1-icon.svg) no-repeat center right 14px / 13px 10px;
 }
 
 .form-textarea {
@@ -76,7 +78,7 @@
   background: g.$c-sub;
   width: 100%;
   height: g.rem(180);
-  padding: g.rem(16);
+  padding: g.rem(16 - 3);
 }
 
 .form-checkbox {
