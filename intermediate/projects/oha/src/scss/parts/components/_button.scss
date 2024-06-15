@@ -21,6 +21,13 @@
     opacity: initial;
   }
 
+  &--submit {
+    &:focus {
+      background-color: g.$c-accent2;
+      outline: none;
+    }
+  }
+
   &--type2 {
     background-color: g.$c-base;
     color: g.$c-sub;

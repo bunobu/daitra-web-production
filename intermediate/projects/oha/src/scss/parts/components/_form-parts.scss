@@ -8,8 +8,10 @@
   padding: g.rem(15 - 3) g.rem(16 - 3) g.rem(14 - 3);
   transition: border-color 0.3s;
 
-  &:hover {
-    border: 3px solid g.$c-accent2;
+  &:hover,
+  &:focus {
+    border-color: g.$c-accent2;
+    outline: none;
   }
 }
 
@@ -34,6 +36,14 @@
     + .form-radio__text {
       &::after {
         opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    + .form-radio__text {
+      &::before {
+        border-color: g.$c-accent2;
       }
     }
   }
@@ -84,8 +94,10 @@
   background: url(../img/polygon1-icon.svg) no-repeat center right 14px / 13px 10px;
   transition: border-color 0.3s;
 
-  &:hover {
-    border: 3px solid g.$c-accent2;
+  &:hover,
+  &:focus {
+    border-color: g.$c-accent2;
+    outline: none;
   }
 }
 
@@ -98,8 +110,10 @@
   padding: g.rem(16 - 3);
   transition: border-color 0.3s;
 
-  &:hover {
-    border: 3px solid g.$c-accent2;
+  &:hover,
+  &:focus {
+    border-color: g.$c-accent2;
+    outline: none;
   }
 }
 
@@ -126,6 +140,15 @@
     + .form-checkbox__text {
       &::after {
         opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    + .form-checkbox__text {
+      &::before {
+        border-color: g.$c-accent2;
+        outline: line;
       }
     }
   }
@@ -168,7 +191,9 @@
     font-weight: inherit;
     transition: color 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
+      outline: none;
       color: g.$c-accent1;
       text-decoration-color: currentColor;
     }
