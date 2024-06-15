@@ -12,6 +12,7 @@
   img {
     width: g.rem(50);
     display: inline-block;
+    vertical-align: middle;
     @include g.mq(md) {
       width: g.rem(76);
     }
