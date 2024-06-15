@@ -49,6 +49,7 @@
 
 .contact__button {
   margin-top: g.rem(30);
+  text-align: center;
   @include g.mq(md) {
     margin-top: g.rem(38);
   }
