@@ -1,0 +1,18 @@
+@use "@global" as g;
+
+.footer {
+  padding-top: g.rem(18);
+  padding-bottom: g.rem(18);
+  text-align: center;
+  background-color: g.$c-base;
+}
+
+.footer__inner {
+}
+
+.footer__copyright {
+  color: #f5f5f5;
+  font-size: g.rem(12);
+  line-height: 1;
+  letter-spacing: g.letter-spacing(8);
+}

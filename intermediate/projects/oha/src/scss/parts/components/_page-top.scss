@@ -1,0 +1,19 @@
+@use "@global" as g;
+
+.page-top {
+  position: fixed;
+  right: g.rem(10);
+  bottom: g.rem(10);
+  @include g.mq(md) {
+    right: g.rem(16);
+    bottom: g.rem(30);
+  }
+
+  img {
+    width: g.rem(50);
+    display: inline-block;
+    @include g.mq(md) {
+      width: g.rem(76);
+    }
+  }
+}

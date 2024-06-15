@@ -1,0 +1,34 @@
+@use "@global" as g;
+
+.cta {
+  background: g.$c-gradation;
+  padding-top: g.rem(50);
+  padding-bottom: g.rem(50);
+  text-align: center;
+  @include g.mq(md) {
+    padding-top: g.rem(60);
+    padding-bottom: g.rem(60);
+  }
+}
+
+.cta__inner {
+}
+
+.cta__text {
+  font-weight: g.$f-weight-bold;
+  line-height: 2;
+  letter-spacing: g.letter-spacing(3);
+  @include g.mq(md) {
+    font-size: g.rem(18);
+  }
+}
+
+.pc-hidden {
+}
+
+.cta__button {
+  margin-top: g.rem(16);
+}
+
+.button {
+}
