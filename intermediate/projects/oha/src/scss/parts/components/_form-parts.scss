@@ -6,10 +6,21 @@
   background: g.$c-sub;
   width: 100%;
   padding: g.rem(15 - 3) g.rem(16 - 3) g.rem(14 - 3);
+  transition: border-color 0.3s;
+
+  &:hover {
+    border: 3px solid g.$c-accent2;
+  }
 }
 
 .form-radio {
   line-height: calc(23 / 16);
+
+  &:hover {
+    .form-radio__text::before {
+      border-color: g.$c-accent2;
+    }
+  }
 }
 
 .form-radio__input {
@@ -48,6 +59,7 @@
     height: g.rem(24);
     border: 3px solid g.$c-base;
     left: 0;
+    transition: border-color 0.3s;
   }
 
   &::after {
@@ -70,6 +82,11 @@
   // selectは疑似要素が使えないので、背景画像で矢印を表示
   // prettier-ignore
   background: url(../img/polygon1-icon.svg) no-repeat center right 14px / 13px 10px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border: 3px solid g.$c-accent2;
+  }
 }
 
 .form-textarea {
@@ -79,12 +96,23 @@
   width: 100%;
   height: g.rem(180);
   padding: g.rem(16 - 3);
+  transition: border-color 0.3s;
+
+  &:hover {
+    border: 3px solid g.$c-accent2;
+  }
 }
 
 .form-checkbox {
   font-size: g.rem(14);
   font-weight: g.$f-weight-bold;
   line-height: 1.7;
+
+  &:hover {
+    .form-checkbox__text::before {
+      border-color: g.$c-accent2;
+    }
+  }
 }
 
 .form-checkbox__input {
@@ -123,6 +151,7 @@
     height: g.rem(20);
     border-radius: 1px;
     border: 1px solid g.$c-base;
+    transform: border-color 0.3s;
   }
 
   &::after {
@@ -137,5 +166,11 @@
   a {
     text-decoration-line: underline;
     font-weight: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: g.$c-accent1;
+      text-decoration-color: currentColor;
+    }
   }
 }

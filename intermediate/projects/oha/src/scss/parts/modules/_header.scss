@@ -36,6 +36,11 @@
 .header__link {
   font-weight: g.$f-weight-bold;
   letter-spacing: g.letter-spacing(3);
+  transition: color 0.3s;
+
+  &:hover {
+    color: g.$c-accent2;
+  }
 }
 
 .header__button {

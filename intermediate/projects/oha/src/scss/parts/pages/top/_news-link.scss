@@ -6,11 +6,17 @@
   gap: g.rem(7);
   padding-top: g.rem(10);
   padding-bottom: g.rem(10);
+  transition: background-color 0.3s;
   @include g.mq(md) {
     flex-direction: row;
     padding-top: g.rem(12);
     padding-bottom: g.rem(12);
     gap: 0;
+  }
+
+  &:hover {
+    background-color: #fff9e5;
+    opacity: 1;
   }
 }
 

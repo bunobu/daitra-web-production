@@ -13,9 +13,21 @@
   color: g.$c-base;
   min-width: g.rem(150);
   text-align: center;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: g.$c-accent2;
+    opacity: initial;
+  }
 
   &--type2 {
     background-color: g.$c-base;
     color: g.$c-sub;
+
+    &:hover {
+      background-color: g.$c-sub;
+      color: g.$c-base;
+    }
   }
 }
