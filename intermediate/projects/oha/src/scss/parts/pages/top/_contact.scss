@@ -10,19 +10,10 @@
   }
 }
 
-.contact__inner {
-}
-
 .contact__box {
   border-radius: g.rem(30);
   background: g.$c-sub;
   padding: g.rem(60) g.rem(20);
-}
-
-.contact__title {
-}
-
-.how-to-use__title {
 }
 
 .contact__form {
@@ -42,9 +33,6 @@
   @include g.mq(md) {
     gap: g.rem(29);
   }
-}
-
-.contact__field {
 }
 
 .contact__privacy {
