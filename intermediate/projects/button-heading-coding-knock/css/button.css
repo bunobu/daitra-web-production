@@ -1,6 +1,7 @@
 :root {
   --color-black: #333;
   --color-accent: #fabe00;
+  --color-gradation-01: linear-gradient(90deg, #f5810e 0%, #fabe00 100%);
 }
 
 body {
@@ -96,4 +97,32 @@ main {
   padding: 10px 16px;
   -webkit-box-shadow: 0px 5px 0px 0px #e3a80e;
           box-shadow: 0px 5px 0px 0px #e3a80e;
+}
+
+.button-type5 {
+  display: inline-block;
+  color: var(--color-black);
+  font-size: 16px;
+  min-width: 230px;
+  font-weight: 700;
+  line-height: 1.7;
+  background: var(--color-accent);
+  border-radius: 3px;
+  padding: 10px 16px;
+  -webkit-box-shadow: 3px 3px 7px 0px #dcdcdc;
+          box-shadow: 3px 3px 7px 0px #dcdcdc;
+}
+
+.button-type6 {
+  display: inline-block;
+  color: var(--color-black);
+  font-size: 16px;
+  min-width: 229px;
+  font-weight: 700;
+  line-height: 1.7;
+  border-radius: 3px;
+  padding: 10px 16px;
+  background: var(--color-gradation-01);
+  -webkit-filter: drop-shadow(3px 3px 7px rgba(220, 220, 220, 0.25));
+          filter: drop-shadow(3px 3px 7px rgba(220, 220, 220, 0.25));
 }
