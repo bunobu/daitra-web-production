@@ -1,7 +1,9 @@
 // 変数まとめ
 
-$color-1: #333;
-$accent-color: #fabe00;
+:root {
+  --color-black: #333;
+  --color-accent: #fabe00;
+}
 
 // >>> base
 
@@ -28,11 +30,11 @@ main {
 
 .button-type1 {
   display: inline-block;
-  color: $color-1;
+  color: var(--color-black);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.7;
-  background: $accent-color;
+  background: var(--color-accent);
   text-align: center;
   border-radius: 3px;
   padding: 10px 16px;
@@ -40,24 +42,46 @@ main {
 
 .button-type2 {
   display: inline-block;
-  color: $color-1;
+  color: var(--color-black);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.7;
   padding: 10px 30px 10px 16px;
   position: relative;
-  background: $accent-color;
+  background: var(--color-accent);
   border-radius: 3px;
   min-width: 230px;
 
   &::before {
     content: "";
     position: absolute;
-    width: 6px;
-    height: 10px;
+    width: 7.5px;
+    height: 11.5px;
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
     background: url(../img/arrow.svg) no-repeat center center / contain;
+  }
+}
+
+.button-type3 {
+  display: inline-flex;
+  align-items: center;
+  min-width: 230px;
+  border-radius: 30px;
+  background: var(--color-accent);
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  padding: 10px 16px 10px 20px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 7.5px;
+    height: 11.5px;
+    background: url(../img/arrow.svg) no-repeat center center / contain;
+    margin-left: 9.5px;
   }
 }
