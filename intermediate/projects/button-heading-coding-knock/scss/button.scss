@@ -4,7 +4,8 @@
 
 :root {
   --color-black: #333;
-  --color-accent: #fabe00;
+  --color-yellow: #fabe00;
+  --color-orange: #f6830e;
   --color-gradation-01: linear-gradient(90deg, #f5810e 0%, #fabe00 100%);
 }
 
@@ -27,8 +28,15 @@ main {
 
 // <<< base
 
-.button-wrapper {
+.wrapper {
   margin-top: 30px;
+  text-align: center;
+}
+
+.type10-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .button-type1 {
@@ -37,7 +45,7 @@ main {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.7;
-  background: var(--color-accent);
+  background: var(--color-yellow);
   text-align: center;
   border-radius: 3px;
   padding: 10px 16px;
@@ -52,9 +60,10 @@ main {
   line-height: 1.7;
   padding: 10px 30px 10px 16px;
   position: relative;
-  background: var(--color-accent);
+  background: var(--color-yellow);
   border-radius: 3px;
   min-width: 230px;
+  text-align: left;
 
   &::before {
     content: "";
@@ -73,12 +82,13 @@ main {
   align-items: center;
   min-width: 230px;
   border-radius: 30px;
-  background: var(--color-accent);
+  background: var(--color-yellow);
   color: var(--color-black);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.7;
   padding: 10px 16px 10px 20px;
+  text-align: left;
 
   &::after {
     content: "";
@@ -97,10 +107,11 @@ main {
   min-width: 230px;
   font-weight: 700;
   line-height: 1.7;
-  background: var(--color-accent);
+  background: var(--color-yellow);
   border-radius: 3px;
   padding: 10px 16px;
   box-shadow: 0px 5px 0px 0px #e3a80e;
+  text-align: left;
 }
 
 .button-type5 {
@@ -110,10 +121,11 @@ main {
   min-width: 230px;
   font-weight: 700;
   line-height: 1.7;
-  background: var(--color-accent);
+  background: var(--color-yellow);
   border-radius: 3px;
   padding: 10px 16px;
   box-shadow: 3px 3px 7px 0px #dcdcdc;
+  text-align: left;
 }
 
 .button-type6 {
@@ -127,4 +139,100 @@ main {
   padding: 10px 16px;
   background: var(--color-gradation-01);
   filter: drop-shadow(3px 3px 7px rgba(220, 220, 220, 0.25));
+  text-align: left;
+}
+
+.button-type7 {
+  padding-top: 26px;
+  padding-bottom: 30px;
+  background: var(--color-orange);
+}
+
+.button-type7__body {
+  display: inline-block;
+  min-width: 230px;
+  padding: 12px 16px;
+  border: 2px solid #fff;
+  background: var(--color-orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: calc(24 / 16);
+  text-align: left;
+}
+
+.button-type8 {
+  padding-top: 26px;
+  padding-bottom: 30px;
+  background: var(--color-orange);
+}
+
+.button-type8__wrapper {
+}
+
+.button-type8__body {
+  display: inline-block;
+  min-width: 230px;
+  padding: 12px 21px;
+  border: 2px solid #fff;
+  background: var(--color-orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: calc(24 / 16);
+  text-align: center;
+  position: relative;
+
+  //  線のスタイル
+  &::before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateX(50%);
+  }
+}
+
+.button-type9 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background-color: var(--color-yellow);
+  filter: drop-shadow(0px 4px 4px rgba(159, 159, 159, 0.3));
+}
+
+.button-type9__body {
+  display: inline-block;
+  color: var(--color-black);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.button-type10 {
+  display: inline-block;
+  min-width: 200px;
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border-radius: 3px;
+  background: var(--color-yellow);
+  box-shadow: 0px 5px 0px 0px #e3a80e;
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+
+  &--type2 {
+    color: #fff;
+    background: #43b549;
+    box-shadow: 0px 5px 0px 0px #319937;
+  }
 }
