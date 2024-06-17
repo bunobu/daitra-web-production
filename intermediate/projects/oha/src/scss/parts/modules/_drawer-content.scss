@@ -9,6 +9,12 @@
   background: #f7ba1a;
   z-index: 50;
   padding: g.rem(86) g.rem(40) g.rem(40);
+  transform: translateX(100%);
+  transition: transform 0.3s linear;
+
+  &--checked {
+    transform: translateX(0);
+  }
 }
 
 .drawer-content__menu {
