@@ -1,0 +1,23 @@
+@use "@global" as g;
+
+.gallery-card {
+  border-radius: g.rem(20);
+  border: 3px solid #111;
+  background: #fff;
+  box-shadow: 0px 9px 30px 0px #f4f4f4;
+  padding: g.rem(15) g.rem(15) g.rem(15) g.rem(12);
+}
+
+.gallery-card__img {
+  text-align: center;
+  img {
+    border-radius: 10px;
+    display: inline-block;
+  }
+}
+
+.gallery-card__text {
+  text-align: center;
+  font-size: g.rem(14);
+  line-height: 1.7;
+}

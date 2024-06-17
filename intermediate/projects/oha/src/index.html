@@ -583,26 +583,78 @@
     <!-- <<< Q&A -->
 
     <!-- >>> ギャラリー -->
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+    <section class="gallery">
+      <div class="gallery__inner container">
+        <h2 class="gallery__title section-title">
+          <span class="section-title__en">GALLERY</span>
+          <span class="section-title__ja">ギャラリー</span>
+        </h2>
+
+        <div class="gallery__slide-wrapper">
+          <!-- >>> ライブラリ - swiper -->
+          <!-- Slider main container -->
+          <div class="swiper gallery__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img
+                      src="./img/gallery-1.jpg"
+                      alt=""
+                      width="1200"
+                      height="794"
+                    />
+                  </div>
+                  <p class="gallery-card__text">
+                    最高な海。を拝んでいる私最高...
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img
+                      src="./img/gallery-2.jpg"
+                      alt=""
+                      width="1200"
+                      height="794"
+                    />
+                  </div>
+                  <p class="gallery-card__text">
+                    モーニングは一番のり。今日も私えらい。
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img
+                      src="./img/gallery-3.png"
+                      alt=""
+                      width="1200"
+                      height="794"
+                    />
+                  </div>
+                  <p class="gallery-card__text">
+                    風車のある公園ヨガ。みんな私に釘付け。
+                  </p>
+                </div>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination gallery__pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev gallery__prev"></div>
+            <div class="swiper-button-next gallery__next"></div>
+          </div>
+          <!-- <<< ライブラリ - swiper -->
+        </div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+    </section>
     <!-- <<< ギャラリー -->
 
     <!-- >>> お問い合わせ -->
