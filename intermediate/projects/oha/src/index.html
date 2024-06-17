@@ -15,11 +15,20 @@
     />
 
     <title>{{title}}</title>
+
+    <!-- swiper style -->
+    <link rel="stylesheet" href="/library/swiper/swiper-bundle.min.css" />
+    <!-- original style -->
     <link rel="stylesheet" href="./scss/style.scss" />
+
+    <!-- swiper script-->
+    <script src="/library/swiper/swiper-bundle.min.js" defer></script>
+    <!-- jquery -->
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      type="module"
+      defer
     ></script>
+    <!-- original script -->
     <script src="./js/main.js" type="module"></script>
   </head>
   <body>
@@ -572,6 +581,29 @@
       </div>
     </section>
     <!-- <<< Q&A -->
+
+    <!-- >>> ギャラリー -->
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <!-- <<< ギャラリー -->
 
     <!-- >>> お問い合わせ -->
     <section class="contact">
