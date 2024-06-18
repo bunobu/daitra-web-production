@@ -86,3 +86,19 @@ $(window).on("scroll", function () {
     $("#js-page-top").removeClass("page-top--show");
   }
 });
+
+// スクロールに応じて要素を表示させる
+const intersectionObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("--in-view");
+    } else {
+      // entry.target.classList.remove("--in-view");
+    }
+  });
+});
+
+const inViewItems = document.querySelectorAll(".js-in-view");
+inViewItems.forEach(function (inViewItem) {
+  intersectionObserver.observe(inViewItem);
+});
