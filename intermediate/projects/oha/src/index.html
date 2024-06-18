@@ -593,7 +593,7 @@
         <div class="gallery__slide-wrapper">
           <!-- >>> ライブラリ - swiper -->
           <!-- Slider main container -->
-          <div class="swiper gallery__swiper">
+          <div id="js-gallery-swiper" class="swiper gallery__swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -642,14 +642,22 @@
                   </p>
                 </div>
               </div>
-              ...
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination gallery__pagination"></div>
+            <div
+              id="js-gallery-pagination"
+              class="swiper-pagination gallery__pagination"
+            ></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev gallery__prev"></div>
-            <div class="swiper-button-next gallery__next"></div>
+            <div
+              id="js-gallery-prev"
+              class="swiper-button-prev gallery__prev"
+            ></div>
+            <div
+              id="js-gallery-next"
+              class="swiper-button-next gallery__next"
+            ></div>
           </div>
           <!-- <<< ライブラリ - swiper -->
         </div>

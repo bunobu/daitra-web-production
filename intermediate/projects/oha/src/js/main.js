@@ -16,23 +16,24 @@ $(".js-accordion").on("click", function (e) {
   }
 });
 
-const swiper = new Swiper(".swiper", {
+const rootFontSize = getComputedStyle(document.documentElement).fontSize;
+// const gallerySwiperBetWeen = parseInt(rootFontSize) * 4.375;
+const gallerySwiperBetWeen = parseInt(rootFontSize) * 5;
+
+const swiper = new Swiper("#js-gallery-swiper", {
+  spaceBetween: gallerySwiperBetWeen + 2,
+
   // Optional parameters
   loop: true,
 
   // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
+    el: "#js-gallery-pagination",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
+    nextEl: "#js-gallery-next",
+    prevEl: "#js-gallery-prev",
   },
 });

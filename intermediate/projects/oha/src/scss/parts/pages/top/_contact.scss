@@ -41,9 +41,9 @@
 }
 
 .contact__button {
-  margin-top: g.rem(36);
+  margin-top: g.rem(28);
   text-align: center;
   @include g.mq(md) {
-    margin-top: g.rem(38);
+    margin-top: g.rem(36);
   }
 }
