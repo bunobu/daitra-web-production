@@ -34,6 +34,7 @@
   <body>
     {{> header }}
 
+    <!-- >>> mv -->
     <div class="mv">
       <div class="mv__inner">
         <div class="mv__content">
@@ -56,7 +57,9 @@
         </div>
       </div>
     </div>
+    <!-- <<< mv -->
 
+    <!-- >>> case -->
     <section class="case">
       <div class="case__inner">
         <h2 class="case__title">導入実績</h2>
@@ -88,7 +91,9 @@
         </div>
       </div>
     </section>
+    <!-- <<< case -->
 
+    <!-- >>> news -->
     <section class="news">
       <div class="news__inner container">
         <div class="news__card">
@@ -138,7 +143,9 @@
         </div>
       </div>
     </section>
+    <!-- <<< news -->
 
+    <!-- >>> about -->
     <div class="about">
       <div class="about__inner">
         <div class="about__title">
@@ -176,11 +183,42 @@
           </p>
           <div class="about__pop">＼開発者はお坊さん？／</div>
           <div class="about__button">
-            <button class="button">誕生ストーリーを見る</button>
+            <button class="button js-modal-open">誕生ストーリーを見る</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- <<< about -->
+
+    <!-- >>> about-modal -->
+    <dialog
+      id="js-about-modal"
+      class="about-modal"
+      aria-label="誕生ストーリの詳細"
+    >
+      <div class="about-modal__head">
+        <button
+          class="about-modal__close-icon js-modal-close"
+          aria-label="誕生ストーリの開閉"
+        >
+          <img src="./img/close-icon.png" alt="" width="74" height="74" />
+        </button>
+      </div>
+      <div class="about-modal__body">
+        <p>
+          お坊さんの師匠は、ある日自分が寝坊して仏教の講義に遅刻してしまい、急いで作ったアプリがきっかけでした。そのアプリは、自分のスマートフォンにセットした時間になると、仏教の教えをパッと思い出すようになっていました。<br />
+          お坊さんはそのアプリを見て、自分もそんなアプリが欲しいと思い、師匠に頼んで自分専用のアプリを作ってもらったのだそうです。そして、お坊さんは太郎にそのアプリを使ってもらうように勧めました。
+        </p>
+        <p>
+          太郎は早速、そのアプリをダウンロードして設定してみました。翌朝、セットした時間になると、スマートフォンが音を立てて仏教の教えが表示されました。「一日を立派に過ごすためには、まず朝イチで身心の健康を整えることが大切です」という教えに太郎は心を動かされ、僧侶になるかもしれないと思いました。<br />
+          以来、太郎は毎朝ちゃんと起きることができ、授業に遅刻することはなくなりました。そして、太郎はそのアプリの効果に感服し、友人たちにも勧めるようになっていきました。そうして、そのアプリは口コミで広まり、多くの人に利用されるようになっていったのでした。
+        </p>
+      </div>
+      <div class="about-modal__close-button">
+        <button class="button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+    <!-- <<< about-modal -->
 
     <section class="movie">
       <div class="movie__inner">

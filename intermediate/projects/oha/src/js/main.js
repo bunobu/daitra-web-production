@@ -37,3 +37,15 @@ const swiper = new Swiper("#js-gallery-swiper", {
     prevEl: "#js-gallery-prev",
   },
 });
+
+$(".js-modal-open").on("click", function (e) {
+  e.preventDefault();
+  $("#js-about-modal")[0].showModal();
+  $("body").css("overflow", "hidden");
+});
+
+$(".js-modal-close").on("click", function (e) {
+  e.preventDefault();
+  $("#js-about-modal")[0].close();
+  $("body").css("overflow", "auto ");
+});

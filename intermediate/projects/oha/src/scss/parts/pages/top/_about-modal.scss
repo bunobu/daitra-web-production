@@ -1,0 +1,62 @@
+@use "@global" as g;
+
+.about-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  max-width: calc(100% - g.rem(g.$l-sp-padding) * 2);
+  max-height: calc(100% - g.rem(20) * 2);
+  overflow: auto;
+  padding: g.rem(16) g.rem(15) g.rem(64);
+  border: none;
+  border-radius: g.rem(20);
+  background: #fff;
+  z-index: 60;
+  overscroll-behavior-y: contain;
+
+  @include g.mq(md) {
+    max-width: g.rem(1140);
+    padding: g.rem(40) g.rem(70) g.rem(75);
+  }
+
+  &::backdrop {
+    opacity: 0.2;
+    background: #000;
+  }
+}
+
+.about-modal__head {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+
+.about-modal__close-icon {
+  img {
+    width: g.rem(37);
+  }
+}
+
+.about-modal__body {
+  margin-top: g.rem(12);
+  @include g.mq(md) {
+    margin-top: g.rem(43);
+  }
+
+  p {
+    font-size: g.rem(14);
+    @include g.mq(md) {
+      font-size: g.rem(16);
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: g.rem(20);
+    }
+  }
+}
+
+.about-modal__close-button {
+  margin-top: g.rem(30);
+  text-align: center;
+}
