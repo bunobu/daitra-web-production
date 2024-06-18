@@ -4,9 +4,17 @@
   position: fixed;
   right: g.rem(10);
   bottom: g.rem(10);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
   @include g.mq(md) {
     right: g.rem(16);
     bottom: g.rem(30);
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
   }
 
   img {

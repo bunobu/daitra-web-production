@@ -57,7 +57,7 @@ $(".js-modal-close").on("click", function (e) {
 // スムーススクロール
 
 $('#js-drawer-content a[href^="#"]').on("click", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   jQuery("#js-drawer-icon").removeClass("drawer-icon--checked");
   jQuery("#js-drawer-content").removeClass("drawer-content--checked");
 });
@@ -76,4 +76,13 @@ $('a[href^="#"]').on("click", function (e) {
     speed,
     "swing" //swing or linear
   );
+});
+
+// スクロールしたらページTOPに戻るボタンを表示
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() > 100) {
+    $("#js-page-top").addClass("page-top--show");
+  } else {
+    $("#js-page-top").removeClass("page-top--show");
+  }
 });
