@@ -3,9 +3,16 @@
 .gallery {
   padding-top: g.rem(60);
   padding-bottom: g.rem(60);
+  @include g.mq(md) {
+    padding-top: g.rem(100);
+    padding-bottom: g.rem(100);
+  }
 }
 
 .gallery__inner {
+  @include g.mq(md) {
+    max-width: g.rem(800 + g.$l-pc-padding * 2);
+  }
 }
 
 .gallery__title {
@@ -31,6 +38,11 @@
   padding-bottom: g.rem(26);
   padding-right: g.rem(5);
   padding-left: g.rem(5);
+  @include g.mq(md) {
+    padding-right: g.rem(70);
+    padding-left: g.rem(70);
+    margin-top: g.rem(60);
+  }
 }
 
 .swiper-wrapper {
@@ -73,6 +85,10 @@
   width: g.rem(40);
   height: g.rem(40);
   margin-top: g.rem(-40);
+  @include g.mq(md) {
+    width: g.rem(50);
+    height: g.rem(50);
+  }
 
   &::after {
     display: none;
