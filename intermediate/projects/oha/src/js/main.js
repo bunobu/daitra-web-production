@@ -91,9 +91,9 @@ $(window).on("scroll", function () {
 const intersectionObserver = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
-      entry.target.classList.add("--in-view");
+      entry.target.classList.add("is-in-view");
     } else {
-      // entry.target.classList.remove("--in-view");
+      // entry.target.classList.remove("is-in-view");
     }
   });
 });

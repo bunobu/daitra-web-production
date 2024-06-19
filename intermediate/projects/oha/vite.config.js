@@ -11,7 +11,9 @@ import imageminPlugin from "@macropygia/vite-plugin-imagemin-cache";
 const pageDate = {
   "/index.html": {
     isHome: true,
-    title: "indexページだよ",
+    title: "OHA!",
+    description:
+      "OHA!は、朝起きたい人と朝起こされたい人がランダムにマッチングしちゃう通話アプリです。",
   },
   // "/hoge.html": {
   //   isHome: false,
