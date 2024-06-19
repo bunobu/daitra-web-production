@@ -29,7 +29,7 @@
   width: 1px;
   height: 1px;
   position: absolute;
-  clip-path: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 
   &:checked {
@@ -133,7 +133,7 @@
   width: 1px;
   height: 1px;
   position: absolute;
-  clip-path: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 
   &:checked {
@@ -148,7 +148,6 @@
     + .form-checkbox__text {
       &::before {
         border-color: g.$c-accent2;
-        outline: line;
       }
     }
   }
@@ -174,7 +173,7 @@
     height: g.rem(20);
     border-radius: 1px;
     border: 1px solid g.$c-base;
-    transform: border-color 0.3s;
+    transition: border-color 0.3s;
   }
 
   &::after {

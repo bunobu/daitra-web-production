@@ -14,13 +14,39 @@
       rel="stylesheet"
     />
 
+    <!-- site setting -->
     <title>{{title}}</title>
+    <meta name="description" content="{{description}}" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- site ogp -->
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="ページのURL" />
+    <meta property="og:image" content="/ogp.png" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:site_name" content="{{title}}" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- swiper style -->
+    <link rel="stylesheet" href="/library/swiper/swiper-bundle.min.css" />
+    <!-- original style -->
     <link rel="stylesheet" href="./scss/style.scss" />
+
+    <!-- swiper script-->
+    <script src="/library/swiper/swiper-bundle.min.js" defer></script>
+    <!-- jquery -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      defer
+    ></script>
+    <!-- original script -->
     <script src="./js/main.js" type="module"></script>
   </head>
   <body>
     {{> header }}
 
+    <!-- >>> mv -->
     <div class="mv">
       <div class="mv__inner">
         <div class="mv__content">
@@ -35,7 +61,9 @@
             通話アプリです。
           </div>
           <div class="mv__button">
-            <a class="button button--type2">アプリダウンロード</a>
+            <a href="#contact" class="button button--type2"
+              >アプリダウンロード</a
+            >
           </div>
           <div class="mv__img">
             <img src="./img/img-mv.png" alt="" width="1200" height="1154" />
@@ -43,10 +71,12 @@
         </div>
       </div>
     </div>
+    <!-- <<< mv -->
 
+    <!-- >>> case -->
     <section class="case">
       <div class="case__inner">
-        <h2 class="case__title">導入実績</h2>
+        <h2 class="case__title js-in-view fade-in-up">導入実績</h2>
         <div class="case__items">
           <div class="case__item">
             <img src="./img/case1-img.png" alt="" width="400" height="120" />
@@ -75,11 +105,13 @@
         </div>
       </div>
     </section>
+    <!-- <<< case -->
 
+    <!-- >>> news -->
     <section class="news">
       <div class="news__inner container">
         <div class="news__card">
-          <h2 class="news__title">NEWS</h2>
+          <h2 class="news__title js-in-view fade-in-up">NEWS</h2>
           <div class="news__lists">
             <a href="" class="news__list news-link">
               <div class="news-link__meta">
@@ -120,15 +152,17 @@
             </a>
           </div>
           <div class="news__link">
-            <a href="">もっとみる</a>
+            <a href="#">もっとみる</a>
           </div>
         </div>
       </div>
     </section>
+    <!-- <<< news -->
 
-    <div class="about">
+    <!-- >>> about -->
+    <div id="about" class="about">
       <div class="about__inner">
-        <div class="about__title">
+        <div class="about__title js-in-view fade-in-up">
           <img src="./img/logo.svg" alt="OHA!" width="230" height="60" />
         </div>
         <div class="about__content">
@@ -163,15 +197,47 @@
           </p>
           <div class="about__pop">＼開発者はお坊さん？／</div>
           <div class="about__button">
-            <button class="button">誕生ストーリーを見る</button>
+            <button class="button js-modal-open">誕生ストーリーを見る</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- <<< about -->
 
+    <!-- >>> about-modal -->
+    <dialog
+      id="js-about-modal"
+      class="about-modal"
+      aria-label="誕生ストーリの詳細"
+    >
+      <div class="about-modal__head">
+        <button
+          class="about-modal__close-icon js-modal-close"
+          aria-label="誕生ストーリの開閉"
+        >
+          <img src="./img/close-icon.png" alt="" width="74" height="74" />
+        </button>
+      </div>
+      <div class="about-modal__body">
+        <p>
+          お坊さんの師匠は、ある日自分が寝坊して仏教の講義に遅刻してしまい、急いで作ったアプリがきっかけでした。そのアプリは、自分のスマートフォンにセットした時間になると、仏教の教えをパッと思い出すようになっていました。<br />
+          お坊さんはそのアプリを見て、自分もそんなアプリが欲しいと思い、師匠に頼んで自分専用のアプリを作ってもらったのだそうです。そして、お坊さんは太郎にそのアプリを使ってもらうように勧めました。
+        </p>
+        <p>
+          太郎は早速、そのアプリをダウンロードして設定してみました。翌朝、セットした時間になると、スマートフォンが音を立てて仏教の教えが表示されました。「一日を立派に過ごすためには、まず朝イチで身心の健康を整えることが大切です」という教えに太郎は心を動かされ、僧侶になるかもしれないと思いました。<br />
+          以来、太郎は毎朝ちゃんと起きることができ、授業に遅刻することはなくなりました。そして、太郎はそのアプリの効果に感服し、友人たちにも勧めるようになっていきました。そうして、そのアプリは口コミで広まり、多くの人に利用されるようになっていったのでした。
+        </p>
+      </div>
+      <div class="about-modal__close-button">
+        <button class="button js-modal-close">閉じる</button>
+      </div>
+    </dialog>
+    <!-- <<< about-modal -->
+
+    <!-- >>> movie -->
     <section class="movie">
       <div class="movie__inner">
-        <h2 class="section-title">
+        <h2 class="section-title js-in-view fade-in-up">
           <span class="section-title__en">MOVIE</span>
           <span class="section-title__ja">2秒で分かる！OHA!について</span>
         </h2>
@@ -189,10 +255,12 @@
         </div>
       </div>
     </section>
+    <!-- <<< movie -->
 
-    <section class="how-to-use">
+    <!-- >>> how-to-use -->
+    <section id="how-to-use" class="how-to-use">
       <div class="how-to-use__inner container">
-        <h2 class="how-to-use__title section-title">
+        <h2 class="how-to-use__title section-title js-in-view fade-in-up">
           <span class="section-title__en">HOW TO USE</span>
           <span class="section-title__ja">OHA!の使い方</span>
         </h2>
@@ -352,11 +420,13 @@
         </div>
       </div>
     </section>
+    <!-- <<< how-to-use -->
 
-    <section class="merit">
+    <!-- >>> merit -->
+    <section id="merit" class="merit">
       <div class="merit__inner container">
         <div class="merit__title">
-          <h2 class="section-title">
+          <h2 class="section-title js-in-view fade-in-up">
             <span class="section-title__en">MERIT</span>
             <span class="section-title__ja">OHA!を使うメリット</span>
           </h2>
@@ -374,12 +444,12 @@
                   />
                 </div>
                 <div class="merit-box__body">
-                  <h2 class="merit-box__head">
+                  <h3 class="merit-box__head">
                     <span class="merit-box__number">1</span>
                     <span class="merit-box__title"
                       >通りすがりに猫が<br />挨拶してくれるようになる</span
                     >
-                  </h2>
+                  </h3>
                   <p class="merit-box__text">
                     偶然の可能性も高いですが、OHA!を使うようになってから、やたらと猫が挨拶してくれるようになった、というお話をいただきます。とはいえ、自惚れすぎてはいけません。挨拶されたからといって一方的に話しかけ続けてしまうと気まぐれ猫ちゃんにうんざりされる上に周りの目も冷ややかです。
                   </p>
@@ -399,14 +469,14 @@
                   />
                 </div>
                 <div class="merit-box__body">
-                  <h2 class="merit-box__head">
+                  <h3 class="merit-box__head">
                     <span class="merit-box__number">2</span>
                     <span class="merit-box__title"
                       >商店街の福引で<br />3等のティッシュボックスが<br
                         class="pc-hidden"
                       />当たる</span
                     >
-                  </h2>
+                  </h3>
                   <p class="merit-box__text">
                     OHA!を使うことで、どういった因果関係なのか、ちょっと運もよくなります。あなたの街には商店街があるかわかりませんが、もしあればチャンスです。買い物をして、福引に挑んでみましょう。3等のティッシュボックスが当たること間違いなしです。<br />
                     もう景品のポケットティッシュで涙を拭う、なんてことはないのです。
@@ -427,14 +497,14 @@
                   />
                 </div>
                 <div class="merit-box__body">
-                  <h2 class="merit-box__head">
+                  <h3 class="merit-box__head">
                     <span class="merit-box__number">3</span>
                     <span class="merit-box__title"
                       >掃除をしていたら、<br />過去に自分が隠した<br
                         class="pc-hidden"
                       />へそくりが出てきた</span
                     >
-                  </h2>
+                  </h3>
                   <p class="merit-box__text">
                     自分が隠したへそくりを自分が発見するのはプラスマイナス0ですが、なんだか嬉しいものですよね。過去の自分よ、素敵なサプライズをありがとう。<br />
                     へそくりをしたことがない方にとっては申し訳ないですがこのイベントは起こりませんのでアプリ使用の再検討をおすすめします。
@@ -446,7 +516,9 @@
         </div>
       </div>
     </section>
+    <!-- <<< merit -->
 
+    <!-- >>> CTA -->
     <div class="cta">
       <div class="cta__inner container">
         <p class="cta__text">
@@ -455,14 +527,18 @@
           />早速今日から使ってみたくなりましたか？<br />てかほんと使って。お願い。
         </p>
         <div class="cta__button">
-          <a href="" class="button">今すぐダウンロード</a>
+          <a href="#contact" class="button">今すぐダウンロード</a>
         </div>
       </div>
     </div>
+    <!-- <<< CTA -->
 
+    <!-- >>> 他のサービスとの違い -->
     <div class="compare">
       <div class="compare__inner">
-        <h2 class="compare__title">他のサービスとの違い</h2>
+        <h2 class="compare__title js-in-view fade-in-up">
+          他のサービスとの違い
+        </h2>
         <div class="compare__content">
           <table class="compare__table" aria-label="他社との違い">
             <thead>
@@ -505,13 +581,156 @@
         <div class="compare__attention">横にスクロールできます</div>
       </div>
     </div>
+    <!-- <<< 他のサービスとの違い -->
+
+    <!-- >>> Q&A -->
+    <section class="qa">
+      <div class="qa__inner container">
+        <h2 class="section-title js-in-view fade-in-up">
+          <span class="section-title__en">Q&A</span>
+          <span class="section-title__ja">よくあるご質問</span>
+        </h2>
+        <div class="qa__box-wrapper">
+          <div class="qa__box qa-box qa-box--open">
+            <button class="qa-box__head js-accordion" aria-label="Q&Aの開閉">
+              <span class="qa-box__head-icon">Q</span>
+              <span class="qa-box__head-text"
+                >僕があまりにも起きない場合、相手に怒られることはあるのでしょうか？怖くて朝も起きられません。</span
+              >
+            </button>
+            <div class="qa-box__body" style="display: block">
+              <div class="qa-box__a">
+                <span class="qa-box__a-icon">A</span>
+                <span class="qa-box__a-text">残念ながら、相手によります。</span>
+              </div>
+            </div>
+          </div>
+          <div class="qa__box qa-box">
+            <button class="qa-box__head js-accordion" aria-label="Q&Aの開閉">
+              <span class="qa-box__head-icon">Q</span>
+              <span class="qa-box__head-text"
+                >今現在の登録者は何人ですか？</span
+              >
+            </button>
+            <div class="qa-box__body">
+              <div class="qa-box__a">
+                <span class="qa-box__a-icon">A</span>
+                <span class="qa-box__a-text"
+                  >現在の登録者は150万人(から149.998万人を引いた人数)です。この文を2行にしたいのでもう一度言います。現在の登録者は150万人(から149.998万人を引いた人数)です！</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="qa__box qa-box">
+            <button class="qa-box__head js-accordion" aria-label="Q&Aの開閉">
+              <span class="qa-box__head-icon">Q</span>
+              <span class="qa-box__head-text"
+                >アプリをインストールして使う妄想だけで朝起きられるようになりました！結局インストールはしてないですが、ありがとうございます！</span
+              >
+            </button>
+            <div class="qa-box__body">
+              <div class="qa-box__a">
+                <span class="qa-box__a-icon">A</span>
+                <span class="qa-box__a-text"
+                  >それはよかったです！しかしインストールはしてほしかった！！！</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <<< Q&A -->
+
+    <!-- >>> ギャラリー -->
+    <section class="gallery">
+      <div class="gallery__inner container">
+        <h2 class="gallery__title section-title js-in-view fade-in-up">
+          <span class="section-title__en">GALLERY</span>
+          <span class="section-title__ja">ギャラリー</span>
+        </h2>
+
+        <div class="gallery__slide-wrapper">
+          <!-- >>> ライブラリ - swiper -->
+          <!-- Slider main container -->
+          <div id="js-gallery-swiper" class="swiper gallery__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img
+                      src="./img/gallery-1.jpg"
+                      alt=""
+                      width="1200"
+                      height="794"
+                    />
+                  </div>
+                  <p class="gallery-card__text">
+                    最高な海。を拝んでいる私最高...
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img
+                      src="./img/gallery-2.jpg"
+                      alt=""
+                      width="1200"
+                      height="794"
+                    />
+                  </div>
+                  <p class="gallery-card__text">
+                    モーニングは一番のり。今日も私えらい。
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <div class="gallery-card">
+                  <div class="gallery-card__img">
+                    <img
+                      src="./img/gallery-3.png"
+                      alt=""
+                      width="1200"
+                      height="794"
+                    />
+                  </div>
+                  <p class="gallery-card__text">
+                    風車のある公園ヨガ。みんな私に釘付け。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div
+              id="js-gallery-pagination"
+              class="swiper-pagination gallery__pagination"
+            ></div>
+
+            <!-- If we need navigation buttons -->
+            <div
+              id="js-gallery-prev"
+              class="swiper-button-prev gallery__prev"
+            ></div>
+            <div
+              id="js-gallery-next"
+              class="swiper-button-next gallery__next"
+            ></div>
+          </div>
+          <!-- <<< ライブラリ - swiper -->
+        </div>
+      </div>
+    </section>
+    <!-- <<< ギャラリー -->
 
     <!-- >>> お問い合わせ -->
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contact__inner container">
         <div class="contact__box">
-          <div class="contact__title">
-            <h2 class="how-to-use__title section-title">
+          <div class="contact__title js-in-view fade-in-up">
+            <h2 class="section-title">
               <span class="section-title__en">CONTACT</span>
               <span class="section-title__ja">お問い合わせ</span>
             </h2>
@@ -675,6 +894,7 @@
     </section>
     <!-- <<< お問い合わせ -->
 
+    <!-- >>> footer -->
     <footer class="footer">
       <div class="footer__inner inner">
         <small class="footer__copyright">
@@ -682,13 +902,16 @@
         </small>
       </div>
     </footer>
+    <!-- <<< footer -->
 
-    <a href="" class="page-top"
+    <!-- >>> トップへ戻る -->
+    <a id="js-page-top" href="#" class="page-top"
       ><img
         src="./img/pagetop-img.png"
         alt="ページトップへ戻る"
         width="100"
         height="122"
     /></a>
+    <!-- <<< トップへ戻る -->
   </body>
 </html>

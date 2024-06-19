@@ -1,0 +1,130 @@
+@use "@global" as g;
+
+.qa-box {
+  border-radius: g.rem(10);
+  border: 3px solid hsl(0, 0%, 7%);
+  background: #fff;
+
+  &--open {
+    // .qa-box__body {
+    //   display: block;
+    // }
+
+    .qa-box__head {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.qa-box__head {
+  display: block;
+  width: 100%;
+  padding: g.rem(32 - 3) g.rem(40 - 3) g.rem(20 - 3) g.rem(15 - 3);
+  position: relative;
+  @include g.mq(md) {
+    padding: g.rem(32 - 3) g.rem(88 - 3) g.rem(20 - 3) g.rem(20 - 3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: g.rem(14);
+    width: g.rem(9.26px);
+    height: g.rem(6.834px);
+    background: url(../img/polygon.svg) no-repeat center center / contain;
+    transform: rotate(180deg);
+    margin-top: g.rem(3);
+    @include g.mq(md) {
+      right: g.rem(18);
+      margin-top: g.rem(2);
+    }
+  }
+}
+
+.qa-box__head-icon {
+  display: grid;
+  place-items: center;
+  font-family: g.$f-family-en;
+  font-size: g.rem(22);
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  width: g.rem(44);
+  height: g.rem(44);
+  border-radius: 50%;
+  border: 3px solid #111;
+  background: g.$c-accent1;
+  position: absolute;
+  top: g.rem(-26);
+  left: g.rem(12);
+  @include g.mq(md) {
+    left: g.rem(18);
+  }
+}
+
+.qa-box__head-text {
+  display: block;
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+  line-height: 1.7;
+  letter-spacing: g.letter-spacing(8);
+  text-align: left;
+  @include g.mq(md) {
+    font-size: g.rem(16);
+    font-style: normal;
+    font-weight: g.$f-weight-bold;
+    line-height: calc(27 / 16);
+  }
+}
+
+.qa-box__body {
+  padding: g.rem(10 + 3) g.rem(17 - 3) g.rem(20 - 3) g.rem(15 - 3);
+  display: none;
+  @include g.mq(md) {
+    padding: 0 g.rem(36) g.rem(20) g.rem(18);
+  }
+}
+
+.qa-box__a {
+  display: flex;
+  gap: g.rem(8);
+  @include g.mq(md) {
+    gap: g.rem(10);
+  }
+}
+
+.qa-box__a-icon {
+  display: grid;
+  place-items: center;
+  color: #111;
+  font-family: g.$f-family-en;
+  font-size: g.rem(22);
+  font-style: normal;
+  font-weight: g.$f-weight-bold;
+  line-height: 1;
+  width: g.rem(44);
+  height: g.rem(44);
+  background: g.$c-accent2;
+  border-radius: 50%;
+  border: 3px solid #111;
+  flex-shrink: 0;
+}
+
+.qa-box__a-text {
+  display: block;
+  text-align: left;
+  font-size: g.rem(14);
+  font-weight: g.$f-weight-bold;
+  line-height: 1.7;
+  letter-spacing: g.letter-spacing(8);
+  flex-grow: 1;
+  padding-top: g.rem(12);
+  @include g.mq(md) {
+    font-size: g.rem(16);
+    font-weight: g.$f-weight-bold;
+    line-height: calc(27 / 16);
+    padding-top: g.rem(9);
+  }
+}
