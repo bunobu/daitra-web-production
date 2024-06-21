@@ -30,5 +30,10 @@
 
 // 関数 - letter-spacing計算
 @function l-spacing($spacing) {
-  @return math.div($spacing, 1000) * 1em;
+  @return math.div($spacing, 100) * 1em;
+}
+
+// window幅に対してfont-sizeをvwに変換
+@function vw($px-size, $window-width) {
+  @return math.div($px-size, $window-width) * 100vw;
 }

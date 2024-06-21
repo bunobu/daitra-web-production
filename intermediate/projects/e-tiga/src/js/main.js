@@ -11,7 +11,7 @@ tamago();
   const viewportSwitch = () => {
     const screenWidth = window.screen.width;
     const meta = document.querySelector("meta[name='viewport']");
-    const flagSize = 370;
+    const flagSize = 400;
     console.log(meta);
 
     if (screenWidth >= flagSize) {

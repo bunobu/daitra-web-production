@@ -4,14 +4,20 @@
 :root {
   // color
   --color-white: #ffffff;
-  --color-black:#333333;
-  --color-black2: #2B2B2B
+  --color-white2: #f6f7f7;
+  --color-black: #333333;
+  --color-black2: #2b2b2b;
 
   --color-main: #2082e0;
   --color-main2: #2082df;
 
-  --color-gradation: linear-gradient(180deg, #EAF4F7 0%, #FFF 100%);
-  --color-gradation2: linear-gradient(180deg, rgba(34, 142, 221, 0.90) 0%, rgba(43, 198, 201, 0.90) 100%);
+  --color-gradation: linear-gradient(180deg, #eaf4f7 0%, #fff 100%);
+  --color-gradation2: linear-gradient(
+    180deg,
+    rgba(34, 142, 221, 0.9) 0%,
+    rgba(43, 198, 201, 0.9) 100%
+  );
+  --color-gradation3: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
 
   // font-family
   --font-family-en: sans-serif;
@@ -28,7 +34,7 @@ body {
 }
 
 html {
-    font-size: g.$font-size-base;
+  font-size: g.$font-size-base;
 }
 
 body {
