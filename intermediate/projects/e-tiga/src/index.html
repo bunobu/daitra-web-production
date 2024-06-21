@@ -45,7 +45,7 @@
                 チームの管理をよりスピーディーに円滑にします。
               </p>
               <div class="p-mv__button">
-                <button class="c-button">無料で登録</button>
+                <a href="" class="c-button">無料で登録</a>
               </div>
             </div>
           </div>
@@ -54,38 +54,92 @@
       <!-- <<< mv -->
     </div>
 
-    <!-- >>> blog -->
-    <section class="p-blog">
-      <div class="p-blog__inner l-inner">
-        <h2 class="p-blog__title">
-          <span class="p-blog__title-en">BLOG</span>
-          <span class="p-blog__title-ja">ブログ</span>
-        </h2>
-        <div class="p-blog__cards">
-          <!-- >>> ループ -->
-          {{#each blogList}}
-          <article class="p-blog-card">
-            <div class="p-blog-card__head">
-              <div class="p-blog-card__img">
-                <img src="{{img}}" alt="" width="660" height="440" />
-              </div>
-              <span class="p-blog-card__label">ラベル</span>
-            </div>
-            <div class="p-blog-card__body">
-              <h3 class="p-blog-card__body-title">{{title}}</h3>
-              <p class="p-blog-card__body-text">{{text}}</p>
-            </div>
-          </article>
-          {{/each}}
-          <!-- <<< ループ -->
+    <main class="l-main">
+      <!-- >>> blog -->
+      <section class="p-blog">
+        <div class="p-blog__inner l-inner">
+          <h2 class="p-blog__title">
+            <span class="p-blog__title-en">BLOG</span>
+            <span class="p-blog__title-ja">ブログ</span>
+          </h2>
+          <div class="p-blog__cards">
+            <!-- >>> ループ -->
+            {{#each blogList}}
+            <article class="p-blog-card">
+              <a href="" class="p-blog-card__link">
+                <div class="p-blog-card__head">
+                  <div class="p-blog-card__img">
+                    <img src="{{img}}" alt="" width="660" height="440" />
+                  </div>
+                  <span class="p-blog-card__label">ラベル</span>
+                </div>
+                <div class="p-blog-card__body">
+                  <h3 class="p-blog-card__body-title">{{title}}</h3>
+                  <p class="p-blog-card__body-text">{{text}}</p>
+                </div>
+              </a>
+            </article>
+            {{/each}}
+            <!-- <<< ループ -->
+          </div>
+          <div class="p-blog__button">
+            <button class="c-button">ブログ一覧へ</button>
+          </div>
         </div>
-        <div class="p-blog__button">
-          <button class="c-button">ブログ一覧へ</button>
-        </div>
-      </div>
-    </section>
-    <!-- <<< blog -->
+      </section>
+      <!-- <<< blog -->
 
-    <main class="l-main"></main>
+      <!-- >>> news -->
+      <section class="p-news">
+        <div class="p-news__inner l-inner">
+          <div class="p-news__title-wrapper">
+            <h2 class="p-news__title">NEWS</h2>
+          </div>
+          <div class="p-news__content">
+            <div class="p-news__article-list">
+              <!-- >>> ループ -->
+              {{#each newsList}}
+              <article class="p-news-article">
+                <a href="" class="p-news-article__link">
+                  <div class="p-news-article__box">
+                    <div class="p-news-article__head">
+                      <time class="p-news-article__time" datetime="{{dateTime}}"
+                        >{{date}}</time
+                      >
+                    </div>
+                    <div class="p-news-article__body">
+                      <p class="p-news-article__text">{{text}}</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              {{/each}}
+              <!-- <<< ループ -->
+            </div>
+          </div>
+          <div class="p-news__footer">
+            <div class="p-news__pagination">
+              <a href="" class="p-news__pagination__prev"
+                ><img src="./img/prev-icon.svg" alt="" />
+                <img src="./img/prev-icon.svg" alt="" />
+              </a>
+              <a href="" class="p-news__pagination__item">1</a>
+              <a href="" class="p-news__pagination__item">2</a>
+              <a href="" class="p-news__pagination__item">3</a>
+              <a href="" class="p-news__pagination__item">4</a>
+              <a href="" class="p-news__pagination__item">5</a>
+              <a href="" class="p-news__pagination__next">
+                <img src="./img/next-icon.svg" alt="" />
+                <img src="./img/next-icon.svg" alt="" />
+              </a>
+            </div>
+            <div class="p-new__button">
+              <a href="">全てみる</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< news -->
+    </main>
   </body>
 </html>
