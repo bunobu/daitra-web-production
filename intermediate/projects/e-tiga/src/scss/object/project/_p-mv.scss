@@ -26,13 +26,15 @@
   }
 }
 
-.p-mv__img {
+.p-mv__img-box {
   text-align: center;
   @include g.mq(md) {
     margin-left: min(calc(102 / 1120 * 100%), g.rem(102));
     align-self: center;
   }
+}
 
+.p-mv__img-picture {
   img {
     max-width: g.rem(650);
     width: 100%;
@@ -43,12 +45,16 @@
   margin-top: g.rem(40);
   @include g.mq(md) {
     flex-shrink: 0;
-    margin-top: g.rem(60);
+    margin-top: g.rem(64);
   }
 }
 
 .p-mv__logo {
   text-align: center;
+  @include g.mq(md) {
+    text-align: left;
+  }
+
   img {
     width: g.rem(250);
   }
@@ -73,9 +79,15 @@
   font-size: g.rem(16);
   font-weight: g.$font-weight-regular;
   line-height: 2;
+  @include g.mq(md) {
+    text-align: left;
+  }
 }
 
 .p-mv__button {
   margin-top: g.rem(30);
   text-align: center;
+  @include g.mq(md) {
+    text-align: left;
+  }
 }

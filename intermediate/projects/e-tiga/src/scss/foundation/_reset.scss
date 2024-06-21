@@ -68,6 +68,9 @@ button,
 textarea,
 select {
   font: inherit;
+  // 追加
+  padding: 0;
+  margin: 0;
 }
 
 // テキスト

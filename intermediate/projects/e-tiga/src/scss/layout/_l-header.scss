@@ -74,10 +74,12 @@
 
 .l-header__menu-button {
   display: inline-block;
-  width: g.rem(40);
-  height: g.rem(20);
+  width: g.rem(43);
+  height: g.rem(23);
   background: transparent;
   position: relative;
+  margin-top: g.rem(4.5);
+  margin-right: g.rem(-1.5);
   @include g.mq(md) {
     display: none;
   }

@@ -14,13 +14,20 @@
       <div class="p-mv">
         <div class="p-mv__inner l-inner">
           <div class="p-mv__box">
-            <div class="p-mv__img">
-              <img
-                src="./img/first-view.png"
-                alt="中小企業導入ランキングNo.1"
-                width="1300"
-                height="876"
-              />
+            <div class="p-mv__img-box">
+              <picture class="p-mv__img-picture">
+                <source
+                  srcset="./img/first-view.png"
+                  media="(min-width: 834px)"
+                />
+                <!-- 幅1000px以上なら表示 -->
+                <img
+                  src="./img/sp-first-view.png"
+                  alt="中小企業導入ランキングNo.1"
+                  width="796"
+                  height="570"
+                />
+              </picture>
             </div>
             <div class="p-mv__content">
               <div class="p-mv__logo">
