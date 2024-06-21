@@ -1,0 +1,45 @@
+@use "@global" as g;
+
+.p-blog-card {
+  padding: g.rem(12) g.rem(15) g.rem(16);
+  box-shadow: 5px 7px 34px 0px #f1f1f1;
+}
+
+.p-blog-card__head {
+  position: relative;
+}
+
+.p-blog-card__img {
+  text-align: center;
+}
+
+.p-blog-card__label {
+  display: inline-block;
+  min-width: g.rem(100);
+  background: var(--color-main5);
+  color: var(--color-white);
+  font-size: g.rem(12);
+  font-weight: g.$font-weight-bold;
+  line-height: calc(18 / 12);
+  padding: g.rem(3) g.rem(4) g.rem(4);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.p-blog-card__body {
+  margin-top: g.rem(6);
+}
+
+.p-blog-card__body-title {
+  font-size: g.rem(15);
+  font-weight: g.$font-weight-bold;
+  line-height: 1.7;
+}
+
+.p-blog-card__body-text {
+  margin-top: g.rem(4);
+  font-size: g.rem(13);
+  line-height: 1.7;
+}

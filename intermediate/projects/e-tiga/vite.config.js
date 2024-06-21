@@ -6,6 +6,7 @@
 
 import { defineConfig } from "vite";
 import { resolve, join } from "path";
+import { pageData } from "./pageData";
 
 import handlebars from "vite-plugin-handlebars";
 
@@ -15,18 +16,7 @@ import viteImagemin from "vite-plugin-imagemin";
 import imageminPlugin from "@macropygia/vite-plugin-imagemin-cache";
 
 // HTMLで出し分ける情報
-const pageDate = {
-  "/index.html": {
-    isHome: true,
-    title: "indexページだよ",
-    description: "indexページの説明文だよ",
-  },
-  "/hoge.html": {
-    isHome: false,
-    title: "hogeページだよ",
-    description: "hogeページの説明文だよ",
-  },
-};
+const pageDate = pageData;
 
 export default defineConfig({
   base: "./", // 出力されるファイルのパスを相対パスにする

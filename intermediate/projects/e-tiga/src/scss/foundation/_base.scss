@@ -10,6 +10,9 @@
 
   --color-main: #2082e0;
   --color-main2: #2082df;
+  --color-main3: #228ddd;
+  --color-main4: #228bde;
+  --color-main5: #2392db;
 
   --color-gradation: linear-gradient(180deg, #eaf4f7 0%, #fff 100%);
   --color-gradation2: linear-gradient(
@@ -20,7 +23,7 @@
   --color-gradation3: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
 
   // font-family
-  --font-family-en: sans-serif;
+  --font-family-en: "Montserrat", sans-serif;
   --font-family-ja: "Noto Sans JP", sans-serif;
 
   // ハーフ・レディングを削除 margin-blockにあてる
@@ -34,7 +37,10 @@ body {
 }
 
 html {
-  font-size: g.$font-size-base;
+  font-size: 100%;
+  @include g.mq("md") {
+    font-size: g.$font-size-base;
+  }
 }
 
 body {

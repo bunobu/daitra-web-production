@@ -12,7 +12,7 @@
       {{> header }}
       <!-- >>> mv -->
       <div class="p-mv">
-        <div class="p-mv__inner">
+        <div class="p-mv__inner l-inner">
           <div class="p-mv__box">
             <div class="p-mv__img">
               <img
@@ -38,7 +38,7 @@
                 チームの管理をよりスピーディーに円滑にします。
               </p>
               <div class="p-mv__button">
-                <button>無料で登録</button>
+                <button class="c-button">無料で登録</button>
               </div>
             </div>
           </div>
@@ -46,6 +46,38 @@
       </div>
       <!-- <<< mv -->
     </div>
+
+    <!-- >>> blog -->
+    <section class="p-blog">
+      <div class="p-blog__inner l-inner">
+        <h2 class="p-blog__title">
+          <span class="p-blog__title-en">BLOG</span>
+          <span class="p-blog__title-ja">ブログ</span>
+        </h2>
+        <div class="p-blog__cards">
+          <!-- >>> ループ -->
+          {{#each blogList}}
+          <article class="p-blog-card">
+            <div class="p-blog-card__head">
+              <div class="p-blog-card__img">
+                <img src="{{img}}" alt="" width="660" height="440" />
+              </div>
+              <span class="p-blog-card__label">ラベル</span>
+            </div>
+            <div class="p-blog-card__body">
+              <h3 class="p-blog-card__body-title">{{title}}</h3>
+              <p class="p-blog-card__body-text">{{text}}</p>
+            </div>
+          </article>
+          {{/each}}
+          <!-- <<< ループ -->
+        </div>
+        <div class="p-blog__button">
+          <button class="c-button">ブログ一覧へ</button>
+        </div>
+      </div>
+    </section>
+    <!-- <<< blog -->
 
     <main class="l-main"></main>
   </body>

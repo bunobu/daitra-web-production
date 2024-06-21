@@ -1,0 +1,15 @@
+@use "@global" as g;
+
+.c-button {
+  display: inline-flex;
+  padding: g.rem(9) g.rem(53);
+  border-radius: g.rem(48);
+  background: var(--color-gradation3);
+  box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+  color: var(--color-white2);
+  text-align: center;
+  font-size: g.rem(16);
+  font-weight: g.$font-weight-bold;
+  line-height: 1.7 /* 27.2px */;
+  letter-spacing: calc(3 / 16 * 1em);
+}
