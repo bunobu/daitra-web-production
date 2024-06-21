@@ -28,7 +28,12 @@
   gap: g.rem(2);
   @include g.mq(md) {
     flex-direction: row;
-    gap: g.rem(28);
+    gap: g.rem(25);
+    padding-left: g.rem(33);
+    align-items: center;
+  }
+  @include g.mq(xl) {
+    padding-left: 0;
   }
 }
 
@@ -37,7 +42,7 @@
   font-family: var(--font-family-en);
   font-size: g.rem(36);
   font-weight: g.$font-weight-bold;
-  line-height: 1.7;
+  line-height: 1.7em;
   letter-spacing: g.l-spacing(10);
 }
 
@@ -52,7 +57,7 @@
   margin-top: g.rem(46);
   display: flex;
   flex-direction: column;
-  gap: g.rem(16);
+  gap: g.rem(14);
   max-width: g.rem(500);
   margin: 0 auto;
   @include g.mq(md) {
@@ -61,7 +66,10 @@
     margin-top: g.rem(60);
     flex-direction: row;
     flex-wrap: wrap;
-    gap: g.rem(34) g.rem(20);
+    gap: g.rem(32) g.rem(20);
+  }
+  @include g.mq(xl) {
+    margin-top: g.rem(40);
   }
 
   .p-blog-card {
@@ -75,9 +83,12 @@
 }
 
 .p-blog__button {
-  margin-top: g.rem(46);
+  margin-top: g.rem(45);
   text-align: center;
   @include g.mq(md) {
     margin-top: g.rem(60);
+  }
+  @include g.mq(xl) {
+    padding-left: g.rem(21);
   }
 }

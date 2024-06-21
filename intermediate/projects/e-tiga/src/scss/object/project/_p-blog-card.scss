@@ -26,6 +26,9 @@
   position: absolute;
   top: 0;
   right: 0;
+  @include g.mq(md) {
+    padding: g.rem(3) g.rem(4);
+  }
 }
 
 .p-blog-card__body {
