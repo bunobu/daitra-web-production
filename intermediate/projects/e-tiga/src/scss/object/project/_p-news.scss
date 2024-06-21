@@ -10,6 +10,10 @@
 }
 
 .p-news__inner {
+  @include g.mq(md) {
+    max-width: calc(g.rem(930) + g.rem(g.$l-pc-padding * 2));
+    margin: 0 auto;
+  }
 }
 
 .l-inner {
@@ -30,6 +34,10 @@
   position: relative;
   width: fit-content;
   padding-bottom: g.rem(9);
+  @include g.mq(md) {
+    font-size: g.rem(36);
+    padding-bottom: g.rem(5);
+  }
 
   &::before {
     content: "";
@@ -56,28 +64,39 @@
 }
 
 .p-news-article {
-  border-bottom: 1px solid #e3e3e3;
 }
 
 .p-news-article__link {
 }
 
+.p-news-article:first-child {
+  .p-news-article__box {
+    padding-bottom: g.rem(13);
+    @include g.mq(md) {
+      padding-bottom: g.rem(11);
+    }
+  }
+}
+
 .p-news-article__box {
-  padding: g.rem(10) 0 g.rem(13) 0;
+  padding: g.rem(9) 0 g.rem(10) 0;
+  border-bottom: 1px solid #e3e3e3;
   @include g.mq(md) {
     display: flex;
     gap: g.rem(30);
-    padding: g.rem(12) 0;
+    padding: g.rem(12) 0 g.rem(11) 0;
   }
 }
 
 .p-news-article__head {
   @include g.mq(md) {
-    min-width: g.rem(119);
+    min-width: g.rem(120);
+    align-self: center;
   }
 }
 
 .p-news-article__time {
+  display: inline-block;
   font-size: g.rem(14);
   line-height: 1.7;
   @include g.mq(md) {
@@ -87,8 +106,10 @@
 }
 
 .p-news-article__body {
+  margin-top: g.rem(9);
   @include g.mq(md) {
     flex-grow: 1;
+    margin-top: 0;
   }
 }
 
@@ -102,8 +123,9 @@
 }
 
 .p-news__footer {
+  margin-top: g.rem(44);
   @include g.mq(md) {
-    margin-top: g.rem(26);
+    margin-top: g.rem(25);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -111,7 +133,6 @@
 }
 
 .p-news__pagination {
-  margin-top: g.rem(46);
   display: flex;
   gap: g.rem(20);
   justify-content: center;
@@ -133,6 +154,14 @@
   align-items: center;
   justify-content: center;
   border: 1px solid currentColor;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover,
+  &.is-current {
+    color: var(--color-white);
+    background: var(--color-main7);
+    border: 1px solid var(--color-main7);
+  }
 }
 
 .p-news__pagination__prev,
@@ -143,9 +172,23 @@
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-gray);
+  stroke: var(--color-gray2);
+  transition: background-color 0.3s, border 0.3s;
+  @include g.mq(md) {
+    &:hover,
+    &.is-current {
+      background: var(--color-main7);
+      border: 1px solid var(--color-main7);
 
-  img {
-    width: g.rem(10);
+      svg {
+        stroke: var(--color-white);
+      }
+    }
+  }
+
+  svg {
+    width: g.rem(16);
+    transition: stroke 0.3s;
   }
 }
 

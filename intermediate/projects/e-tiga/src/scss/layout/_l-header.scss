@@ -51,8 +51,7 @@
     position: relative;
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       &::before {
         background-color: var(--color-main2);
         width: 100%;
