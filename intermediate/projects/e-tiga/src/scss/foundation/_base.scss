@@ -4,13 +4,18 @@
 :root {
   // color
   --color-white: #ffffff;
-  --color-black: #000000;
-  --color-red: #ff0000;
-  --color-blue: #0000ff;
+  --color-black:#333333;
+  --color-black2: #2B2B2B
+
+  --color-main: #2082e0;
+  --color-main2: #2082df;
+
+  --color-gradation: linear-gradient(180deg, #EAF4F7 0%, #FFF 100%);
+  --color-gradation2: linear-gradient(180deg, rgba(34, 142, 221, 0.90) 0%, rgba(43, 198, 201, 0.90) 100%);
 
   // font-family
   --font-family-en: sans-serif;
-  --font-family-ja: sans-serif;
+  --font-family-ja: "Noto Sans JP", sans-serif;
 
   // ハーフ・レディングを削除 margin-blockにあてる
   --leading-trim: calc((1em - 1lh) / 2);
@@ -23,23 +28,19 @@ body {
 }
 
 html {
-  // root-fontの設定
-  font-size: 100%;
-  font-size: calc(100vw * 16 / 375);
-  @include g.mq("md") {
     font-size: g.$font-size-base;
-  }
 }
 
 body {
   color: var(--color-black);
   background-color: var(--color-white);
-  font-family: sans-serif;
+  font-family: var(--font-family-ja);
+  font-weight: g.$font-weight-regular;
   line-height: 1;
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /* <<< base - サイト共通のスタイル */

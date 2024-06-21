@@ -1,9 +1,22 @@
 <header class="l-header">
-  <h1>{{title}}</h1>
-  <p>header</p>
-  {{#if isHome}}
-  <p>indexぺージ</p>
-  {{else}}
-  <p>hogeページ</p>
-  {{/if}}
+  <div class="l-header__inner">
+    <h1 class="l-header__logo">
+      <a href="" class="l-header__logo-link"
+        ><img src="../img/logo.svg" alt="e-tiga" width="160" height="32"
+      /></a>
+    </h1>
+
+    <nav class="l-header__nav">
+      <a href="" class="l-header__nav-link">e-tigaとは</a>
+      <a href="" class="l-header__nav-link">ご利用の流れ</a>
+      <a href="" class="l-header__nav-link">プラン</a>
+      <a href="" class="l-header__nav-link">運営会社</a>
+    </nav>
+
+    <button class="l-header__menu-button" aria-label="メニューボタン">
+      <span class="l-header__menu-line"></span>
+      <span class="l-header__menu-line"></span>
+      <span class="l-header__menu-line"></span>
+    </button>
+  </div>
 </header>
