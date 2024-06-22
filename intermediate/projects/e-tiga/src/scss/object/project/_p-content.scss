@@ -29,8 +29,8 @@
 
 .p-concept__img {
   text-align: center;
-  align-self: center;
   @include g.mq(md) {
+    align-self: center;
     text-align: initial;
   }
 
@@ -59,12 +59,14 @@
   font-size: g.rem(24);
   font-weight: g.$font-weight-bold;
   line-height: 1.7;
+  display: inline-block;
   @include g.mq(md) {
     font-size: g.rem(26);
   }
 }
 
 .p-concept__text {
+  display: inline-block;
   margin-top: g.rem(30);
   color: var(--color-black);
   font-size: g.rem(15);
@@ -77,12 +79,11 @@
 
 .p-content__button {
   margin-top: g.rem(30);
+  margin-right: g.rem(27);
   text-align: center;
   @include g.mq(md) {
     margin-top: g.rem(36);
+    margin-right: 0;
     text-align: left;
   }
-}
-
-.c-button {
 }
