@@ -58,10 +58,12 @@
       <!-- >>> blog -->
       <section class="p-blog">
         <div class="p-blog__inner l-inner">
-          <h2 class="p-blog__title">
-            <span class="p-blog__title-en">BLOG</span>
-            <span class="p-blog__title-ja">ブログ</span>
-          </h2>
+          <div class="p-blog__title">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">BLOG</span>
+              <span class="c-heading01__ja">ブログ</span>
+            </h2>
+          </div>
           <div class="p-blog__cards">
             <!-- >>> ループ -->
             {{#each blogList}}
@@ -108,7 +110,7 @@
                       >
                     </div>
                     <div class="p-news-article__body">
-                      <p class="p-news-article__text">{{text}}</p>
+                      <h3 class="p-news-article__text">{{text}}</h3>
                     </div>
                   </div>
                 </a>
@@ -180,6 +182,53 @@
         </div>
       </div>
       <!-- <<< concept -->
+
+      <!-- >>> seminar -->
+      <section class="p-seminar">
+        <div class="p-seminar__inner l-inner">
+          <div class="p-seminar__title">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">SEMINAR</span>
+              <span class="c-heading01__ja">セミナー</span>
+            </h2>
+          </div>
+          <div class="p-seminar__card-wrapper">
+            {{#each seminarList}}
+            <article class="p-seminar-card">
+              <div class="p-seminar-card__box">
+                <div class="p-seminar-card__img">
+                  <img
+                    src="{{imgSrc}}"
+                    alt="{{imgAlt}}"
+                    width="{{imgWidth}}"
+                    height="{{imgHeight}}"
+                  />
+                </div>
+                <div class="p-seminar-card__body">
+                  <div class="p-seminar-card__body-head">
+                    <span class="p-seminar-card__body-label">開催日</span>
+                    <time
+                      datetime="{{dateTime}}"
+                      class="p-seminar-card__body-time"
+                      >{{date}}</time
+                    >
+                  </div>
+                  <h3 class="p-seminar-card__body-title">{{title}}</h3>
+                  <p class="p-seminar-card__body-text">{{text}}</p>
+                  <div class="p-seminar-card__body-button">
+                    <a href="">詳細を見る</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            {{/each}}
+          </div>
+          <div class="p-seminar__button">
+            <a href="" class="c-button">セミナー一覧へ</a>
+          </div>
+        </div>
+      </section>
+      <!-- <<< seminar -->
     </main>
   </body>
 </html>

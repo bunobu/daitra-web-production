@@ -11,6 +11,10 @@
 
 .p-blog-card__img {
   text-align: center;
+  img {
+    aspect-ratio: 320 / 220;
+    object-fit: cover;
+  }
 }
 
 .p-blog-card__label {

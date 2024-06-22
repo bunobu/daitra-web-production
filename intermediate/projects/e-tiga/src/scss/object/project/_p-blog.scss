@@ -23,14 +23,8 @@
 }
 
 .p-blog__title {
-  display: flex;
-  flex-direction: column;
-  gap: g.rem(2);
   @include g.mq(md) {
-    flex-direction: row;
-    gap: g.rem(25);
     padding-left: g.rem(33);
-    align-items: center;
   }
   @include g.mq(xl) {
     padding-left: 0;

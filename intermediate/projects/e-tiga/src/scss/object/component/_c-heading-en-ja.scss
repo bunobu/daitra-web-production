@@ -1,0 +1,28 @@
+@use "@global" as g;
+
+.c-heading01 {
+  display: flex;
+  flex-direction: column;
+  gap: g.rem(2);
+  @include g.mq(md) {
+    flex-direction: row;
+    gap: g.rem(25);
+    align-items: center;
+  }
+}
+
+.c-heading01__en {
+  color: var(--color-main3);
+  font-family: var(--font-family-en);
+  font-size: g.rem(36);
+  font-weight: g.$font-weight-bold;
+  line-height: 1.7em;
+  letter-spacing: g.l-spacing(10);
+}
+
+.c-heading01__ja {
+  color: var(--color-main4);
+  font-size: g.rem(14);
+  line-height: 1.7;
+  letter-spacing: g.l-spacing(19);
+}
