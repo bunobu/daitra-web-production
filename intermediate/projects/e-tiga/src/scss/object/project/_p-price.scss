@@ -1,0 +1,137 @@
+@use "@global" as g;
+
+.p-price {
+  background: var(--color-white3);
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  @include g.mq(xl) {
+    padding-top: g.rem(100);
+    padding-bottom: g.rem(100);
+  }
+}
+
+.p-price__inner {
+  padding-right: g.rem(30);
+  padding-left: g.rem(30);
+  @include g.mq(xl) {
+    padding-right: g.rem(g.$l-pc-padding);
+    padding-left: g.rem(g.$l-pc-padding);
+    max-width: calc(g.rem(959) + g.rem(g.$l-pc-padding) * 2);
+    margin: 0 auto;
+  }
+}
+
+.p-price__title {
+  text-align: left;
+}
+
+.p-price__content {
+  max-width: g.rem(300);
+  margin: g.rem(40) auto 0;
+  @include g.mq(md) {
+    max-width: g.rem(630);
+    margin-top: g.rem(40);
+  }
+  @include g.mq(xl) {
+    max-width: 100%;
+    margin-top: g.rem(40);
+  }
+}
+
+.p-price__cards {
+  display: grid;
+  grid-template-columns: (repeat(1, 1fr));
+  gap: g.rem(30);
+  @include g.mq(md) {
+    grid-template-columns: (repeat(2, 1fr));
+  }
+  @include g.mq(xl) {
+    grid-template-columns: (repeat(3, 1fr));
+  }
+}
+
+.p-price-card {
+  border-radius: g.rem(10);
+  background: var(--color-white);
+  padding: g.rem(30) g.rem(20) g.rem(30) g.rem(19);
+}
+
+.p-price-card__title {
+  text-align: center;
+}
+
+.p-price-card__title-text {
+  display: block;
+  color: var(--color-main5);
+  font-size: g.rem(20);
+  font-weight: g.$font-weight-bold;
+  line-height: calc(30 / 20);
+}
+
+.p-price-card__title-price {
+  color: var(--color-main5);
+  font-size: g.rem(36);
+  font-weight: g.$font-weight-bold;
+  line-height: calc(48 / 36);
+  letter-spacing: g.l-spacing(10);
+  margin-top: g.rem(10);
+  position: relative;
+
+  &.is-month {
+    &::before,
+    &::after {
+      color: var(--color-black);
+      font-size: g.rem(16);
+      font-weight: g.$font-weight-bold;
+      line-height: 1.7;
+      letter-spacing: 0;
+      position: absolute;
+      bottom: 0;
+    }
+    &::before {
+      content: "月";
+      left: g.rem(-20);
+    }
+    &::after {
+      content: "円";
+      right: g.rem(-20);
+    }
+  }
+}
+
+.p-price-card__table {
+  margin-top: g.rem(30);
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  tr {
+    height: g.rem(39);
+  }
+
+  th,
+  td {
+    color: var(--color-black);
+    font-size: g.rem(16);
+    line-height: 1.7;
+    vertical-align: middle;
+    border-bottom: 1px solid #c2c2c2;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  td {
+    text-align: right;
+  }
+}
+
+.p-price-card__button {
+  margin-top: g.rem(30);
+  margin-left: g.rem(4);
+  text-align: center;
+}
+
+.c-button {
+}
