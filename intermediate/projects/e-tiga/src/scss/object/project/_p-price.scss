@@ -27,7 +27,7 @@
 
 .p-price__content {
   max-width: g.rem(300);
-  margin: g.rem(40) auto 0;
+  margin: g.rem(46) auto 0;
   @include g.mq(md) {
     max-width: g.rem(630);
     margin-top: g.rem(40);
@@ -69,6 +69,7 @@
 }
 
 .p-price-card__title-price {
+  display: inline-block;
   color: var(--color-main5);
   font-size: g.rem(36);
   font-weight: g.$font-weight-bold;
@@ -86,15 +87,28 @@
       line-height: 1.7;
       letter-spacing: 0;
       position: absolute;
-      bottom: 0;
+      bottom: g.rem(4);
     }
     &::before {
       content: "月";
-      left: g.rem(-20);
+      left: g.rem(-18);
     }
     &::after {
       content: "円";
-      right: g.rem(-20);
+      right: g.rem(-18);
+    }
+
+    &.is-comma {
+      &::before,
+      &::after {
+        bottom: g.rem(0);
+      }
+      &::before {
+        left: g.rem(-18);
+      }
+      &::after {
+        content: "円";
+      }
     }
   }
 }
@@ -120,10 +134,12 @@
 
   th {
     text-align: left;
+    padding-left: g.rem(11);
   }
 
   td {
     text-align: right;
+    padding-right: g.rem(12);
   }
 }
 
@@ -131,6 +147,9 @@
   margin-top: g.rem(30);
   margin-left: g.rem(4);
   text-align: center;
+  @include g.mq(md) {
+    margin-left: g.rem(8);
+  }
 }
 
 .c-button {
