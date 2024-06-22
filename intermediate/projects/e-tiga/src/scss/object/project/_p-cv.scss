@@ -1,0 +1,52 @@
+@use "@global" as g;
+
+.p-cv {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  color: var(--color-white);
+  text-align: center;
+  background: var(--color-gradation4);
+  @include g.mq(md) {
+    padding-top: g.rem(80);
+    padding-bottom: g.rem(79);
+  }
+}
+
+.p-cv__inner {
+}
+
+.l-inner {
+}
+
+.p-cv__title {
+  font-size: g.rem(26);
+  font-weight: g.$font-weight-bold;
+  line-height: 1.7;
+  letter-spacing: g.l-spacing(10);
+}
+
+.p-cv__text {
+  margin-top: g.rem(8);
+  font-size: g.rem(16);
+  line-height: 1.7;
+  letter-spacing: g.l-spacing(10);
+}
+
+.p-cv__button {
+  margin-top: g.rem(17);
+  a {
+    display: inline-block;
+    padding: g.rem(9 - 2) g.rem(18 - 2);
+    border-radius: g.rem(9999);
+    border: 2px solid var(--color-white);
+    box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.16);
+    color: var(--color-white2);
+    text-align: center;
+    font-size: g.rem(16);
+    font-weight: g.$font-weight-bold;
+    line-height: 1.7;
+    letter-spacing: calc(3 / 16 * 1em);
+    min-width: g.rem(200);
+    background: transparent;
+  }
+}
