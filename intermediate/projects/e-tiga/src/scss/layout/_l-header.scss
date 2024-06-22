@@ -72,38 +72,4 @@
 }
 
 .l-header__menu-button {
-  display: inline-block;
-  width: g.rem(43);
-  height: g.rem(23);
-  background: transparent;
-  position: relative;
-  margin-top: g.rem(4.5);
-  margin-right: g.rem(-1.5);
-  @include g.mq(md) {
-    display: none;
-  }
-}
-
-.l-header__menu-line {
-  display: inline-block;
-  height: g.rem(3);
-  width: 100%;
-  background-color: #2082e0;
-  border-radius: g.rem(1.5);
-  position: absolute;
-  left: 0;
-
-  &:nth-of-type(1) {
-    top: 0;
-  }
-
-  &:nth-last-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &:nth-last-of-type(1) {
-    top: 100%;
-    transform: translateY(-100%);
-  }
 }
