@@ -11,6 +11,7 @@
 }
 
 .p-qa__inner {
+  max-width: calc(g.rem(800) + g.rem(g.$l-sp-padding) * 2);
   @include g.mq(md) {
     max-width: calc(g.rem(800) + g.rem(g.$l-pc-padding) * 2);
     margin-left: auto;
@@ -53,7 +54,7 @@
 
 .p-qa-accordion {
   &:not(:first-child) {
-    margin-top: g.rem(12);
+    margin-top: g.rem(14);
     @include g.mq(md) {
       margin-top: g.rem(20);
     }
@@ -68,14 +69,15 @@
   display: block;
   border-radius: g.rem(10);
   background: var(--color-white);
-  padding: g.rem(10) g.rem(42) g.rem(10) g.rem(60);
+  padding: g.rem(10.25) g.rem(42) g.rem(10.25) g.rem(60);
   color: var(--color-black);
-  font-size: g.rem(16);
+  font-size: g.rem(15);
   line-height: 1.7;
   text-align: left;
   position: relative;
   @include g.mq(md) {
-    padding: g.rem(12) g.rem(48) g.rem(12) g.rem(75);
+    font-size: g.rem(16);
+    padding: g.rem(12) g.rem(55) g.rem(12) g.rem(85);
   }
 }
 
@@ -103,6 +105,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @include g.mq(md) {
+      top: calc(50% - 3px);
     }
   }
 }
@@ -110,11 +113,15 @@
 .p-qa-accordion__icon-bar {
   position: absolute;
   top: calc(50% + 1px);
-  right: g.rem(14);
+  right: g.rem(9);
   border-radius: 0 g.rem(12) g.rem(12) 0;
   width: g.rem(22);
   height: g.rem(22);
   transform: translateY(-50%);
+  @include g.mq(md) {
+    top: calc(50%);
+    right: g.rem(13);
+  }
 
   &::before,
   &::after {
@@ -139,7 +146,7 @@
 }
 
 .p-qa-accordion__content {
-  padding: g.rem(10) g.rem(10);
+  padding: g.rem(10.5) g.rem(10);
   border-radius: g.rem(10);
   background: var(--color-white);
   color: var(--color-black);
