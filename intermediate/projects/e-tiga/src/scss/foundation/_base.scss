@@ -48,10 +48,7 @@ body {
 }
 
 html {
-  font-size: 100%;
-  @include g.mq("md") {
-    font-size: g.$font-size-base;
-  }
+  font-size: 16px;
 }
 
 body {

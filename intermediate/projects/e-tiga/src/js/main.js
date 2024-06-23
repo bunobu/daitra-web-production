@@ -1,29 +1,24 @@
-import { tamago } from "./tamago";
+// import { tamago } from "./tamago";
 
-console.log("main");
-tamago();
+// console.log("main");
+// tamago();
 
 /**
  * デバイス幅400px以下の場合はviewportを固定
  * flagSize 固定を始めるデバイス幅
  */
-(() => {
-  const viewportSwitch = () => {
-    const screenWidth = window.screen.width;
-    const meta = document.querySelector("meta[name='viewport']");
-    const flagSize = 400;
-    console.log(meta);
 
-    if (screenWidth >= flagSize) {
-      meta.setAttribute(
-        "content",
-        "width=device-width,initial-scale=1.0,viewport-fit=cover"
-      );
-    } else {
-      meta.setAttribute("content", `width=${flagSize}`);
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value =
+      window.screen.width > 428
+        ? "width=device-width,initial-scale=1"
+        : "width=428";
+    if (viewport.getAttribute("content") !== value) {
+      viewport.setAttribute("content", value);
     }
-  };
-
-  window.addEventListener("resize", viewportSwitch);
-  viewportSwitch();
+  }
+  addEventListener("resize", switchViewport, false);
+  switchViewport();
 })();

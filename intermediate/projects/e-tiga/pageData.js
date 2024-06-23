@@ -5,32 +5,32 @@ export const pageData = {
     description: "indexページの説明文だよ",
     blogList: [
       {
-        img: "./img/blog1-img.jpg",
+        img: "/img/blog1-img.jpg",
         title: "タイトルタイトル",
         text: "テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
       },
       {
-        img: "./img/blog2-img.jpg",
+        img: "/img/blog2-img.jpg",
         title: "タイトルタイトル",
         text: "テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
       },
       {
-        img: "./img/blog3-img.jpg",
+        img: "/img/blog3-img.jpg",
         title: "タイトルタイトル",
         text: "テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
       },
       {
-        img: "./img/blog4-img.jpg",
+        img: "/img/blog4-img.jpg",
         title: "タイトルタイトル",
         text: "テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
       },
       {
-        img: "./img/blog5-img.jpg",
+        img: "/img/blog5-img.jpg",
         title: "タイトルタイトル",
         text: "テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
       },
       {
-        img: "./img/blog6-img.jpg",
+        img: "/img/blog6-img.jpg",
         title: "タイトルタイトル",
         text: "テキストテキストテキストテキストテキストテキストテキストテキストテキスト",
       },
@@ -64,7 +64,7 @@ export const pageData = {
     ],
     seminarList: [
       {
-        imgSrc: "./img/seminar1-img.jpg",
+        imgSrc: "/img/seminar1-img.jpg",
         imgWidth: "648",
         imgHeight: "400",
         imgAlt: "",
@@ -75,7 +75,7 @@ export const pageData = {
         link: "#seminar",
       },
       {
-        imgSrc: "./img/seminar1-img.jpg",
+        imgSrc: "/img/seminar1-img.jpg",
         imgWidth: "648",
         imgHeight: "400",
         imgAlt: "",
@@ -86,7 +86,7 @@ export const pageData = {
         link: "#seminar",
       },
       {
-        imgSrc: "./img/seminar1-img.jpg",
+        imgSrc: "/img/seminar1-img.jpg",
         imgWidth: "648",
         imgHeight: "400",
         imgAlt: "",
