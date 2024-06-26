@@ -66,3 +66,50 @@ const bodyFixedRemove = () => {
     });
   }
 })();
+
+/**
+ * QAアコーディオンの開閉
+ */
+document.querySelectorAll(".js-qa-accordion").forEach((el) => {
+  const summary = el.querySelector(".js-summary");
+  const content = el.querySelector(".js-content");
+
+  const animationOption = {
+    duration: 300,
+    easing: "ease-in-out",
+  };
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (el.getAttribute("open") !== null) {
+      const closing = content.animate(
+        {
+          height: [content.offsetHeight + "px", 0],
+          opacity: [1, 0],
+        },
+        {
+          duration: animationOption.duration,
+          easing: animationOption.easing,
+        }
+      );
+
+      closing.onfinish = () => {
+        el.removeAttribute("open");
+      };
+    } else {
+      el.setAttribute("open", "true");
+
+      const opening = content.animate(
+        {
+          height: [0, content.offsetHeight + "px"],
+          opacity: [0, 1],
+        },
+        {
+          duration: animationOption.duration,
+          easing: animationOption.easing,
+        }
+      );
+    }
+  });
+});

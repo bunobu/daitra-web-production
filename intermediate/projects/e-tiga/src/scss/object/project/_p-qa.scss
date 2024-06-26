@@ -75,6 +75,7 @@
   line-height: 1.7;
   text-align: left;
   position: relative;
+  cursor: pointer;
   @include g.mq(md) {
     font-size: g.rem(16);
     padding: g.rem(12) g.rem(55) g.rem(12) g.rem(85);
@@ -146,6 +147,20 @@
 }
 
 .p-qa-accordion__content {
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    height: g.rem(12);
+    visibility: hidden;
+    @include g.mq(md) {
+      height: g.rem(6);
+    }
+  }
+}
+
+.p-qa-accordion__content-inner {
   padding: g.rem(10.5) g.rem(10);
   border-radius: g.rem(10);
   background: var(--color-white);
@@ -153,10 +168,10 @@
   font-size: g.rem(14);
   line-height: 1.7;
   margin-left: g.rem(20);
-  margin-top: g.rem(12);
+  // margin-top: g.rem(12);
   @include g.mq(md) {
     margin-left: g.rem(41);
-    margin-top: g.rem(6);
+    // margin-top: g.rem(6);
     padding: g.rem(12) g.rem(14);
     font-size: g.rem(16);
   }

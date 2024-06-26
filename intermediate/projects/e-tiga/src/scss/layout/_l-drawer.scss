@@ -7,7 +7,7 @@
   left: 0;
   width: 100%;
   height: calc(100% + 1px);
-  // display: none;
+  display: none;
   z-index: g.z-index(drawer);
   opacity: 0;
   overscroll-behavior-y: contain;
