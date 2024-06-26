@@ -70,46 +70,61 @@ const bodyFixedRemove = () => {
 /**
  * QAアコーディオンの開閉
  */
-document.querySelectorAll(".js-qa-accordion").forEach((el) => {
-  const summary = el.querySelector(".js-summary");
-  const content = el.querySelector(".js-content");
+(() => {
+  // アコーディオンの要素を取得
+  const accordion = document.querySelectorAll(".js-qa-accordion");
+  if (accordion.length === 0) return;
+  accordion.forEach((el) => {
+    // アコーディオンの中身を取得
+    const summary = el.querySelector(".js-summary");
+    const content = el.querySelector(".js-content");
 
-  const animationOption = {
-    duration: 300,
-    easing: "ease-in-out",
-  };
+    // アニメーションのオプション
+    const animationOption = {
+      duration: 300,
+      easing: "ease-in-out",
+    };
 
-  summary.addEventListener("click", (e) => {
-    e.preventDefault();
+    // summaryのクリックイベント
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
 
-    if (el.getAttribute("open") !== null) {
-      const closing = content.animate(
-        {
-          height: [content.offsetHeight + "px", 0],
-          opacity: [1, 0],
-        },
-        {
-          duration: animationOption.duration,
-          easing: animationOption.easing,
-        }
-      );
+      // open属性がある場合
+      if (el.getAttribute("open") !== null) {
+        // アニメーションを実行
+        const closing = content.animate(
+          {
+            height: [content.offsetHeight + "px", 0],
+            opacity: [1, 0],
+          },
+          {
+            duration: animationOption.duration,
+            easing: animationOption.easing,
+          }
+        );
 
-      closing.onfinish = () => {
-        el.removeAttribute("open");
-      };
-    } else {
-      el.setAttribute("open", "true");
+        // アニメーションが終わったらopen属性を削除
+        closing.onfinish = () => {
+          el.removeAttribute("open");
+        };
 
-      const opening = content.animate(
-        {
-          height: [0, content.offsetHeight + "px"],
-          opacity: [0, 1],
-        },
-        {
-          duration: animationOption.duration,
-          easing: animationOption.easing,
-        }
-      );
-    }
+        // open属性がない場合
+      } else {
+        // open属性を追加
+        el.setAttribute("open", "true");
+
+        // アニメーションを実行
+        const opening = content.animate(
+          {
+            height: [0, content.offsetHeight + "px"],
+            opacity: [0, 1],
+          },
+          {
+            duration: animationOption.duration,
+            easing: animationOption.easing,
+          }
+        );
+      }
+    });
   });
-});
+})();
