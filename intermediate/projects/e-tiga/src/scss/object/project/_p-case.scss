@@ -1,0 +1,34 @@
+@use "@global" as g;
+
+.p-case {
+  padding-top: g.rem(60);
+  padding-bottom: g.rem(60);
+  @include g.mq(md) {
+    margin-top: g.rem(100);
+  }
+}
+
+.p-case__inner {
+  padding-left: g.rem(20);
+}
+
+.l-inner {
+}
+
+.c-heading01 {
+}
+
+.c-heading01__en {
+}
+
+.c-heading01__ja {
+}
+
+.p-case__content {
+}
+
+.p-case__slider {
+}
+
+.p-case__button {
+}
