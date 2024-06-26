@@ -1,11 +1,12 @@
 import { swiper } from "./swiper";
 
+// swiperの実行
+swiper;
+
 /**
  * デバイス幅400px以下の場合はviewportを固定
  * flagSize 固定を始めるデバイス幅
  */
-
-swiper();
 
 !(function () {
   const viewport = document.querySelector('meta[name="viewport"]');

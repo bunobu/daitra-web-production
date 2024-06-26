@@ -3,6 +3,9 @@
 
 :root {
   // color
+  --color-base: var(--color-white);
+  --color-text: var(--color-black);
+
   --color-white: #ffffff;
   --color-white2: #f6f7f7;
   --color-white3: #f4fbff;
@@ -13,6 +16,8 @@
   --color-black3: #111111;
   --color-gray: #707070;
   --color-gray2: #828282;
+  --color-gray3: #9d9d9d;
+  --color-gray4: #e1e1e1;
 
   --color-main: #2082e0;
   --color-main2: #2082df;
@@ -21,6 +26,7 @@
   --color-main5: #2392db;
   --color-main6: #238fdc;
   --color-main7: #2392db;
+  --color-main8: #2f7dc8;
 
   --color-sub: #2bc8c8;
 
@@ -52,8 +58,8 @@ html {
 }
 
 body {
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-text);
+  background-color: var(--color-base);
   font-family: var(--font-family-ja);
   font-weight: g.$font-weight-regular;
   line-height: 1;
