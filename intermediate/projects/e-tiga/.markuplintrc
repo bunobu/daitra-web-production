@@ -10,6 +10,7 @@
     "\\.html$": "@markuplint/mustache-parser"
   },
   "rules": {
-    "required-h1": false
+    "required-h1": false,
+    "no-refer-to-non-existent-id": false
   }
 }
