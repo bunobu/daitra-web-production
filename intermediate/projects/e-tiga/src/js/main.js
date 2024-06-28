@@ -133,3 +133,19 @@ const bodyFixedRemove = () => {
     });
   });
 })();
+
+/**
+ * TOPへ戻るボタンの表示・非表示
+ */
+(() => {
+  const pageTop = document.getElementById("js-page-top");
+  if (pageTop) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        pageTop.classList.add("is-active");
+      } else {
+        pageTop.classList.remove("is-active");
+      }
+    });
+  }
+})();
