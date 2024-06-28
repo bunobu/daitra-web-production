@@ -8,7 +8,7 @@ swiper;
  * flagSize 固定を始めるデバイス幅
  */
 
-!(function () {
+(() => {
   const viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
     const value =
@@ -33,6 +33,7 @@ const bodyFixedAdd = () => {
   document.body.style.cssText = `
       position: fixed;
       top: -${scrollTop}px;
+      width: 100%;
     `;
 
   console.log("fixed");
@@ -43,34 +44,35 @@ const bodyFixedRemove = () => {
       position: "";
       top: "";
   `;
+
   window.scrollTo({
     top: scrollTop,
     left: 0,
-    // behavior: "smooth",
   });
 };
 
 /**
  * ドロワーボタンを押したらドロワーを開閉する
  */
-(() => {
-  const drawerToggle = document.getElementById("js-drawer-toggle");
-  const drawer = document.getElementById("js-drawer");
+let drawerFlag = false;
+const drawerToggle = document.getElementById("js-drawer-toggle");
+const drawer = document.getElementById("js-drawer");
 
-  if (drawerToggle) {
-    drawerToggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      drawerToggle.classList.toggle("is-active");
-      drawer.classList.toggle("is-active");
+if (drawerToggle) {
+  drawerToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    drawerToggle.classList.toggle("is-active");
+    drawer.classList.toggle("is-active");
 
-      if (drawer.classList.contains("is-active")) {
-        bodyFixedAdd();
-      } else {
-        bodyFixedRemove();
-      }
-    });
-  }
-})();
+    if (drawer.classList.contains("is-active")) {
+      bodyFixedAdd();
+      drawerFlag = true;
+    } else {
+      bodyFixedRemove();
+      drawerFlag = false;
+    }
+  });
+}
 
 /**
  * QAアコーディオンの開閉
@@ -149,3 +151,51 @@ const bodyFixedRemove = () => {
     });
   }
 })();
+
+/**
+ * スムーススクロール
+ */
+
+const anchors = document.querySelectorAll("a[href^='#']");
+
+anchors.forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    console.log("click");
+    e.preventDefault();
+
+    // クリックしたリンクのhref属性を取得
+    const href = this.getAttribute("href");
+
+    // href属性が#だけの場合は処理を中断
+    if (href === "#") return;
+
+    // 目標のターゲットを取得
+    const target = document.querySelector(href);
+
+    // 表示されている画面上からターゲットのtop位置までの距離を取得
+    const targetPosition = target.getBoundingClientRect().top;
+
+    // 現在のスクロール位置を取得
+    const currentPosition = window.scrollY;
+
+    // headerの高さを取得
+    // const headerHeight = document.querySelector("header").offsetHeight;
+
+    // 現在位置からターゲットの位置までの距離を取得
+    // const distance = targetPosition + currentPosition - headerHeight;
+    const distance = targetPosition + currentPosition;
+
+    // もしドロワーが開いていたら固定を解除して閉じる
+    if (drawerFlag) {
+      bodyFixedRemove();
+      drawerToggle.classList.remove("is-active");
+      drawer.classList.remove("is-active");
+    }
+
+    // スクロールアニメーションを実行
+    window.scrollTo({
+      top: distance,
+      behavior: "smooth",
+    });
+  });
+});
