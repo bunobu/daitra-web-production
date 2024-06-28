@@ -20,7 +20,7 @@ export const swiper = new Swiper("#js-case-swiper", {
   breakpoints: {
     // スライドの表示枚数：500px以上の場合
     834: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
     },
     1280: {
       slidesPerView: 3,
