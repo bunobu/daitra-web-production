@@ -1,7 +1,54 @@
 import { swiper } from "./swiper";
 
-// swiperの実行
+// ライブラリの読み込み
 swiper;
+
+/**
+ * グローバル変数
+ */
+
+const body = document.querySelector("body");
+
+let drawerFlag = false;
+const drawerToggle = document.getElementById("js-drawer-toggle");
+const drawer = document.getElementById("js-drawer");
+
+/**
+ * グローバル関数
+ */
+
+// bodyの固定をする
+const bodyFixedAdd = () => {
+  // スクロール位置を取得
+  const scrollTop = window.scrollY;
+
+  // bodyを固定して位置を保持
+  body.style.cssText = `
+      position: fixed;
+      top: -${scrollTop}px;
+      width: 100%;
+    `;
+};
+
+// bodyの固定を解除する
+const bodyFixedRemove = () => {
+  // fixedのtopの位置を取得
+  const scrollTop = body.style.top;
+
+  // bodyの固定を解除
+  body.style.cssText = `
+      position: "";
+      top: "";
+  `;
+
+  // スクロール位置にfixedのtopの位置を格納
+  const scrollY = parseInt(scrollTop || "0") * -1;
+
+  // 現在の位置までスクロール
+  window.scrollTo(0, scrollY);
+  // スクロール位置を返す
+  return scrollY;
+};
 
 /**
  * デバイス幅400px以下の場合はviewportを固定
@@ -9,70 +56,66 @@ swiper;
  */
 
 (() => {
+  // viewport属性の取得
   const viewport = document.querySelector('meta[name="viewport"]');
+  // 固定するデバイス幅
+  const staticWidth = 400;
+
+  // viewportの切り替え関数
   function switchViewport() {
     const value =
-      window.screen.width > 400
-        ? "width=device-width,initial-scale=1"
-        : "width=400";
+      // window.screen.widthはデバイスの幅を取得
+      window.screen.width > staticWidth
+        ? // デバイス幅が条件より大きい場合はデバイス幅に合わせる
+          "width=device-width,initial-scale=1"
+        : // デバイス幅が条件より小さい場合は固定の幅に合わせる
+          `width=${staticWidth}`;
+
+    // viewportの値がvalueと異なる場合はvalueをセット
     if (viewport.getAttribute("content") !== value) {
       viewport.setAttribute("content", value);
     }
   }
+  // リサイズ時にviewportを切り替え
   addEventListener("resize", switchViewport, false);
+  // 初期読み込み時にviewportを切り替え
   switchViewport();
 })();
 
 /**
- * モーダル表示時の背景固定・解除する
- */
-let scrollTop = window.scrollY;
-const bodyFixedAdd = () => {
-  scrollTop = window.scrollY;
-
-  document.body.style.cssText = `
-      position: fixed;
-      top: -${scrollTop}px;
-      width: 100%;
-    `;
-
-  console.log("fixed");
-};
-
-const bodyFixedRemove = () => {
-  document.body.style.cssText = `
-      position: "";
-      top: "";
-  `;
-
-  window.scrollTo({
-    top: scrollTop,
-    left: 0,
-  });
-};
-
-/**
  * ドロワーボタンを押したらドロワーを開閉する
  */
-let drawerFlag = false;
-const drawerToggle = document.getElementById("js-drawer-toggle");
-const drawer = document.getElementById("js-drawer");
+(() => {
+  if (drawerToggle) {
+    drawerToggle.addEventListener("click", (e) => {
+      // デフォルトのイベントをキャンセル
+      e.preventDefault();
 
-if (drawerToggle) {
-  drawerToggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    drawerToggle.classList.toggle("is-active");
-    drawer.classList.toggle("is-active");
+      // ドロワーが開いている場合
+      if (drawer.classList.contains("is-active")) {
+        // bodyの固定を解除
+        bodyFixedRemove();
+        // ドロワーボタンのアクティブクラスを削除
+        drawerToggle.classList.remove("is-active");
+        // ドロワーのアクティブクラスを削除
+        drawer.classList.remove("is-active");
+        // フラグをfalseにする
+        drawerFlag = false;
 
-    if (drawer.classList.contains("is-active")) {
-      bodyFixedAdd();
-      drawerFlag = true;
-    } else {
-      bodyFixedRemove();
-      drawerFlag = false;
-    }
-  });
-}
+        // ドロワーが閉じている場合
+      } else {
+        // bodyを固定
+        bodyFixedAdd();
+        // ドロワーボタンにアクティブクラスを追加
+        drawerToggle.classList.add("is-active");
+        // ドロワーにアクティブクラスを追加
+        drawer.classList.add("is-active");
+        // フラグをtrueにする
+        drawerFlag = true;
+      }
+    });
+  }
+})();
 
 /**
  * QAアコーディオンの開閉
@@ -155,47 +198,68 @@ if (drawerToggle) {
 /**
  * スムーススクロール
  */
+(() => {
+  // ページ内リンクの要素を全て取得
+  const anchors = document.querySelectorAll("a[href^='#']");
+  // ページ内リンクがない場合は処理を中断
+  if (anchors.length > 0) {
+    // ページ内リンクの数だけ処理を繰り返す
+    anchors.forEach((anchor) => {
+      // ページ内リンクがクリックされたら処理を実行
+      anchor.addEventListener("click", function (e) {
+        // デフォルトのイベントをキャンセル
+        e.preventDefault();
 
-const anchors = document.querySelectorAll("a[href^='#']");
+        // クリックしたリンクのhref属性を取得
+        const href = this.getAttribute("href");
 
-anchors.forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    console.log("click");
-    e.preventDefault();
+        // href属性が#だけの場合は処理を中断
+        if (href === "#") return;
 
-    // クリックしたリンクのhref属性を取得
-    const href = this.getAttribute("href");
+        // 目標のターゲットを取得
+        const target = document.querySelector(href);
 
-    // href属性が#だけの場合は処理を中断
-    if (href === "#") return;
+        // 表示されている画面上からターゲットのtop位置までの距離を取得
+        const targetPosition = target.getBoundingClientRect().top;
 
-    // 目標のターゲットを取得
-    const target = document.querySelector(href);
+        // 現在のスクロール位置を取得
+        let currentPosition = window.scrollY;
 
-    // 表示されている画面上からターゲットのtop位置までの距離を取得
-    const targetPosition = target.getBoundingClientRect().top;
+        // headerの高さを取得
+        // const headerHeight = document.querySelector("header").offsetHeight;
 
-    // 現在のスクロール位置を取得
-    const currentPosition = window.scrollY;
+        // 現在位置からターゲットの位置までの距離を取得
+        // const distance = targetPosition + currentPosition - headerHeight;
 
-    // headerの高さを取得
-    // const headerHeight = document.querySelector("header").offsetHeight;
+        // ドロワーが開いている場合
+        if (drawerFlag) {
+          // bodyの固定を解除
+          let top = bodyFixedRemove();
+          // ドロワーボタンのアクティブクラスを削除
+          drawerToggle.classList.remove("is-active");
+          // ドロワーのアクティブクラスを削除
+          drawer.classList.remove("is-active");
+          // 現在の位置にドロワーのtop位置を格納
+          currentPosition = top;
+        }
 
-    // 現在位置からターゲットの位置までの距離を取得
-    // const distance = targetPosition + currentPosition - headerHeight;
-    const distance = targetPosition + currentPosition;
+        // 現在位置からターゲットの位置までの距離を取得
+        const distance = targetPosition + currentPosition;
 
-    // もしドロワーが開いていたら固定を解除して閉じる
-    if (drawerFlag) {
-      bodyFixedRemove();
-      drawerToggle.classList.remove("is-active");
-      drawer.classList.remove("is-active");
-    }
-
-    // スクロールアニメーションを実行
-    window.scrollTo({
-      top: distance,
-      behavior: "smooth",
+        // スクロールアニメーションを実行
+        window.scrollTo({
+          top: distance,
+          behavior: "smooth",
+        });
+      });
     });
-  });
+  }
+})();
+
+// スクロール位置を取得してCSS変数に格納
+window.addEventListener("scroll", () => {
+  document.documentElement.style.setProperty(
+    "--scroll-y",
+    `${window.scrollY}px`
+  );
 });
