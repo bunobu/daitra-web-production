@@ -1,3 +1,5 @@
+"use strict";
+
 import { swiper } from "./swiper";
 
 // ライブラリの読み込み
@@ -263,3 +265,32 @@ window.addEventListener("scroll", () => {
     `${window.scrollY}px`
   );
 });
+
+/**
+ * 会社概要のタブクリックでコンテンツ切り替え
+ */
+(() => {
+  const tabList = document.querySelectorAll(".js-company-tab");
+  tabList.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      const tabTargetDate = e.currentTarget.dataset.tab;
+
+      const menuList = e.currentTarget.closest("#js-company-menu-list");
+      const menuItems = menuList.querySelectorAll(".js-company-menu");
+
+      tabList.forEach((item) => {
+        item.classList.remove("is-active");
+      });
+
+      menuItems.forEach((item) => {
+        const menuTargetDate = item.dataset.menu;
+        if (tabTargetDate === menuTargetDate) {
+          tab.classList.add("is-active");
+          item.classList.add("is-active");
+        } else {
+          item.classList.remove("is-active");
+        }
+      });
+    });
+  });
+})();
