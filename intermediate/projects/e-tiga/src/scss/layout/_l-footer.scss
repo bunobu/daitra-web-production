@@ -2,13 +2,22 @@
 
 .l-footer {
   background-image: var(--color-gradation5);
-  padding-top: g.rem(46);
+  padding-top: g.rem(48);
   color: var(--color-white);
+  @include g.mq(xl) {
+    padding-top: g.rem(60);
+  }
 }
 
 .l-footer__inner.l-inner {
   @include g.mq(xl) {
-    max-width: calc(g.rem(941) + g.$l-pc-padding * 2);
+    max-width: calc(g.rem(941) + g.$l-pc-padding + 109px);
+    margin: initial;
+    padding-left: g.rem(109);
+  }
+
+  @include g.mq(2xl) {
+    margin: 0 auto;
   }
 }
 
@@ -31,6 +40,9 @@
 
 .l-footer__logo {
   text-align: center;
+  @include g.mq(xl) {
+    text-align: left;
+  }
 
   a {
     width: g.rem(160);
@@ -40,7 +52,7 @@
 
 .l-footer__company {
   margin-top: g.rem(24);
-  font-size: g.rem(16);
+  font-size: g.rem(14);
   line-height: 1.7;
   @include g.mq(xl) {
     margin-top: g.rem(16);
@@ -50,17 +62,23 @@
 .l-footer__company-box {
   display: flex;
   justify-content: center;
+  @include g.mq(xl) {
+    justify-content: flex-start;
+  }
 
   & + & {
-    margin-top: g.rem(5);
+    margin-top: g.rem(3);
+    @include g.mq(xl) {
+      margin-top: g.rem(1);
+    }
   }
 
   dt {
     &::after {
-      content: ":";
+      content: "：";
       display: inline-block;
       height: 100%;
-      margin: 0 g.rem(4);
+      // margin: 0 g.rem(4);
       position: relative;
       top: g.rem(-1);
     }
@@ -68,10 +86,10 @@
 }
 
 .l-footer__nav {
-  margin-top: g.rem(37);
+  margin-top: g.rem(34);
   @include g.mq(xl) {
     margin-top: 0;
-    margin-left: calc(g.rem(78) / g.rem(941) * 100%);
+    margin-left: g.rem(78);
   }
 }
 
@@ -100,7 +118,7 @@
     position: relative;
 
     @include g.mq(xl) {
-      padding-right: g.rem(24);
+      padding-right: g.rem(26);
       padding-left: g.rem(24);
     }
   }
@@ -118,11 +136,12 @@
           content: "";
           display: inline-block;
           width: 1px;
-          height: 100%;
+          height: calc(16 / 24 * 100%);
           background-color: var(--color-white);
           position: absolute;
-          top: 0;
+          top: 50%;
           right: 0;
+          transform: translate(-50%, -50%);
         }
       }
     }
@@ -159,6 +178,9 @@
   padding: g.rem(11) g.rem(22);
   text-align: center;
   display: block;
+  @include g.mq(xl) {
+    margin-top: g.rem(58);
+  }
 
   small {
     font-size: g.rem(12);
