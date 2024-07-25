@@ -61,7 +61,7 @@ const bodyFixedRemove = () => {
   // viewport属性の取得
   const viewport = document.querySelector('meta[name="viewport"]');
   // 固定するデバイス幅
-  const staticWidth = 400;
+  const staticWidth = 420;
 
   // viewportの切り替え関数
   function switchViewport() {
