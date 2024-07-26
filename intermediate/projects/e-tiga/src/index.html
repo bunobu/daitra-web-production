@@ -44,7 +44,7 @@
                 チームの管理をよりスピーディーに円滑にします。
               </p>
               <div class="p-mv__button">
-                <a href="" class="c-button">無料で登録</a>
+                <a href="#cv" class="c-button">無料で登録</a>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@
 
     <main class="l-main">
       <!-- >>> blog -->
-      <section class="p-blog">
+      <section id="blog" class="p-blog">
         <div class="p-blog__inner l-inner">
           <div class="p-blog__title">
             <h2 class="c-heading01">
@@ -67,7 +67,7 @@
             <!-- >>> ループ -->
             {{#each blogList}}
             <article class="p-blog-card">
-              <a href="" class="p-blog-card__link">
+              <a href="#" class="p-blog-card__link">
                 <div class="p-blog-card__head">
                   <div class="p-blog-card__img">
                     <img src="{{img}}" alt="" width="660" height="440" />
@@ -84,14 +84,14 @@
             <!-- <<< ループ -->
           </div>
           <div class="p-blog__button">
-            <button class="c-button">ブログ一覧へ</button>
+            <a href="#" class="c-button">ブログ一覧へ</a>
           </div>
         </div>
       </section>
       <!-- <<< blog -->
 
       <!-- >>> news -->
-      <section class="p-news">
+      <section id="news" class="p-news">
         <div class="p-news__inner l-inner">
           <div class="p-news__title-wrapper">
             <h2 class="p-news__title">NEWS</h2>
@@ -101,7 +101,7 @@
               <!-- >>> ループ -->
               {{#each newsList}}
               <article class="p-news-article">
-                <a href="" class="p-news-article__link">
+                <a href="#" class="p-news-article__link">
                   <div class="p-news-article__box">
                     <div class="p-news-article__head">
                       <time class="p-news-article__time" datetime="{{dateTime}}"
@@ -120,7 +120,11 @@
           </div>
           <div class="p-news__footer">
             <div class="p-news__pagination">
-              <a href="" class="p-news__pagination__prev" aria-label="前へ戻る">
+              <a
+                href="#"
+                class="p-news__pagination__prev"
+                aria-label="前へ戻る"
+              >
                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
                   <path
                     d="M15 1L8 6L15 11M9 1L2 6L9 11"
@@ -129,12 +133,16 @@
                   />
                 </svg>
               </a>
-              <a href="" class="p-news__pagination__item is-current">1</a>
-              <a href="" class="p-news__pagination__item">2</a>
-              <a href="" class="p-news__pagination__item">3</a>
-              <a href="" class="p-news__pagination__item">4</a>
-              <a href="" class="p-news__pagination__item">5</a>
-              <a href="" class="p-news__pagination__next" aria-label="次へ進む">
+              <a href="#" class="p-news__pagination__item is-current">1</a>
+              <a href="#" class="p-news__pagination__item">2</a>
+              <a href="#" class="p-news__pagination__item">3</a>
+              <a href="#" class="p-news__pagination__item">4</a>
+              <a href="#" class="p-news__pagination__item">5</a>
+              <a
+                href="#"
+                class="p-news__pagination__next"
+                aria-label="次へ進む"
+              >
                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
                   <path
                     d="M1 1L8 6L1 11M7 1L14 6L7 11"
@@ -144,8 +152,8 @@
                 </svg>
               </a>
             </div>
-            <div class="p-new__button">
-              <a href="">全てみる</a>
+            <div class="p-news__button">
+              <a href="#">全てみる</a>
             </div>
           </div>
         </div>
@@ -169,7 +177,7 @@
                 誰でも簡単らくらくに、スケジュールや名刺をデジタル化。チームの管理をよりスピーディーに円滑にします。誰でも簡単らくらくに、スケジュールや名刺をデジタル化。チームの管理をよりスピーディーに円滑にします。誰でも簡単らくらくに、
               </p>
               <div class="p-content__button">
-                <a href="" class="c-button">詳細・できることへ</a>
+                <a href="#" class="c-button">詳細・できることへ</a>
               </div>
             </div>
           </div>
@@ -178,7 +186,7 @@
       <!-- <<< concept -->
 
       <!-- >>> seminar -->
-      <section class="p-seminar">
+      <section id="seminar" class="p-seminar">
         <div class="p-seminar__inner l-inner">
           <div class="p-seminar__title">
             <h2 class="c-heading01">
@@ -210,7 +218,7 @@
                   <h3 class="p-seminar-card__body-title">{{title}}</h3>
                   <p class="p-seminar-card__body-text">{{text}}</p>
                   <div class="p-seminar-card__body-button">
-                    <a href="">詳細を見る</a>
+                    <a href="#">詳細を見る</a>
                   </div>
                 </div>
               </div>
@@ -218,14 +226,14 @@
             {{/each}}
           </div>
           <div class="p-seminar__button">
-            <a href="" class="c-button">セミナー一覧へ</a>
+            <a href="#" class="c-button">セミナー一覧へ</a>
           </div>
         </div>
       </section>
       <!-- <<< seminar -->
 
       <!-- >>> price -->
-      <section class="p-price">
+      <section id="price" class="p-price">
         <div class="p-price__inner l-inner">
           <div class="p-price__title">
             <h2 class="c-heading01">
@@ -269,7 +277,7 @@
                     </tr>
                   </table>
                   <div class="p-price-card__button">
-                    <a href="" class="c-button">お申し込み</a>
+                    <a href="#" class="c-button">お申し込み</a>
                   </div>
                 </div>
                 <div class="p-price-card">
@@ -309,7 +317,7 @@
                     </tr>
                   </table>
                   <div class="p-price-card__button">
-                    <a href="" class="c-button">お申し込み</a>
+                    <a href="#" class="c-button">お申し込み</a>
                   </div>
                 </div>
                 <div class="p-price-card">
@@ -349,7 +357,7 @@
                     </tr>
                   </table>
                   <div class="p-price-card__button">
-                    <a href="" class="c-button">お申し込み</a>
+                    <a href="#" class="c-button">お申し込み</a>
                   </div>
                 </div>
               </div>
@@ -360,21 +368,21 @@
       <!-- <<< price -->
 
       <!-- >>> cv -->
-      <div class="p-cv">
+      <div id="cv" class="p-cv">
         <div class="p-cv__inner l-inner">
           <p class="p-cv__title">まずは無料お試し</p>
           <div>
             <p class="p-cv__text">ライトプランなら無料でお使いいただけます。</p>
           </div>
           <div class="p-cv__button">
-            <a href="">お申し込み</a>
+            <a href="#">お申し込み</a>
           </div>
         </div>
       </div>
       <!-- <<< cv -->
 
       <!-- >>> Q & A -->
-      <section class="p-qa">
+      <section id="qa" class="p-qa">
         <div class="p-qa__inner l-inner">
           <h2 class="p-qa__title">Q&A</h2>
           <div class="p-qa__content">
@@ -432,7 +440,7 @@
       <!-- <<< Q & A -->
 
       <!-- >>> case -->
-      <section class="p-case">
+      <section id="case" class="p-case">
         <div class="p-case__inner l-inner">
           <div class="p-case__title">
             <h2 class="c-heading01">
@@ -449,7 +457,7 @@
                 <div class="swiper-wrapper p-case-swiper__wrapper">
                   <!-- Slides -->
                   <article class="swiper-slide p-case-swiper__slide">
-                    <a href="" class="p-case-swiper__slide-inner">
+                    <a href="#" class="p-case-swiper__slide-inner">
                       <div class="p-case-swiper__slide-img">
                         <img
                           src="/img/card-1-img.jpg"
@@ -471,7 +479,7 @@
                     </a>
                   </article>
                   <article class="swiper-slide p-case-swiper__slide">
-                    <a href="" class="p-case-swiper__slide-inner">
+                    <a href="#" class="p-case-swiper__slide-inner">
                       <div class="p-case-swiper__slide-img">
                         <img
                           src="/img/card-2-img.jpg"
@@ -493,7 +501,7 @@
                     </a>
                   </article>
                   <article class="swiper-slide p-case-swiper__slide">
-                    <a href="" class="p-case-swiper__slide-inner">
+                    <a href="#" class="p-case-swiper__slide-inner">
                       <div class="p-case-swiper__slide-img">
                         <img
                           src="/img/card-3-img.jpg"
@@ -515,7 +523,7 @@
                     </a>
                   </article>
                   <article class="swiper-slide p-case-swiper__slide">
-                    <a href="" class="p-case-swiper__slide-inner">
+                    <a href="#" class="p-case-swiper__slide-inner">
                       <div class="p-case-swiper__slide-img">
                         <img
                           src="/img/card-1-img.jpg"
@@ -548,14 +556,14 @@
             <!-- <<< swiper -->
           </div>
           <div class="p-case__button">
-            <a href="">全てみる</a>
+            <a href="#">全てみる</a>
           </div>
         </div>
       </section>
       <!-- <<< case -->
 
       <!-- >>> company -->
-      <section class="p-company">
+      <section id="company" class="p-company">
         <div class="p-company__inner l-inner">
           <div class="p-company__title">
             <h2 class="c-heading01">
@@ -737,8 +745,13 @@
         <div class="l-footer__content">
           <div class="l-footer__top">
             <div class="l-footer__logo">
-              <a href="">
-                <img src="./img/logo-white.svg" alt="" />
+              <a href="./">
+                <img
+                  src="./img/logo-white.svg"
+                  alt="e-tiga"
+                  width="180"
+                  height="36"
+                />
               </a>
             </div>
 
@@ -761,26 +774,37 @@
           <nav class="l-footer__nav">
             <ul class="l-footer__nav-list">
               <li class="l-footer__nav-item">
-                <a href="">お問い合わせ</a>
+                <a href="#">お問い合わせ</a>
               </li>
               <li class="l-footer__nav-item">
-                <a href="">プライバシーポリシー</a>
+                <a href="#">プライバシーポリシー</a>
               </li>
               <li class="l-footer__nav-item">
-                <a href="">特定商取引法</a>
+                <a href="#">特定商取引法</a>
               </li>
             </ul>
           </nav>
 
           <ul class="l-footer__sns-list">
             <li class="l-footer__sns-item">
-              <a href="" class="fa-brands fa-youtube fa-fw"></a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="fa-brands fa-youtube fa-fw"
+              ></a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" class="fa-brands fa-x-twitter fa-fw"></a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                class="fa-brands fa-x-twitter fa-fw"
+              ></a>
             </li>
             <li class="l-footer__sns-item">
-              <a href="" class="fa-brands fa-instagram"></a>
+              <a
+                href="https://www.instagram.com/"
+                class="fa-brands fa-instagram"
+              ></a>
             </li>
           </ul>
         </div>

@@ -28,6 +28,17 @@
 }
 
 .l-header__logo-link {
+  display: inline-block;
+  @include g.mq(md) {
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      scale: 1.1;
+    }
+  }
+
   img {
   }
 }
@@ -50,8 +61,17 @@
     padding: g.rem(9.71) g.rem(22);
     position: relative;
 
-    &:hover,
-    &:active {
+    @include g.mq(md) {
+      &:hover {
+        &::before {
+          background-color: var(--color-main2);
+          width: 100%;
+        }
+      }
+    }
+
+    &:active,
+    &:focus {
       &::before {
         background-color: var(--color-main2);
         width: 100%;

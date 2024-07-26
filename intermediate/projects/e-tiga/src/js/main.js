@@ -258,14 +258,6 @@ const bodyFixedRemove = () => {
   }
 })();
 
-// スクロール位置を取得してCSS変数に格納
-window.addEventListener("scroll", () => {
-  document.documentElement.style.setProperty(
-    "--scroll-y",
-    `${window.scrollY}px`
-  );
-});
-
 /**
  * 会社概要のタブクリックでコンテンツ切り替え
  */

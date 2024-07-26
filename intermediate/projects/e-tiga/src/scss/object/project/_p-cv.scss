@@ -48,5 +48,13 @@
     letter-spacing: calc(3 / 16 * 1em);
     min-width: g.rem(200);
     background: transparent;
+
+    @include g.mq(md) {
+      transition: transform 0.3s;
+      &:hover,
+      &:focus {
+        transform: rotateX(360deg);
+      }
+    }
   }
 }

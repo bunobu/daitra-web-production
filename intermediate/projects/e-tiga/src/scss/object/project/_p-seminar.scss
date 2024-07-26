@@ -143,6 +143,16 @@
     font-weight: g.$font-weight-medium;
     line-height: 1.7;
     padding: g.rem(8 - 1) g.rem(16 - 1);
+
+    @include g.mq(md) {
+      transition: 0.3s;
+      &:hover,
+      &:focus {
+        color: var(--color-white);
+        background-color: var(--color-main5);
+        border-color: currentColor;
+      }
+    }
   }
 }
 

@@ -37,6 +37,11 @@
     rgba(43, 198, 201, 0.9) 100%
   );
   --color-gradation3: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
+  --color-gradation3-reverse: linear-gradient(
+    90deg,
+    #2bcbc6 1.75%,
+    #2188de 97.75%
+  );
   --color-gradation4: linear-gradient(90deg, #2390dc 0%, #2bc8c8 100%);
   --color-gradation5: linear-gradient(90deg, #2390dc 0%, #2bc8c8 100%);
 
@@ -68,6 +73,12 @@ body {
 
 p {
   line-height: 1.7;
+}
+
+a[href="#"] {
+  @include g.mq(md) {
+    cursor: not-allowed;
+  }
 }
 
 /* <<< base - サイト共通のスタイル */

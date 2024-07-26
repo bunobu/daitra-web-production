@@ -50,10 +50,27 @@
 }
 
 .p-qa-accordion {
+  transition: 0.3s;
   &:not(:first-child) {
     margin-top: g.rem(14);
     @include g.mq(md) {
       margin-top: g.rem(20);
+    }
+  }
+
+  &[open="true"] {
+    .p-qa-accordion__icon-bar {
+      transform: translateY(-50%) rotate(360deg);
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  @include g.mq(md) {
+    &:hover {
+      scale: 1.05;
     }
   }
 }
@@ -116,6 +133,7 @@
   width: g.rem(22);
   height: g.rem(22);
   transform: translateY(-50%);
+  transition: 0.3s;
   @include g.mq(md) {
     top: calc(50%);
     right: g.rem(13);
