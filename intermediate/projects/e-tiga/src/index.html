@@ -5,13 +5,48 @@
 
     <link rel="stylesheet" href="./scss/style.scss" />
 
+    <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/566b522bd3.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="./js/main.js" type="module" defer></script>
   </head>
   <body>
+    <div class="l-loading" data-id="loading">
+      <div class="l-loading__inner">
+        <div class="progress js-progress">
+          <div class="progress__inner">
+            <svg class="progress__svg" viewBox="0 0 100 100">
+              <circle
+                class="progress__background"
+                cx="50"
+                cy="50"
+                r="45"
+              ></circle>
+              <circle class="progress__bar" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <div class="progress__text">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="l-top-bg">
       {{> header }}
       <!-- >>> mv -->

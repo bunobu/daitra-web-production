@@ -286,3 +286,43 @@ const bodyFixedRemove = () => {
     });
   });
 })();
+
+/**
+ * gsap
+ */
+
+let radius = document.querySelector(".progress__bar").getAttribute("r");
+const lengthOfCircle = 2 * Math.PI * radius;
+
+gsap
+  .timeline({
+    defaults: {
+      delay: 0.5,
+      ease: "none",
+    },
+  })
+  .add("start")
+  .to(".progress__text", 3, {
+    textContent: 100 + "%",
+    ease: "none",
+    snap: {
+      textContent: 1,
+    },
+  })
+  .to(
+    ".progress__bar",
+    0,
+    {
+      strokeDashoffset: lengthOfCircle,
+    },
+    "start"
+  )
+  .to(
+    ".progress__bar",
+    3,
+    {
+      strokeDashoffset: 0,
+      ease: "none",
+    },
+    "start"
+  );
