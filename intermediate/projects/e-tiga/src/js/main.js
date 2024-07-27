@@ -1,9 +1,41 @@
 "use strict";
 
-import { swiper } from "./swiper";
+import { caseSlider } from "./caseSlider";
+import { loading } from "./loading";
 
-// ライブラリの読み込み
-swiper;
+loading();
+caseSlider();
+/**
+ * デバイス幅400px以下の場合はviewportを固定
+ * flagSize 固定を始めるデバイス幅
+ */
+
+(() => {
+  // viewport属性の取得
+  const viewport = document.querySelector('meta[name="viewport"]');
+  // 固定するデバイス幅
+  const staticWidth = 420;
+
+  // viewportの切り替え関数
+  function switchViewport() {
+    const value =
+      // window.screen.widthはデバイスの幅を取得
+      window.screen.width > staticWidth
+        ? // デバイス幅が条件より大きい場合はデバイス幅に合わせる
+          "width=device-width,initial-scale=1"
+        : // デバイス幅が条件より小さい場合は固定の幅に合わせる
+          `width=${staticWidth}`;
+
+    // viewportの値がvalueと異なる場合はvalueをセット
+    if (viewport.getAttribute("content") !== value) {
+      viewport.setAttribute("content", value);
+    }
+  }
+  // リサイズ時にviewportを切り替え
+  addEventListener("resize", switchViewport, false);
+  // 初期読み込み時にviewportを切り替え
+  switchViewport();
+})();
 
 /**
  * グローバル変数
@@ -51,38 +83,6 @@ const bodyFixedRemove = () => {
   // スクロール位置を返す
   return scrollY;
 };
-
-/**
- * デバイス幅400px以下の場合はviewportを固定
- * flagSize 固定を始めるデバイス幅
- */
-
-(() => {
-  // viewport属性の取得
-  const viewport = document.querySelector('meta[name="viewport"]');
-  // 固定するデバイス幅
-  const staticWidth = 420;
-
-  // viewportの切り替え関数
-  function switchViewport() {
-    const value =
-      // window.screen.widthはデバイスの幅を取得
-      window.screen.width > staticWidth
-        ? // デバイス幅が条件より大きい場合はデバイス幅に合わせる
-          "width=device-width,initial-scale=1"
-        : // デバイス幅が条件より小さい場合は固定の幅に合わせる
-          `width=${staticWidth}`;
-
-    // viewportの値がvalueと異なる場合はvalueをセット
-    if (viewport.getAttribute("content") !== value) {
-      viewport.setAttribute("content", value);
-    }
-  }
-  // リサイズ時にviewportを切り替え
-  addEventListener("resize", switchViewport, false);
-  // 初期読み込み時にviewportを切り替え
-  switchViewport();
-})();
 
 /**
  * ドロワーボタンを押したらドロワーを開閉する
@@ -286,43 +286,3 @@ const bodyFixedRemove = () => {
     });
   });
 })();
-
-/**
- * gsap
- */
-
-let radius = document.querySelector(".progress__bar").getAttribute("r");
-const lengthOfCircle = 2 * Math.PI * radius;
-
-gsap
-  .timeline({
-    defaults: {
-      delay: 0.5,
-      ease: "none",
-    },
-  })
-  .add("start")
-  .to(".progress__text", 3, {
-    textContent: 100 + "%",
-    ease: "none",
-    snap: {
-      textContent: 1,
-    },
-  })
-  .to(
-    ".progress__bar",
-    0,
-    {
-      strokeDashoffset: lengthOfCircle,
-    },
-    "start"
-  )
-  .to(
-    ".progress__bar",
-    3,
-    {
-      strokeDashoffset: 0,
-      ease: "none",
-    },
-    "start"
-  );

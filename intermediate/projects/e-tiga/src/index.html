@@ -28,20 +28,24 @@
     <script src="./js/main.js" type="module" defer></script>
   </head>
   <body>
-    <div class="l-loading" data-id="loading">
+    <div class="l-loading" id="loading">
       <div class="l-loading__inner">
-        <div class="progress js-progress">
-          <div class="progress__inner">
-            <svg class="progress__svg" viewBox="0 0 100 100">
-              <circle
-                class="progress__background"
-                cx="50"
-                cy="50"
-                r="45"
-              ></circle>
-              <circle class="progress__bar" cx="50" cy="50" r="45"></circle>
+        <div class="p-progress">
+          <div class="p-progress__inner">
+            <svg class="p-progress__svg" viewBox="0 0 100 100">
+              <circle class="p-progress__bg" cx="50" cy="50" r="45"></circle>
+              <circle class="p-progress__bar" cx="50" cy="50" r="45"></circle>
             </svg>
-            <div class="progress__text">0%</div>
+            <div class="p-progress__count">0%</div>
+
+            <div class="p-circle-text">
+              <svg viewBox="0 0 100 100">
+                <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+                <text>
+                  <textPath xlink:href="#circle">- New Loading -</textPath>
+                </text>
+              </svg>
+            </div>
           </div>
         </div>
       </div>

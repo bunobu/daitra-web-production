@@ -69,6 +69,18 @@ body {
   font-family: var(--font-family-ja);
   font-weight: g.$font-weight-regular;
   line-height: 1;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+
+  &.is-loaded {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 p {

@@ -1,0 +1,65 @@
+@use "@global" as g;
+
+.p-progress {
+  max-width: 300px;
+  width: 80%;
+  aspect-ratio: 1;
+  backdrop-filter: blur(10px);
+}
+
+.p-progress__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.p-progress__svg {
+  fill: none;
+
+  circle {
+    stroke-width: var(--stroke-width, 4);
+    stroke-dasharray: 283;
+  }
+}
+
+.p-progress__bg {
+  stroke: var(--color-gray);
+}
+
+.p-progress__bar {
+  // プログレスバーのカラー
+  stroke: var(--stroke-color, var(--color-white));
+  // 円弧の破線の開始位置
+  stroke-dashoffset: var(--stroke-dashoffset, 283);
+  // プログレスバーのアニメーションを開始する位置(回転率)
+  transform: rotate(var(--start-rotate, -90deg));
+  // プログレスバーのアニメーション時間
+  // transition: stroke-dashoffset var(--duration, 1.5s) ease-out;
+  transform-origin: center center;
+}
+
+.p-progress__count {
+  --border-width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: g.$font-weight-bold;
+  color: var(--color-white);
+  font-weight: g.$font-weight-regular;
+  letter-spacing: 0.1em;
+  padding: 10px 20px;
+  width: max-content;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    width: var(--border-width);
+    transform: translate(-50%, -50%);
+    height: 2px;
+    background: var(--color-white);
+  }
+}
