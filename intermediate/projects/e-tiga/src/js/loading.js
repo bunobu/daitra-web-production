@@ -4,12 +4,12 @@ export const loading = () => {
 
   // ローディング画面が既に表示されたかどうかをチェック
   if (sessionStorage.getItem("loadingShow")) {
-    console.log("aaaa");
+    // bodyにis-loadedクラスを追加 表示
     document.body.classList.add("is-loaded");
     return; // 既に表示されている場合、関数を終了
   }
 
-  // ローディング画面を表示
+  // bodyとloadingの透過を解除
   document.body.classList.add("is-loaded");
   loading.classList.add("is-visible");
 
@@ -17,6 +17,7 @@ export const loading = () => {
   const progressBar = loading.querySelector(".p-progress__bar");
   const progressCircle = loading.querySelector("circle");
   const progressCount = loading.querySelector(".p-progress__count");
+
   // circleTextの要素を取得
   const textCircle = loading.querySelector(".p-circle-text");
   const textCircleText = textCircle.querySelector("textPath");
@@ -37,10 +38,13 @@ export const loading = () => {
       outputTextCircleText += `<tspan>${el}</tspan>`;
     }
   });
+  // tspanタグで囲んだ文字列をtextCircleTextに追加
   textCircleText.innerHTML = outputTextCircleText;
 
+  // textCircleTextのtspan要素を取得
   const textCircleTextInline = textCircleText.querySelectorAll("tspan");
 
+  // gsapのtimelineでアニメーション
   const tl = gsap.timeline({
     defaults: {
       duration: 1,
@@ -59,6 +63,7 @@ export const loading = () => {
       progressBar,
       {
         strokeDashoffset: 0,
+        // ローディング画面が表示された時にbodyを固定
         onStart: () => {
           document.body.classList.add("is-fixed");
         },
@@ -101,6 +106,7 @@ export const loading = () => {
             opacity: 0,
           });
 
+          // bodyの固定を解除
           document.body.classList.remove("is-fixed");
 
           // ローディング画面が表示されたことを記録
@@ -110,6 +116,7 @@ export const loading = () => {
       "<"
     );
 
+  // アニメーションが終わったらローディング画面が非表示
   tl.add(() => {
     setTimeout(() => {
       loading.classList.remove("is-visible");
