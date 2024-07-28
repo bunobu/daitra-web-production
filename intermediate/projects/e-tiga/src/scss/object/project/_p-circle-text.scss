@@ -1,0 +1,39 @@
+@use "@global" as g;
+
+.p-circle-text {
+  width: 200px;
+  aspect-ratio: 1;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  position: absolute;
+  font-weight: g.$font-weight-regular;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    overflow: visible;
+  }
+
+  path {
+    fill: none;
+  }
+
+  text {
+    fill: var(--color-white);
+  }
+
+  tspan {
+    display: inline-block;
+    position: relative;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

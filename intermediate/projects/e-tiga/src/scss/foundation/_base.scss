@@ -1,0 +1,160 @@
+/* >>> base - サイト共通のスタイル */
+@use "@global" as g;
+
+:root {
+  // color
+  --color-base: var(--color-white);
+  --color-text: var(--color-black);
+
+  --color-white: #ffffff;
+  --color-white2: #f6f7f7;
+  --color-white3: #f4fbff;
+  --color-white4: #f1f1f1;
+
+  --color-black: #333333;
+  --color-black2: #2b2b2b;
+  --color-black3: #111111;
+  --color-gray: #707070;
+  --color-gray2: #828282;
+  --color-gray3: #9d9d9d;
+  --color-gray4: #e1e1e1;
+
+  --color-main: #2082e0;
+  --color-main2: #2082df;
+  --color-main3: #228ddd;
+  --color-main4: #228bde;
+  --color-main5: #2392db;
+  --color-main6: #238fdc;
+  --color-main7: #2392db;
+  --color-main8: #2f7dc8;
+
+  --color-sub: #2bc8c8;
+
+  --color-gradation: linear-gradient(180deg, #eaf4f7 0%, #fff 100%);
+  --color-gradation2: linear-gradient(
+    180deg,
+    rgba(34, 142, 221, 0.9) 0%,
+    rgba(43, 198, 201, 0.9) 100%
+  );
+  --color-gradation3: linear-gradient(90deg, #2188de 1.75%, #2bcbc6 97.75%);
+  --color-gradation3-reverse: linear-gradient(
+    90deg,
+    #2bcbc6 1.75%,
+    #2188de 97.75%
+  );
+  --color-gradation4: linear-gradient(90deg, #2390dc 0%, #2bc8c8 100%);
+  --color-gradation5: linear-gradient(90deg, #2390dc 0%, #2bc8c8 100%);
+
+  // font-family
+  --font-family-en: "Montserrat", sans-serif;
+  --font-family-ja: "Noto Sans JP", sans-serif;
+
+  // ハーフ・レディングを削除 margin-blockにあてる
+  --leading-trim: calc((1em - 1lh) / 2);
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-base);
+  font-family: var(--font-family-ja);
+  font-weight: g.$font-weight-regular;
+  line-height: 1;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+
+  &.is-loaded {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+p {
+  line-height: 1.7;
+}
+
+a[href="#"] {
+  @include g.mq(md) {
+    cursor: not-allowed;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.--in-view {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(g.rem(24));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(g.rem(-24));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(g.rem(12));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(g.rem(-12));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* <<< base - サイト共通のスタイル */

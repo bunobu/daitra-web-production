@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {{> meta/head-meta }}
+
+    <link rel="stylesheet" href="./scss/style.scss" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/566b522bd3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./js/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="l-loading" id="loading">
+      <div class="l-loading__inner">
+        <div class="p-progress">
+          <div class="p-progress__inner">
+            <svg class="p-progress__svg" viewBox="0 0 100 100">
+              <circle class="p-progress__bg" cx="50" cy="50" r="45"></circle>
+              <circle class="p-progress__bar" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <div class="p-progress__count">0%</div>
+
+            <div class="p-circle-text">
+              <svg viewBox="0 0 100 100">
+                <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+                <text>
+                  <textPath href="#circle">- New Loading -</textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="l-top-bg">
+      {{> header }}
+      <!-- >>> mv -->
+      <div class="p-mv js-in-view fade-in-up">
+        <div class="p-mv__inner l-inner">
+          <div class="p-mv__box">
+            <div class="p-mv__img-box">
+              <picture class="p-mv__img-picture">
+                <source
+                  srcset="/img/first-view.png"
+                  media="(min-width: 834px)"
+                />
+                <!-- 幅1000px以上なら表示 -->
+                <img
+                  src="/img/sp-first-view.png"
+                  alt="中小企業導入ランキングNo.1"
+                  width="796"
+                  height="570"
+                />
+              </picture>
+            </div>
+            <div class="p-mv__content">
+              <div class="p-mv__logo">
+                <img src="/img/logo.svg" alt="e-tiga" width="160" height="32" />
+              </div>
+              <p class="mv__title">会社の「チーム力」を強化する</p>
+              <p class="p-mv__text">
+                誰でも簡単らくらくに、<br />
+                スケジュールや名刺をデジタル化。<br />
+                チームの管理をよりスピーディーに円滑にします。
+              </p>
+              <div class="p-mv__button">
+                <a href="#cv" class="c-button">無料で登録</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <<< mv -->
+    </div>
+
+    <main class="l-main">
+      <!-- >>> blog -->
+      <section id="blog" class="p-blog">
+        <div class="p-blog__inner l-inner">
+          <div class="p-blog__title js-in-view fade-in-right">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">BLOG</span>
+              <span class="c-heading01__ja">ブログ</span>
+            </h2>
+          </div>
+          <div class="p-blog__cards">
+            <!-- >>> ループ -->
+            {{#each blogList}}
+            <article class="p-blog-card js-in-view fade-in-up">
+              <a href="#" class="p-blog-card__link">
+                <div class="p-blog-card__head">
+                  <div class="p-blog-card__img">
+                    <img src="{{img}}" alt="" width="660" height="440" />
+                  </div>
+                  <span class="p-blog-card__label">ラベル</span>
+                </div>
+                <div class="p-blog-card__body">
+                  <h3 class="p-blog-card__body-title">{{title}}</h3>
+                  <p class="p-blog-card__body-text">{{text}}</p>
+                </div>
+              </a>
+            </article>
+            {{/each}}
+            <!-- <<< ループ -->
+          </div>
+          <div class="p-blog__button">
+            <a href="#" class="c-button js-in-view fade-in-up">ブログ一覧へ</a>
+          </div>
+        </div>
+      </section>
+      <!-- <<< blog -->
+
+      <!-- >>> news -->
+      <section id="news" class="p-news js-in-view fade-in-up">
+        <div class="p-news__inner l-inner">
+          <div class="p-news__title-wrapper">
+            <h2 class="p-news__title">NEWS</h2>
+          </div>
+          <div class="p-news__content">
+            <div class="p-news__article-list">
+              <!-- >>> ループ -->
+              {{#each newsList}}
+              <article class="p-news-article">
+                <a href="#" class="p-news-article__link">
+                  <div class="p-news-article__box">
+                    <div class="p-news-article__head">
+                      <time class="p-news-article__time" datetime="{{dateTime}}"
+                        >{{date}}</time
+                      >
+                    </div>
+                    <div class="p-news-article__body">
+                      <h3 class="p-news-article__text">{{text}}</h3>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              {{/each}}
+              <!-- <<< ループ -->
+            </div>
+          </div>
+          <div class="p-news__footer">
+            <div class="p-news__pagination">
+              <a
+                href="#"
+                class="p-news__pagination__prev"
+                aria-label="前へ戻る"
+              >
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                  <path
+                    d="M15 1L8 6L15 11M9 1L2 6L9 11"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="p-news__pagination__item is-current">1</a>
+              <a href="#" class="p-news__pagination__item">2</a>
+              <a href="#" class="p-news__pagination__item">3</a>
+              <a href="#" class="p-news__pagination__item">4</a>
+              <a href="#" class="p-news__pagination__item">5</a>
+              <a
+                href="#"
+                class="p-news__pagination__next"
+                aria-label="次へ進む"
+              >
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                  <path
+                    d="M1 1L8 6L1 11M7 1L14 6L7 11"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="p-news__button">
+              <a href="#">全てみる</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< news -->
+
+      <!-- >>> concept -->
+      <div id="concept" class="p-concept js-in-view fade-in-left">
+        <div class="p-concept__inner">
+          <div class="p-content__wrapper">
+            <div class="p-concept__img">
+              <img src="/img/concept-img.png" alt="" width="900" height="872" />
+            </div>
+            <div class="p-concept__content">
+              <p class="p-concept__title">
+                名刺作成から、 <br />
+                スケジュール管理、<br />
+                経理までを簡単スピーディーに。
+              </p>
+              <p class="p-concept__text">
+                誰でも簡単らくらくに、スケジュールや名刺をデジタル化。チームの管理をよりスピーディーに円滑にします。誰でも簡単らくらくに、スケジュールや名刺をデジタル化。チームの管理をよりスピーディーに円滑にします。誰でも簡単らくらくに、
+              </p>
+              <div class="p-content__button">
+                <a href="#" class="c-button">詳細・できることへ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <<< concept -->
+
+      <!-- >>> seminar -->
+      <section id="seminar" class="p-seminar">
+        <div class="p-seminar__inner l-inner">
+          <div class="p-seminar__title js-in-view Pimg">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">SEMINAR</span>
+              <span class="c-heading01__ja">セミナー</span>
+            </h2>
+          </div>
+          <div class="p-seminar__card-wrapper">
+            {{#each seminarList}}
+            <article class="p-seminar-card js-in-view fade-in-up">
+              <div class="p-seminar-card__box">
+                <div class="p-seminar-card__img">
+                  <img
+                    src="{{imgSrc}}"
+                    alt="{{imgAlt}}"
+                    width="{{imgWidth}}"
+                    height="{{imgHeight}}"
+                  />
+                </div>
+                <div class="p-seminar-card__body">
+                  <div class="p-seminar-card__body-head">
+                    <span class="p-seminar-card__body-label">開催日</span>
+                    <time
+                      datetime="{{dateTime}}"
+                      class="p-seminar-card__body-time"
+                      >{{date}}</time
+                    >
+                  </div>
+                  <h3 class="p-seminar-card__body-title">{{title}}</h3>
+                  <p class="p-seminar-card__body-text">{{text}}</p>
+                  <div class="p-seminar-card__body-button">
+                    <a href="#">詳細を見る</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            {{/each}}
+          </div>
+          <div class="p-seminar__button js-in-view fade-in-up">
+            <a href="#" class="c-button">セミナー一覧へ</a>
+          </div>
+        </div>
+      </section>
+      <!-- <<< seminar -->
+
+      <!-- >>> price -->
+      <section id="price" class="p-price">
+        <div class="p-price__inner l-inner">
+          <div class="p-price__title js-in-view fade-in-right">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">PRICE</span>
+              <span class="c-heading01__ja">料金</span>
+            </h2>
+            <div class="p-price__content">
+              <div class="p-price__cards">
+                <div class="p-price-card js-in-view fade-in-up">
+                  <div class="p-price-card__title">
+                    <span class="p-price-card__title-text">ライトプラン</span>
+                    <span class="p-price-card__title-price">無料</span>
+                  </div>
+                  <table
+                    class="p-price-card__table"
+                    aria-label="ライトプラン表"
+                  >
+                    <tr>
+                      <th>人数</th>
+                      <td>3人</td>
+                    </tr>
+                    <tr>
+                      <th>電話サポート</th>
+                      <td>なし</td>
+                    </tr>
+                    <tr>
+                      <th>名刺作成</th>
+                      <td>月2枚まで</td>
+                    </tr>
+                    <tr>
+                      <th>サポート1</th>
+                      <td>なし</td>
+                    </tr>
+                    <tr>
+                      <th>サポート2</th>
+                      <td>なし</td>
+                    </tr>
+                    <tr>
+                      <th>サポート3</th>
+                      <td>なし</td>
+                    </tr>
+                  </table>
+                  <div class="p-price-card__button">
+                    <a href="#" class="c-button">お申し込み</a>
+                  </div>
+                </div>
+                <div class="p-price-card js-in-view fade-in-up">
+                  <div class="p-price-card__title">
+                    <span class="p-price-card__title-text"
+                      >スタンダードプラン</span
+                    >
+                    <span class="p-price-card__title-price is-month">980</span>
+                  </div>
+                  <table
+                    class="p-price-card__table"
+                    aria-label="ライトプラン表"
+                  >
+                    <tr>
+                      <th>人数</th>
+                      <td>20人</td>
+                    </tr>
+                    <tr>
+                      <th>電話サポート</th>
+                      <td>なし</td>
+                    </tr>
+                    <tr>
+                      <th>名刺作成</th>
+                      <td>月15枚まで</td>
+                    </tr>
+                    <tr>
+                      <th>サポート1</th>
+                      <td>あり</td>
+                    </tr>
+                    <tr>
+                      <th>サポート2</th>
+                      <td>なし</td>
+                    </tr>
+                    <tr>
+                      <th>サポート3</th>
+                      <td>なし</td>
+                    </tr>
+                  </table>
+                  <div class="p-price-card__button">
+                    <a href="#" class="c-button">お申し込み</a>
+                  </div>
+                </div>
+                <div class="p-price-card js-in-view fade-in-up">
+                  <div class="p-price-card__title">
+                    <span class="p-price-card__title-text">プロプラン</span>
+                    <span class="p-price-card__title-price is-month is-comma"
+                      >2,480</span
+                    >
+                  </div>
+                  <table
+                    class="p-price-card__table"
+                    aria-label="ライトプラン表"
+                  >
+                    <tr>
+                      <th>人数</th>
+                      <td>無制限</td>
+                    </tr>
+                    <tr>
+                      <th>電話サポート</th>
+                      <td>無制限</td>
+                    </tr>
+                    <tr>
+                      <th>名刺作成</th>
+                      <td>無制限</td>
+                    </tr>
+                    <tr>
+                      <th>サポート1</th>
+                      <td>あり</td>
+                    </tr>
+                    <tr>
+                      <th>サポート2</th>
+                      <td>あり</td>
+                    </tr>
+                    <tr>
+                      <th>サポート3</th>
+                      <td>あり</td>
+                    </tr>
+                  </table>
+                  <div class="p-price-card__button">
+                    <a href="#" class="c-button">お申し込み</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< price -->
+
+      <!-- >>> cv -->
+      <div id="cv" class="p-cv">
+        <div class="p-cv__inner l-inner js-in-view fade-in-up">
+          <p class="p-cv__title">まずは無料お試し</p>
+          <div>
+            <p class="p-cv__text">ライトプランなら無料でお使いいただけます。</p>
+          </div>
+          <div class="p-cv__button">
+            <a href="#">お申し込み</a>
+          </div>
+        </div>
+      </div>
+      <!-- <<< cv -->
+
+      <!-- >>> Q & A -->
+      <section id="qa" class="p-qa">
+        <div class="p-qa__inner l-inner">
+          <h2 class="p-qa__title js-in-view fade-in-up">Q&A</h2>
+          <div class="p-qa__content">
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
+              <summary class="js-summary p-qa-accordion__summary">
+                <span class="p-qa-accordion__icon-q"></span>
+                ここにテキストが入ります。
+                <span class="p-qa-accordion__icon-bar"></span>
+              </summary>
+              <div class="js-content p-qa-accordion__content">
+                <div class="p-qa-accordion__content-inner">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </div>
+              </div>
+            </details>
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
+              <summary class="js-summary p-qa-accordion__summary">
+                <span class="p-qa-accordion__icon-q"></span>
+                ここにテキストが入ります。
+                <span class="p-qa-accordion__icon-bar"></span>
+              </summary>
+              <div class="js-content p-qa-accordion__content">
+                <div class="p-qa-accordion__content-inner">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </div>
+              </div>
+            </details>
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
+              <summary class="js-summary p-qa-accordion__summary">
+                <span class="p-qa-accordion__icon-q"></span>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                <span class="p-qa-accordion__icon-bar"></span>
+              </summary>
+              <div class="js-content p-qa-accordion__content">
+                <div class="p-qa-accordion__content-inner">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </div>
+              </div>
+            </details>
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
+              <summary class="js-summary p-qa-accordion__summary">
+                <span class="p-qa-accordion__icon-q"></span>
+                ここにテキストが入ります。
+                <span class="p-qa-accordion__icon-bar"></span>
+              </summary>
+              <div class="js-content p-qa-accordion__content">
+                <div class="p-qa-accordion__content-inner">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <!-- <<< Q & A -->
+
+      <!-- >>> case -->
+      <section id="case" class="p-case">
+        <div class="p-case__inner l-inner">
+          <div class="p-case__title js-in-view fade-in-left">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">CASESTUDY</span>
+              <span class="c-heading01__ja">お客様の声</span>
+            </h2>
+          </div>
+          <div class="p-case__content js-in-view zoom-in">
+            <div class="p-case__slider">
+              <!-- >>> swiper -->
+              <!-- Slider main container -->
+              <div id="js-case-swiper" class="swiper p-case-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper p-case-swiper__wrapper">
+                  <!-- Slides -->
+                  <article class="swiper-slide p-case-swiper__slide">
+                    <a href="#" class="p-case-swiper__slide-inner">
+                      <div class="p-case-swiper__slide-img">
+                        <img
+                          src="/img/card-1-img.jpg"
+                          alt=""
+                          width="640"
+                          height="428"
+                        />
+                      </div>
+                      <div class="p-case-swiper__slide-body">
+                        <h3 class="p-case-swiper__slide-title">
+                          在宅でも団結したチームワークに。
+                        </h3>
+                        <div class="p-case-swiper__slide-company">
+                          <span>〇〇株式会社</span>
+                          <span>吉本様</span>
+                        </div>
+                        <span class="p-case-swiper__slide-tag">情報通信業</span>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="swiper-slide p-case-swiper__slide">
+                    <a href="#" class="p-case-swiper__slide-inner">
+                      <div class="p-case-swiper__slide-img">
+                        <img
+                          src="/img/card-2-img.jpg"
+                          alt=""
+                          width="640"
+                          height="428"
+                        />
+                      </div>
+                      <div class="p-case-swiper__slide-body">
+                        <h3 class="p-case-swiper__slide-title">
+                          1日2時間分の処理時間の削減に成功
+                        </h3>
+                        <div class="p-case-swiper__slide-company">
+                          <span>〇〇株式会社</span>
+                          <span>竹内様</span>
+                        </div>
+                        <span class="p-case-swiper__slide-tag">情報通信業</span>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="swiper-slide p-case-swiper__slide">
+                    <a href="#" class="p-case-swiper__slide-inner">
+                      <div class="p-case-swiper__slide-img">
+                        <img
+                          src="/img/card-3-img.jpg"
+                          alt=""
+                          width="640"
+                          height="428"
+                        />
+                      </div>
+                      <div class="p-case-swiper__slide-body">
+                        <h3 class="p-case-swiper__slide-title">
+                          導入から1年で残業0へ。
+                        </h3>
+                        <div class="p-case-swiper__slide-company">
+                          <span>〇〇株式会社</span>
+                          <span>三島様</span>
+                        </div>
+                        <span class="p-case-swiper__slide-tag">情報通信業</span>
+                      </div>
+                    </a>
+                  </article>
+                  <article class="swiper-slide p-case-swiper__slide">
+                    <a href="#" class="p-case-swiper__slide-inner">
+                      <div class="p-case-swiper__slide-img">
+                        <img
+                          src="/img/card-1-img.jpg"
+                          alt=""
+                          width="640"
+                          height="428"
+                        />
+                      </div>
+                      <div class="p-case-swiper__slide-body">
+                        <h3 class="p-case-swiper__slide-title">
+                          在宅でも団結したチームワークに。
+                        </h3>
+                        <div class="p-case-swiper__slide-company">
+                          <span>〇〇株式会社</span>
+                          <span>吉本様</span>
+                        </div>
+                        <span class="p-case-swiper__slide-tag">情報通信業</span>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+                <!-- If we need pagination -->
+
+                <!-- If we need navigation buttons -->
+              </div>
+              <div class="swiper-button-next p-case-swiper__next"></div>
+              <div class="swiper-button-prev p-case-swiper__prev"></div>
+            </div>
+            <div class="swiper-pagination p-case-swiper__pagination"></div>
+            <!-- <<< swiper -->
+          </div>
+          <div class="p-case__button js-in-view zoom-in">
+            <a href="#">全てみる</a>
+          </div>
+        </div>
+      </section>
+      <!-- <<< case -->
+
+      <!-- >>> company -->
+      <section id="company" class="p-company">
+        <div class="p-company__inner l-inner">
+          <div class="p-company__title js-in-view fade-in-right">
+            <h2 class="c-heading01">
+              <span class="c-heading01__en">COMPANY</span>
+              <span class="c-heading01__ja">会社概要</span>
+            </h2>
+          </div>
+          <div
+            id="js-company-menu-list"
+            class="p-company__menu-list js-in-view fade-in-up"
+          >
+            <div class="p-company-menu__tab-list">
+              <span
+                class="js-company-tab p-company-menu__tab is-active"
+                data-tab="01"
+                >会社概要</span
+              >
+              <span class="js-company-tab p-company-menu__tab" data-tab="02"
+                >沿革</span
+              >
+              <span class="js-company-tab p-company-menu__tab" data-tab="03"
+                >認証所得</span
+              >
+            </div>
+            <div
+              class="js-company-menu p-company-menu p-company-menu01 is-active"
+              data-menu="01"
+            >
+              <div class="p-company-menu01__inner p-company-menu__inner">
+                <div class="p-company-menu01__content">
+                  <div class="p-company-menu01__title">会社概要</div>
+                  <div class="p-company-menu01__overview">
+                    ここに会社概要が入ります。
+                  </div>
+                  <div class="p-company-menu01__table p-company-table">
+                    <div class="p-company-table__row is-order-1">
+                      <div class="p-company-table__th">
+                        <span class="p-company-table__title">会社名</span>
+                      </div>
+                      <div class="p-company-table__td">
+                        <span class="p-company-table__text"
+                          >株式会社e-tiga</span
+                        >
+                      </div>
+                    </div>
+                    <div class="p-company-table__row is-order-3">
+                      <div class="p-company-table__th">
+                        <span class="p-company-table__title">資本金</span>
+                      </div>
+                      <div class="p-company-table__td">
+                        <span class="p-company-table__text">1000万円</span>
+                      </div>
+                    </div>
+                    <div class="p-company-table__row is-col-1 is-order-5">
+                      <div class="p-company-table__th">
+                        <span class="p-company-table__title">本社所在地</span>
+                      </div>
+                      <div class="p-company-table__td">
+                        <span class="p-company-table__text"
+                          >東京都〇〇区〇〇　〇〇ビル4階</span
+                        >
+                      </div>
+                    </div>
+                    <div class="p-company-table__row is-order-2">
+                      <div class="p-company-table__th">
+                        <span class="p-company-table__title">創業</span>
+                      </div>
+                      <div class="p-company-table__td">
+                        <span class="p-company-table__text">2018年7月10日</span>
+                      </div>
+                    </div>
+                    <div class="p-company-table__row is-order-4">
+                      <div class="p-company-table__th">
+                        <span class="p-company-table__title">代表社員</span>
+                      </div>
+                      <span class="p-company-table__td">田中　太郎</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="js-company-menu p-company-menu p-company-menu02"
+              data-menu="02"
+            >
+              <div class="p-company-menu02__inner p-company-menu__inner">
+                <div class="p-company-menu02__content">
+                  <ul class="p-company-menu02__history">
+                    <li class="p-company-menu02__history-item">
+                      <div class="p-company-menu02__history-head">
+                        <span class="p-company-menu02__history-icon"></span>
+                        <time
+                          datetime="2021-04"
+                          class="p-company-menu02__history-date"
+                          >2021年4月</time
+                        >
+                      </div>
+                      <p class="p-company-menu02__history-text">
+                        株式会社e-tiga設立
+                      </p>
+                    </li>
+                    <li class="p-company-menu02__history-item">
+                      <div class="p-company-menu02__history-head">
+                        <span class="p-company-menu02__history-icon"></span>
+                        <time
+                          datetime="2021-12"
+                          class="p-company-menu02__history-date"
+                          >2021年12月</time
+                        >
+                      </div>
+                      <p class="p-company-menu02__history-text">
+                        e-tigaリリース
+                      </p>
+                    </li>
+                    <li class="p-company-menu02__history-item">
+                      <div class="p-company-menu02__history-head">
+                        <span class="p-company-menu02__history-icon"></span>
+                        <time
+                          datetime="2022-03"
+                          class="p-company-menu02__history-date"
+                          >2022年3月</time
+                        >
+                      </div>
+                      <p class="p-company-menu02__history-text">
+                        導入企業1,000社突破
+                      </p>
+                    </li>
+                    <li class="p-company-menu02__history-item">
+                      <div class="p-company-menu02__history-head">
+                        <span class="p-company-menu02__history-icon"></span>
+                        <time
+                          datetime="2022-10"
+                          class="p-company-menu02__history-date"
+                          >2022年10月</time
+                        >
+                      </div>
+                      <p class="p-company-menu02__history-text">
+                        導入企業2,000社を突破
+                      </p>
+                    </li>
+                    <li class="p-company-menu02__history-item">
+                      <div class="p-company-menu02__history-head">
+                        <span class="p-company-menu02__history-icon"></span>
+                        <time
+                          datetime="2023-09"
+                          class="p-company-menu02__history-date"
+                          >2023年9月</time
+                        >
+                      </div>
+                      <p class="p-company-menu02__history-text">
+                        事務所を渋谷に移転
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="js-company-menu p-company-menu p-company-menu03"
+              data-menu="03"
+            >
+              <div class="p-company-menu03__inner p-company-menu__inner">
+                <div class="p-company-menu03__content">
+                  <div class="p-company-menu03__title">〇〇◎1111認証取得</div>
+                  <div class="p-company-menu03__text">
+                    国際規格である〇〇
+                    認証取得しております。セキュリティ管理システムを開発・運用しており、大切な情報をお守りします。国際規格である〇〇
+                    認証取得しております。セキュリティ管理システムを開発・運用しており、大切な情報をお守りします。国際規格である〇〇
+                    認証取得しております。セキュリティ管理システムを開発・運用しており、大切な情報をお守りします。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< company -->
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-inner l-footer__inner">
+        <div class="l-footer__content">
+          <div class="l-footer__top">
+            <div class="l-footer__logo">
+              <a href="./">
+                <img
+                  src="./img/logo-white.svg"
+                  alt="e-tiga"
+                  width="180"
+                  height="36"
+                />
+              </a>
+            </div>
+
+            <dl class="l-footer__company">
+              <div class="l-footer__company-box">
+                <dt>住所</dt>
+                <dd>東京都〇〇区〇〇　〇〇ビル4階</dd>
+              </div>
+              <div class="l-footer__company-box">
+                <dt>TEL</dt>
+                <dd>0000-00-0000</dd>
+              </div>
+              <div class="l-footer__company-box">
+                <dt>FAX</dt>
+                <dd>0000-00-0000</dd>
+              </div>
+            </dl>
+          </div>
+
+          <nav class="l-footer__nav">
+            <ul class="l-footer__nav-list">
+              <li class="l-footer__nav-item">
+                <a href="#">お問い合わせ</a>
+              </li>
+              <li class="l-footer__nav-item">
+                <a href="#">プライバシーポリシー</a>
+              </li>
+              <li class="l-footer__nav-item">
+                <a href="#">特定商取引法</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="l-footer__sns-list">
+            <li class="l-footer__sns-item">
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="fa-brands fa-youtube fa-fw"
+                aria-label="YouTube"
+              ></a>
+            </li>
+            <li class="l-footer__sns-item">
+              <a
+                href="https://x.com/"
+                target="_blank"
+                class="fa-brands fa-x-twitter fa-fw"
+                aria-label="X"
+              ></a>
+            </li>
+            <li class="l-footer__sns-item">
+              <a
+                href="https://www.instagram.com/"
+                class="fa-brands fa-instagram"
+                aria-label="Instagram"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span class="l-footer__copy">
+        <small>Copyright &copy; 2023 デイトラ All rights reserved.</small>
+      </span>
+    </footer>
+  </body>
+</html>

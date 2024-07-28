@@ -1,0 +1,66 @@
+@use "@global" as g;
+
+.c-drawer-button {
+  display: inline-block;
+  width: g.rem(43);
+  height: g.rem(23);
+  background: transparent;
+  position: absolute;
+  top: g.rem(28.5);
+  right: g.rem(13.5);
+  z-index: g.z-index(drawer-button);
+
+  @include g.mq(md) {
+    display: none;
+  }
+
+  &.is-active {
+    position: fixed;
+    top: g.rem(31);
+    right: g.rem(7);
+  }
+}
+
+.c-drawer-button__line {
+  display: inline-block;
+  height: g.rem(3);
+  width: 100%;
+  background-color: #2082e0;
+  border-radius: g.rem(1.5);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+
+  &:nth-of-type(1) {
+    top: 0;
+  }
+
+  &:nth-last-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:nth-last-of-type(1) {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  .c-drawer-button.is-active & {
+    background-color: var(--color-white);
+
+    &:nth-of-type(1) {
+      top: 50%;
+      rotate: 45deg;
+    }
+
+    &:nth-last-of-type(2) {
+      top: 50%;
+      rotate: -45deg;
+    }
+
+    &:nth-last-of-type(1) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
