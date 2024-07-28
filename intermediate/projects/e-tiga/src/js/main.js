@@ -2,8 +2,10 @@
 
 import { caseSlider } from "./caseSlider";
 import { loading } from "./loading";
+import { scrollAnimation } from "./scrollAnimation";
 
 loading();
+scrollAnimation();
 caseSlider();
 /**
  * デバイス幅400px以下の場合はviewportを固定

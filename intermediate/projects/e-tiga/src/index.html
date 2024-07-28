@@ -42,7 +42,7 @@
               <svg viewBox="0 0 100 100">
                 <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
                 <text>
-                  <textPath xlink:href="#circle">- New Loading -</textPath>
+                  <textPath href="#circle">- New Loading -</textPath>
                 </text>
               </svg>
             </div>
@@ -54,7 +54,7 @@
     <div class="l-top-bg">
       {{> header }}
       <!-- >>> mv -->
-      <div class="p-mv">
+      <div class="p-mv js-in-view fade-in-up">
         <div class="p-mv__inner l-inner">
           <div class="p-mv__box">
             <div class="p-mv__img-box">
@@ -96,7 +96,7 @@
       <!-- >>> blog -->
       <section id="blog" class="p-blog">
         <div class="p-blog__inner l-inner">
-          <div class="p-blog__title">
+          <div class="p-blog__title js-in-view fade-in-right">
             <h2 class="c-heading01">
               <span class="c-heading01__en">BLOG</span>
               <span class="c-heading01__ja">ブログ</span>
@@ -105,7 +105,7 @@
           <div class="p-blog__cards">
             <!-- >>> ループ -->
             {{#each blogList}}
-            <article class="p-blog-card">
+            <article class="p-blog-card js-in-view fade-in-up">
               <a href="#" class="p-blog-card__link">
                 <div class="p-blog-card__head">
                   <div class="p-blog-card__img">
@@ -123,14 +123,14 @@
             <!-- <<< ループ -->
           </div>
           <div class="p-blog__button">
-            <a href="#" class="c-button">ブログ一覧へ</a>
+            <a href="#" class="c-button js-in-view fade-in-up">ブログ一覧へ</a>
           </div>
         </div>
       </section>
       <!-- <<< blog -->
 
       <!-- >>> news -->
-      <section id="news" class="p-news">
+      <section id="news" class="p-news js-in-view fade-in-up">
         <div class="p-news__inner l-inner">
           <div class="p-news__title-wrapper">
             <h2 class="p-news__title">NEWS</h2>
@@ -200,7 +200,7 @@
       <!-- <<< news -->
 
       <!-- >>> concept -->
-      <div id="concept" class="p-concept">
+      <div id="concept" class="p-concept js-in-view fade-in-left">
         <div class="p-concept__inner">
           <div class="p-content__wrapper">
             <div class="p-concept__img">
@@ -227,7 +227,7 @@
       <!-- >>> seminar -->
       <section id="seminar" class="p-seminar">
         <div class="p-seminar__inner l-inner">
-          <div class="p-seminar__title">
+          <div class="p-seminar__title js-in-view Pimg">
             <h2 class="c-heading01">
               <span class="c-heading01__en">SEMINAR</span>
               <span class="c-heading01__ja">セミナー</span>
@@ -235,7 +235,7 @@
           </div>
           <div class="p-seminar__card-wrapper">
             {{#each seminarList}}
-            <article class="p-seminar-card">
+            <article class="p-seminar-card js-in-view fade-in-up">
               <div class="p-seminar-card__box">
                 <div class="p-seminar-card__img">
                   <img
@@ -264,7 +264,7 @@
             </article>
             {{/each}}
           </div>
-          <div class="p-seminar__button">
+          <div class="p-seminar__button js-in-view fade-in-up">
             <a href="#" class="c-button">セミナー一覧へ</a>
           </div>
         </div>
@@ -274,14 +274,14 @@
       <!-- >>> price -->
       <section id="price" class="p-price">
         <div class="p-price__inner l-inner">
-          <div class="p-price__title">
+          <div class="p-price__title js-in-view fade-in-right">
             <h2 class="c-heading01">
               <span class="c-heading01__en">PRICE</span>
               <span class="c-heading01__ja">料金</span>
             </h2>
             <div class="p-price__content">
               <div class="p-price__cards">
-                <div class="p-price-card">
+                <div class="p-price-card js-in-view fade-in-up">
                   <div class="p-price-card__title">
                     <span class="p-price-card__title-text">ライトプラン</span>
                     <span class="p-price-card__title-price">無料</span>
@@ -319,7 +319,7 @@
                     <a href="#" class="c-button">お申し込み</a>
                   </div>
                 </div>
-                <div class="p-price-card">
+                <div class="p-price-card js-in-view fade-in-up">
                   <div class="p-price-card__title">
                     <span class="p-price-card__title-text"
                       >スタンダードプラン</span
@@ -359,7 +359,7 @@
                     <a href="#" class="c-button">お申し込み</a>
                   </div>
                 </div>
-                <div class="p-price-card">
+                <div class="p-price-card js-in-view fade-in-up">
                   <div class="p-price-card__title">
                     <span class="p-price-card__title-text">プロプラン</span>
                     <span class="p-price-card__title-price is-month is-comma"
@@ -408,7 +408,7 @@
 
       <!-- >>> cv -->
       <div id="cv" class="p-cv">
-        <div class="p-cv__inner l-inner">
+        <div class="p-cv__inner l-inner js-in-view fade-in-up">
           <p class="p-cv__title">まずは無料お試し</p>
           <div>
             <p class="p-cv__text">ライトプランなら無料でお使いいただけます。</p>
@@ -423,9 +423,11 @@
       <!-- >>> Q & A -->
       <section id="qa" class="p-qa">
         <div class="p-qa__inner l-inner">
-          <h2 class="p-qa__title">Q&A</h2>
+          <h2 class="p-qa__title js-in-view fade-in-up">Q&A</h2>
           <div class="p-qa__content">
-            <details class="js-qa-accordion p-qa-accordion">
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
               <summary class="js-summary p-qa-accordion__summary">
                 <span class="p-qa-accordion__icon-q"></span>
                 ここにテキストが入ります。
@@ -437,7 +439,9 @@
                 </div>
               </div>
             </details>
-            <details class="js-qa-accordion p-qa-accordion">
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
               <summary class="js-summary p-qa-accordion__summary">
                 <span class="p-qa-accordion__icon-q"></span>
                 ここにテキストが入ります。
@@ -449,7 +453,9 @@
                 </div>
               </div>
             </details>
-            <details class="js-qa-accordion p-qa-accordion">
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
               <summary class="js-summary p-qa-accordion__summary">
                 <span class="p-qa-accordion__icon-q"></span>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -461,7 +467,9 @@
                 </div>
               </div>
             </details>
-            <details class="js-qa-accordion p-qa-accordion">
+            <details
+              class="js-qa-accordion p-qa-accordion js-in-view fade-in-up"
+            >
               <summary class="js-summary p-qa-accordion__summary">
                 <span class="p-qa-accordion__icon-q"></span>
                 ここにテキストが入ります。
@@ -481,13 +489,13 @@
       <!-- >>> case -->
       <section id="case" class="p-case">
         <div class="p-case__inner l-inner">
-          <div class="p-case__title">
+          <div class="p-case__title js-in-view fade-in-left">
             <h2 class="c-heading01">
               <span class="c-heading01__en">CASESTUDY</span>
               <span class="c-heading01__ja">お客様の声</span>
             </h2>
           </div>
-          <div class="p-case__content">
+          <div class="p-case__content js-in-view zoom-in">
             <div class="p-case__slider">
               <!-- >>> swiper -->
               <!-- Slider main container -->
@@ -594,7 +602,7 @@
             <div class="swiper-pagination p-case-swiper__pagination"></div>
             <!-- <<< swiper -->
           </div>
-          <div class="p-case__button">
+          <div class="p-case__button js-in-view zoom-in">
             <a href="#">全てみる</a>
           </div>
         </div>
@@ -604,13 +612,16 @@
       <!-- >>> company -->
       <section id="company" class="p-company">
         <div class="p-company__inner l-inner">
-          <div class="p-company__title">
+          <div class="p-company__title js-in-view fade-in-right">
             <h2 class="c-heading01">
               <span class="c-heading01__en">COMPANY</span>
               <span class="c-heading01__ja">会社概要</span>
             </h2>
           </div>
-          <div id="js-company-menu-list" class="p-company__menu-list">
+          <div
+            id="js-company-menu-list"
+            class="p-company__menu-list js-in-view fade-in-up"
+          >
             <div class="p-company-menu__tab-list">
               <span
                 class="js-company-tab p-company-menu__tab is-active"
@@ -830,6 +841,7 @@
                 href="https://www.youtube.com/"
                 target="_blank"
                 class="fa-brands fa-youtube fa-fw"
+                aria-label="YouTube"
               ></a>
             </li>
             <li class="l-footer__sns-item">
@@ -837,12 +849,14 @@
                 href="https://x.com/"
                 target="_blank"
                 class="fa-brands fa-x-twitter fa-fw"
+                aria-label="X"
               ></a>
             </li>
             <li class="l-footer__sns-item">
               <a
                 href="https://www.instagram.com/"
                 class="fa-brands fa-instagram"
+                aria-label="Instagram"
               ></a>
             </li>
           </ul>

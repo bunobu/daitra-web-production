@@ -93,4 +93,68 @@ a[href="#"] {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.--in-view {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(g.rem(24));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(g.rem(-24));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(g.rem(12));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(g.rem(-12));
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s, transform 1s;
+
+  &.--in-view {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* <<< base - サイト共通のスタイル */

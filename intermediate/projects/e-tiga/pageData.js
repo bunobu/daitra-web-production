@@ -1,8 +1,9 @@
 export const pageData = {
   "/index.html": {
     isHome: true,
-    title: "indexページだよ",
-    description: "indexページの説明文だよ",
+    title: "会社の「チーム力」を強化するe-tiga",
+    description:
+      "会社の「チーム力」を強化するe-tiga。誰でも簡単らくらくに、スケジュールや名刺をデジタル化。チームの管理をよりスピーディーに円滑にします。",
     blogList: [
       {
         img: "/img/blog1-img.jpg",
