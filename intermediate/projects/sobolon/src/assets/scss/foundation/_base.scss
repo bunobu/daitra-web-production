@@ -1,6 +1,9 @@
 /* >>> base - サイト共通のスタイル */
 @use "@global" as g;
 
+// font-family
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+
 :root {
   // 計算式
 
@@ -10,16 +13,16 @@
   --rem: 1rem / var(--font-size-base);
 
   // color
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-red: #ff0000;
-  --color-blue: #0000ff;
+  --color-base: 255, 255, 255;
+  --color-sub: 51, 51, 51;
+
+  --color-primary: 62, 167, 209;
 
   // font
   --font-size-base: 16;
   --font-family-en: sans-serif;
-  --font-family-ja: sans-serif;
-  --line-height-base: 1.5;
+  --font-family-ja: "Noto Serif JP", serif;
+  --line-height-base: 1.7;
 
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
@@ -41,9 +44,9 @@
 
   // layout
   --padding-inline-xs: 15;
-  --padding-inline-md: 30;
+  --padding-inline-md: 40;
 
-  --container-width-md: 1000;
+  --container-width-md: 1200;
 }
 
 html,
@@ -58,14 +61,10 @@ html {
 }
 
 body {
-  color: var(--color-black);
-  background-color: var(--color-white);
-  font-family: sans-serif;
-  font-size: calc(50 * var(--rem));
-}
-
-p {
-  line-height: 3rlh;
+  color: var(--color-sub);
+  background-color: var(--color-base);
+  font-family: var(--font-family-ja);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* <<< base - サイト共通のスタイル */

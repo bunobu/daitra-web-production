@@ -1,11 +1,37 @@
-<header class="l-header">
+<header id="header" class="l-header">
   <div class="l-header__inner l-inner">
-    <h1>{{title}}</h1>
-    <p>header</p>
-    {{#if isHome}}
-    <p>indexぺージ</p>
-    {{else}}
-    <p>hogeページ</p>
-    {{/if}}
+    <h1 class="l-header__logo">
+      <a href="./">
+        <img src="" alt="" />
+      </a>
+    </h1>
+
+    <nav class="l-header__nav">
+      <ul class="l-header__navList">
+        {{#each globalMenu}}
+        <li class="l-header__navItem">
+          <a href="{{link}}">{{title}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </nav>
+
+    <button class="l-header__hamburger" data-open="false" data-id="hamburger">
+      <span class="l-header__hamburgerBar" data-bar="01"></span>
+      <span class="l-header__hamburgerBar" data-bar="02"></span>
+      <span class="l-header__hamburgerBar" data-bar="03"></span>
+    </button>
   </div>
 </header>
+
+<div id="drawerMenu" class="p-drawerMenu" data-show="false">
+  <div class="p-drawerMenu__inner">
+    <nav class="p-drawerMenu__nav">
+      <ul class="p-drawerMenu__list">
+        {{#each globalMenu}}
+        <li class="p-drawerMenu__item"><a href="{{link}}">{{title}}</a></li>
+        {{/each}}
+      </ul>
+    </nav>
+  </div>
+</div>

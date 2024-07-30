@@ -1,6 +1,118 @@
 @use "@global" as g;
 
 .l-header {
-  background-color: var(--color-black);
-  color: white;
+  --_header-height: 60;
+  width: 100%;
+  min-height: calc(var(--_header-height) * var(--rem));
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l-header__logo {
+  display: grid;
+  place-items: center;
+  width: calc(120 * var(--rem));
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    --_bg-color: rgb(0, 0, 0);
+    display: block;
+    background-color: var(--_bg-color);
+    mask-image: url(../img/logo.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.l-header__nav {
+  display: none;
+  @include g.mq(md) {
+    display: block;
+  }
+}
+
+.l-header__navList {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  inline-size: fit-content;
+  gap: calc(46 * var(--rem));
+}
+
+.l-header__navItem {
+  a {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    color: rgb(var(--color-sub));
+
+    font-size: calc(16 * var(--rem));
+    font-weight: var(--font-weight-light);
+    line-height: 1rlh;
+  }
+}
+
+.l-header__hamburger {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  width: calc(30 * var(--rem));
+  height: calc(18 * var(--rem));
+
+  &[data-open="true"] {
+    [data-bar="01"] {
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-100%);
+    }
+    [data-bar="02"] {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    [data-bar="03"] {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+  }
+
+  @include g.mq(md) {
+    display: none;
+  }
+}
+
+.l-header__hamburgerBar {
+  display: inline-block;
+  background-color: rgb(var(--color-primary));
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: 0.3s;
+
+  &[data-bar="01"] {
+    top: 0;
+  }
+  &[data-bar="02"] {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[data-bar="03"] {
+    bottom: 0;
+  }
 }

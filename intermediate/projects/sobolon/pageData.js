@@ -1,4 +1,27 @@
-const baseData = {};
+const baseData = {
+  globalMenu: [
+    {
+      title: "Concept",
+      link: "#concept",
+    },
+    {
+      title: "Feature",
+      link: "#feature",
+    },
+    {
+      title: "Products",
+      link: "#products",
+    },
+    {
+      title: "News",
+      link: "#news",
+    },
+    {
+      title: "Contact",
+      link: "#contact",
+    },
+  ],
+};
 
 const pageDate = {
   "/index.html": {
@@ -7,13 +30,7 @@ const pageDate = {
       title: "indexページだよ",
       description: "indexページの説明文だよ",
     },
-  },
-  "/about.html": {
-    meta: {
-      isHome: false,
-      title: "hogeページだよ",
-      description: "hogeページの説明文だよ",
-    },
+    globalMenu: baseData.globalMenu,
   },
 };
 

@@ -1,0 +1,46 @@
+@use "@global" as g;
+
+.p-drawerMenu {
+  --_header-height-sp: 60;
+  height: 100%;
+  background-color: rgb(var(--color-primary));
+  width: min(100%, calc(270 * var(--rem)));
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateX(101%);
+  transition: translateX 0.3s;
+
+  &[data-show="true"] {
+    transform: translateX(0);
+  }
+}
+
+.p-drawerMenu__inner {
+  padding-block: calc(40 * var(--rem));
+  width: 100%;
+  height: 100%;
+}
+
+.p-drawerMenu__nav {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.p-drawerMenu__list {
+  display: grid;
+  gap: calc(32 * var(--rem));
+  justify-content: end;
+}
+
+.p-drawerMenu__item {
+  a {
+    display: inline-block;
+    padding-inline: calc(16 * var(--rem));
+    color: rgb(var(--color-base));
+    font-size: calc(18 * var(--rem));
+    font-weight: var(--font-weight-light);
+    line-height: 1rlh;
+  }
+}
