@@ -1,0 +1,38 @@
+@use "@global" as g;
+
+.p-feature {
+  padding-block-start: calc(96 * var(--rem));
+}
+
+.p-feature__inner {
+}
+
+.p-feature__title {
+}
+
+.c-sectionTitle {
+}
+
+.p-feature__cardList {
+  margin-block-start: calc(46 * var(--rem));
+}
+
+.p-feature__card {
+}
+
+.p-featureCard {
+  --_shadow-color: 96, 96, 96, 0.16;
+  background: #fff;
+  box-shadow: 3px 3px 15px 0px rgba(var(--_shadow-color));
+}
+
+.p-featureCard__inner {
+}
+
+.p-featureCard__img {
+}
+
+.p-featureCard__text {
+  padding-block: calc(26 * var(--rem));
+  padding-inline: calc(93 * var(--rem));
+}

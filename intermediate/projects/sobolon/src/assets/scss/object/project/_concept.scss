@@ -1,0 +1,62 @@
+@use "@global" as g;
+
+.p-concept {
+  --_mv-content-spacer: 320;
+  padding-block-start: calc(96 * var(--rem));
+  @include g.mq(sm) {
+    padding-block-start: calc((96 + var(--_mv-content-spacer)) * var(--rem));
+  }
+  @include g.mq(lg) {
+    padding-block-start: calc(160 * var(--rem));
+  }
+}
+
+.p-concept__inner {
+}
+
+.l-inner {
+}
+
+.p-concept__title {
+}
+
+.p-concept__content {
+  margin-block-start: calc(46 * var(--rem));
+  @include g.mq(md) {
+    display: flex;
+  }
+}
+
+.p-concept__contentImg {
+  width: 100%;
+  aspect-ratio: 345 / 230;
+  @include g.mq(md) {
+    max-width: calc(600 * var(--rem));
+    aspect-ratio: 600 / 400;
+  }
+}
+
+.p-concept__contentTexts {
+  margin-block-start: calc(34 * var(--rem));
+  @include g.mq(md) {
+    margin-block: auto;
+    padding-block: calc(20 * var(--rem));
+    padding-inline-start: calc(80 * var(--rem));
+  }
+}
+
+.p-concept__contentTitle {
+  font-size: calc(20 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.7;
+}
+
+.p-concept__contentText {
+  margin-block-start: calc(22 * var(--rem));
+  font-size: calc(16 * var(--rem));
+  font-weight: var(--font-weight-light);
+  line-height: 1.7;
+  @include g.mq(md) {
+    margin-block-start: calc(40 * var(--rem));
+  }
+}

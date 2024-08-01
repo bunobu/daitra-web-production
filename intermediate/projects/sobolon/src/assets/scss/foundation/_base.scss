@@ -34,25 +34,22 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
 
-  // breakpoint
-  --bp-xs: 375px;
-  --bp-sm: 640px;
-  --bp-md: 768px;
-  --bp-lg: 1024px;
-  --bp-xl: 1280px;
-  --bp-2xl: 1536px;
-
   // layout
   --padding-inline-xs: 15;
   --padding-inline-md: 40;
 
   --container-width-md: 1200;
+
+  // z-index
+  --z-index-header: 1000;
 }
 
 html,
 body {
   height: 100%;
   min-height: 100%;
+
+  min-height: 200vh;
 }
 
 html {
@@ -61,10 +58,16 @@ html {
 }
 
 body {
-  color: var(--color-sub);
-  background-color: var(--color-base);
+  color: rgb(var(--color-sub));
+  background-color: rgb(var(--color-base));
   font-family: var(--font-family-ja);
   font-weight: var(--font-weight-semibold);
+}
+
+a {
+  &[href="#"] {
+    pointer-events: none;
+  }
 }
 
 /* <<< base - サイト共通のスタイル */

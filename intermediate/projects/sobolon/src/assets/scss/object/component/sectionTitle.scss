@@ -1,0 +1,32 @@
+@use "@global" as g;
+
+.c-sectionTitle {
+  font-size: calc(30 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  position: relative;
+  inline-size: fit-content;
+  padding-block-end: calc(28 * var(--rem));
+  margin-inline: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(var(--color-primary));
+    height: 1px;
+    width: calc(60 * var(--rem));
+  }
+
+  &[data-color="primary"] {
+    &::before {
+      background-color: rgb(var(--color-primary));
+    }
+  }
+
+  &[data-color="secondary"] {
+    color: rgb(var(--color-primary));
+  }
+}
