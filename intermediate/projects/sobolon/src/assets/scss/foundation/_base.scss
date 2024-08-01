@@ -11,6 +11,8 @@
   --leading-trim: calc((1em - 1lh) / 2);
   // remに変換する
   --rem: 1rem / var(--font-size-base);
+  // letter-spacingの%をemに変換する
+  --letter-em: 100 * 1em;
 
   // breakpoint
   --bp-xs: #{g.$bp-xs};

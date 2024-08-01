@@ -1,0 +1,99 @@
+@use "@global" as g;
+
+.p-products {
+  padding-block-start: calc(96 * var(--rem));
+  @include g.mq(md) {
+    padding-block-start: calc(160 * var(--rem));
+  }
+}
+
+.p-products__inner {
+  padding-inline: calc(56 * var(--rem));
+  @include g.mq(md) {
+    max-width: calc((940 + var(--padding-inline-md) * 2) * var(--rem));
+  }
+}
+
+.l-inner {
+}
+
+.p-products__title {
+}
+
+.c-sectionTitle {
+}
+
+.p-products__list {
+  margin-block-start: calc(46 * var(--rem));
+  display: grid;
+  justify-content: center;
+  gap: calc(40 * var(--rem));
+  grid-template-columns: repeat(auto-fit, minmax(calc(260 * var(--rem)), 1fr));
+  @include g.mq(md) {
+    margin-block-start: calc(64 * var(--rem));
+    gap: calc(80 * var(--rem));
+  }
+}
+
+.p-productsItem {
+}
+
+.p-productsItem__wrapper {
+}
+
+.p-productsItem__img {
+  aspect-ratio: 1;
+  img {
+    width: 100%;
+  }
+}
+
+.p-productsItem__textBox {
+  margin-block-start: calc(20 * var(--rem));
+  display: grid;
+  gap: calc(10 * var(--rem));
+  @include g.mq(md) {
+    margin-block-start: calc(18 * var(--rem));
+  }
+}
+
+.p-productsItem__title {
+  font-size: calc(14 * var(--rem));
+  font-weight: var(--font-weight-light);
+  line-height: 1.7;
+}
+
+.p-productsItem__price {
+  --_color: 152, 152, 152;
+  color: rgb(var(--_color));
+  font-size: calc(16 * var(--rem));
+  font-weight: var(--font-weight-light);
+  line-height: 1.7;
+}
+
+.p-products__button {
+  margin-block-start: calc(42 * var(--rem));
+  text-align: center;
+  @include g.mq(md) {
+    margin-block-start: calc(44 * var(--rem));
+  }
+}
+
+.c-borderButton {
+  display: inline-block;
+  --_border-color: var(--color-primary);
+  --_color: var(--color-primary);
+  --_bg-color: transparent;
+  border: none;
+  background: none;
+  min-width: calc(158 * var(--rem));
+
+  padding: calc(12 * var(--rem)) calc(8 * var(--rem));
+  border: 1px solid rgb(var(--_border-color));
+  background: var(--_bg-color);
+  color: rgb(var(--_color));
+  font-size: calc(14 * var(--rem));
+  font-weight: var(--font-weight-light);
+  line-height: 1.7 /* 23.8px */;
+  letter-spacing: calc(0.14 / var(--letter-em));
+}

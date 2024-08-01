@@ -16,14 +16,10 @@
 .p-feature__cardList {
   margin-block-start: calc(46 * var(--rem));
   display: grid;
-  gap: calc(50 * var(--rem));
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, calc(345 * var(--rem)))
-  );
+  gap: calc(50 * var(--rem)) calc(30 * var(--rem));
+  grid-template-columns: repeat(auto-fit, minmax(calc(263 * var(--rem)), 1fr));
   justify-content: center;
   @include g.mq(md) {
-    grid-template-columns: repeat(auto-fit, min(calc(340 * var(--rem))));
     gap: calc(70 * var(--rem));
   }
   @include g.mq(xl) {
@@ -44,6 +40,9 @@
 }
 
 .p-featureCard__img {
+  img {
+    width: 100%;
+  }
 }
 
 .p-featureCard__text {
