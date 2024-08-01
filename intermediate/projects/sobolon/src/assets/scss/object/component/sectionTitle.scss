@@ -8,6 +8,8 @@
   inline-size: fit-content;
   padding-block-end: calc(28 * var(--rem));
   margin-inline: auto;
+  white-space: nowrap;
+  text-align: center;
 
   &::before {
     content: "";

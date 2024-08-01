@@ -12,10 +12,17 @@
   // remに変換する
   --rem: 1rem / var(--font-size-base);
 
+  // breakpoint
+  --bp-xs: #{g.$bp-xs};
+  --bp-sm: #{g.$bp-sm};
+  --bp-md: #{g.$bp-md};
+  --bp-lg: #{g.$bp-lg};
+  --bp-xl: #{g.$bp-xl};
+  --bp-2xl: #{g.$bp-2xl};
+
   // color
   --color-base: 255, 255, 255;
   --color-sub: 51, 51, 51;
-
   --color-primary: 62, 167, 209;
 
   // font
@@ -53,7 +60,7 @@ body {
 }
 
 html {
-  font-size: calc(var(--font-size-base) * 1px);
+  font-size: calc(var(--font-size-base) * var(--rem));
   line-height: var(--line-height-base);
 }
 

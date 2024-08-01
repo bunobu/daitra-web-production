@@ -37,15 +37,15 @@ const pageDate = {
     featureList: [
       {
         img: `${assetsPathImg}img-feature-1.jpg`,
-        text: "素材は海で採れたマイクロプラスチック",
+        text: "素材は海で採れた<br/>マイクロプラスチック",
       },
       {
         img: `${assetsPathImg}img-feature-2.jpg`,
-        text: "個性あふれる“可愛い”デザイン",
+        text: "個性あふれる<br/>“可愛い”デザイン",
       },
       {
         img: `${assetsPathImg}img-feature-3.jpg`,
-        text: "世界にひとつだけの一点物アクセサリー",
+        text: "世界にひとつだけの<br/>一点物アクセサリー",
       },
     ],
     productsList: [

@@ -15,6 +15,20 @@
 
 .p-feature__cardList {
   margin-block-start: calc(46 * var(--rem));
+  display: grid;
+  gap: calc(50 * var(--rem));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, calc(345 * var(--rem)))
+  );
+  justify-content: center;
+  @include g.mq(md) {
+    grid-template-columns: repeat(auto-fit, min(calc(340 * var(--rem))));
+    gap: calc(70 * var(--rem));
+  }
+  @include g.mq(xl) {
+    gap: calc(90 * var(--rem));
+  }
 }
 
 .p-feature__card {
@@ -34,5 +48,9 @@
 
 .p-featureCard__text {
   padding-block: calc(26 * var(--rem));
-  padding-inline: calc(93 * var(--rem));
+  padding-inline: calc(26 * var(--rem));
+  text-align: center;
+  font-size: calc(16 * var(--rem));
+  font-weight: var(--font-weight-regular);
+  line-height: 1.7;
 }
