@@ -78,22 +78,3 @@
     margin-block-start: calc(44 * var(--rem));
   }
 }
-
-.c-borderButton {
-  display: inline-block;
-  --_border-color: var(--color-primary);
-  --_color: var(--color-primary);
-  --_bg-color: transparent;
-  border: none;
-  background: none;
-  min-width: calc(158 * var(--rem));
-
-  padding: calc(12 * var(--rem)) calc(8 * var(--rem));
-  border: 1px solid rgb(var(--_border-color));
-  background: var(--_bg-color);
-  color: rgb(var(--_color));
-  font-size: calc(14 * var(--rem));
-  font-weight: var(--font-weight-light);
-  line-height: 1.7 /* 23.8px */;
-  letter-spacing: calc(0.14 / var(--letter-em));
-}
