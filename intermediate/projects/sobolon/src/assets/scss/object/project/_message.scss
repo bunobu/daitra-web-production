@@ -1,0 +1,61 @@
+@use "@global" as g;
+
+.p-message {
+  margin-block-start: calc(96 * var(--rem));
+  position: relative;
+  @include g.mq(md) {
+    margin-block-start: calc(160 * var(--rem));
+  }
+}
+
+.p-message__bg {
+  --_sb-bg: url("../img/small/bg-message.jpg");
+  --_pc-bg: url("../img/bg-message.jpg");
+
+  position: absolute;
+  background-image: var(--_sb-bg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  inset: 0;
+  z-index: -1;
+  @include g.mq(md) {
+    background-image: var(--_pc-bg);
+    background-position: center;
+  }
+}
+
+.p-message__inner {
+  padding-block-start: calc(180 * var(--rem));
+  padding-block-end: calc(50 * var(--rem));
+  @include g.mq(md) {
+    padding-block-start: calc(123 * var(--rem));
+    padding-block-end: calc(122 * var(--rem));
+  }
+}
+
+.l-inner {
+}
+
+.p-message__content {
+  color: rgb(var(--color-base));
+}
+
+.p-message__title {
+  font-size: calc(20 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.7;
+  @include g.mq(md) {
+    font-size: calc(22 * var(--rem));
+  }
+}
+
+.p-message__text {
+  font-size: calc(14 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.7;
+  margin-block-start: calc(24 * var(--rem));
+  @include g.mq(md) {
+    font-size: calc(16 * var(--rem));
+  }
+}
