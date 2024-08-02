@@ -1,9 +1,7 @@
 @use "@global" as g;
 
 .l-header {
-  --_header-height: 60;
   width: 100%;
-  min-height: calc(var(--_header-height) * var(--rem));
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +13,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-block: calc(19 * var(--rem));
+  min-height: calc(60 * var(--rem));
+  @include g.mq(md) {
+    padding-block: calc(21 * var(--rem));
+    min-height: calc(70 * var(--rem));
+  }
 }
 
 .l-header__logo {
@@ -25,7 +29,7 @@
   a {
     display: block;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 122 / 22;
   }
 
   img {
@@ -52,7 +56,7 @@
   grid-auto-columns: auto;
   grid-auto-flow: column;
   inline-size: fit-content;
-  gap: calc(46 * var(--rem));
+  gap: calc(46.5 * var(--rem));
 }
 
 .l-header__navItem {
@@ -64,6 +68,7 @@
 
     font-size: calc(16 * var(--rem));
     font-weight: var(--font-weight-light);
+    line-height: 1.7;
   }
 }
 
