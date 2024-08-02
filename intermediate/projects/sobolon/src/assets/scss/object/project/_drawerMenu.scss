@@ -10,6 +10,7 @@
   right: 0;
   transform: translateX(101%);
   transition: translateX 0.3s;
+  z-index: var(--z-index-drawer);
 
   &[data-show="true"] {
     transform: translateX(0);
@@ -35,12 +36,14 @@
 }
 
 .p-drawerMenu__item {
+  text-align: right;
+
   a {
     display: inline-block;
     padding-inline: calc(16 * var(--rem));
     color: rgb(var(--color-base));
     font-size: calc(18 * var(--rem));
     font-weight: var(--font-weight-light);
-    line-height: 1rlh;
+    line-height: 1.7;
   }
 }
