@@ -4,7 +4,7 @@
   --_mv-content-spacer: 320;
   padding-block-start: calc(96 * var(--rem));
   @include g.mq(sm) {
-    padding-block-start: calc((96 + var(--_mv-content-spacer)) * var(--rem));
+    padding-block-start: calc((20 + var(--_mv-content-spacer)) * var(--rem));
   }
   @include g.mq(lg) {
     padding-block-start: calc(160 * var(--rem));
@@ -23,6 +23,7 @@
 .p-concept__content {
   margin-block-start: calc(46 * var(--rem));
   @include g.mq(md) {
+    margin-block-start: calc(64 * var(--rem));
     display: flex;
   }
 }
@@ -31,6 +32,8 @@
   width: 100%;
   aspect-ratio: 345 / 230;
   @include g.mq(md) {
+    flex-shrink: 0;
+    width: 50%;
     max-width: calc(600 * var(--rem));
     aspect-ratio: 600 / 400;
   }
@@ -41,7 +44,7 @@
   @include g.mq(md) {
     margin-block: auto;
     padding-block: calc(20 * var(--rem));
-    padding-inline-start: calc(80 * var(--rem));
+    padding-inline-start: calc((80 / 1200 * 100%));
   }
 }
 
@@ -49,14 +52,20 @@
   font-size: calc(20 * var(--rem));
   font-weight: var(--font-weight-semibold);
   line-height: 1.7;
+  @include g.mq(md) {
+    font-size: calc(18 * var(--rem));
+  }
+  @include g.mq(lg) {
+    font-size: calc(20 * var(--rem));
+  }
 }
 
 .p-concept__contentText {
-  margin-block-start: calc(22 * var(--rem));
+  margin-block-start: calc(20 * var(--rem));
   font-size: calc(16 * var(--rem));
   font-weight: var(--font-weight-light);
   line-height: 1.7;
   @include g.mq(md) {
-    margin-block-start: calc(40 * var(--rem));
+    margin-block-start: calc(39 * var(--rem));
   }
 }

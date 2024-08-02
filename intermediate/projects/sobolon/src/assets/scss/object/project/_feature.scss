@@ -2,6 +2,9 @@
 
 .p-feature {
   padding-block-start: calc(96 * var(--rem));
+  @include g.mq(md) {
+    padding-block-start: calc(160 * var(--rem));
+  }
 }
 
 .p-feature__inner {
@@ -16,10 +19,11 @@
 .p-feature__cardList {
   margin-block-start: calc(46 * var(--rem));
   display: grid;
-  gap: calc(50 * var(--rem)) calc(30 * var(--rem));
+  gap: calc(49 * var(--rem)) calc(30 * var(--rem));
   grid-template-columns: repeat(auto-fit, minmax(calc(263 * var(--rem)), 1fr));
   justify-content: center;
   @include g.mq(md) {
+    margin-block-start: calc(64 * var(--rem));
     gap: calc(70 * var(--rem));
   }
   @include g.mq(xl) {

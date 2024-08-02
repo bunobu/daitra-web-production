@@ -10,6 +10,10 @@
   margin-inline: auto;
   white-space: nowrap;
   text-align: center;
+  @include g.mq(md) {
+    font-size: calc(40 * var(--rem));
+    padding-block-end: calc(25 * var(--rem));
+  }
 
   &::before {
     content: "";
