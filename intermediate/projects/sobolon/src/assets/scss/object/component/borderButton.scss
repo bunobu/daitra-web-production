@@ -9,12 +9,17 @@
   background: none;
   min-width: calc(158 * var(--rem));
 
-  padding: calc(12 * var(--rem)) calc(8 * var(--rem));
+  padding-block: calc(12 * var(--rem));
+  padding-inline: calc(8 * var(--rem));
   border: 1px solid rgb(var(--_border-color));
   background: var(--_bg-color);
   color: rgb(var(--_color));
   font-size: calc(14 * var(--rem));
   font-weight: var(--font-weight-light);
-  line-height: 1.7 /* 23.8px */;
+  line-height: 1.7;
   letter-spacing: calc(0.14 / var(--letter-em));
+
+  &[data-bg-color="base"] {
+    background-color: rgb(var(--color-base));
+  }
 }

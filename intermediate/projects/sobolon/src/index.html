@@ -196,30 +196,96 @@
       <section class="p-contact">
         <div class="p-contact__bg"></div>
         <div class="p-contact__inner l-inner">
+          <div class="p-contact__title">
+            <h2 class="c-sectionTitle" data-color="secondary">Contact</h2>
+          </div>
           <div class="p-contact__form">
             <form action="" class="p-contactForm">
-              <span class="p-contactForm__read"></span>
-              <div class="p-contactForm__item">
-                <label for="" class="">お名前</label>
-                <input type="text" name="" id="" />
-              </div>
-              <div class="p-contactForm__item">
-                <label for="" class="">メールアドレス</label>
-                <input type="email" name="" id="" />
-              </div>
-              <div class="p-contactForm__item">
-                <label for="" class="">法人/個人の選択</label>
-                <input type="radio" name="" id="" value="" />
-                <input type="radio" name="" id="" value="" />
+              <span class="p-contactForm__read">は入力必須項目です</span>
+              <div class="p-contactForm__itemList">
+                <!-- 名前 -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <label for="name" class="p-contactForm__label">お名前</label>
+                  <input type="text" name="userName" id="name" required />
+                </div>
+                <!-- メールアドレス -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <label for="email" class="p-contactForm__label"
+                    >メールアドレス</label
+                  >
+                  <input type="email" name="userEmail" id="email" required />
+                </div>
+                <!-- 法人/個人 -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <span class="p-contactForm__label">法人/個人の選択</span>
+                  <div class="p-contactForm__radioWrapper">
+                    <label class="p-contactForm__radioLabel">
+                      <input
+                        id="corporation"
+                        type="radio"
+                        name="select"
+                        value="corporation"
+                        checked
+                        required
+                      />
+                      <span class="p-contactForm__radioText">法人</span>
+                    </label>
+                    <label class="p-contactForm__radioLabel">
+                      <input
+                        id="individual"
+                        type="radio"
+                        name="select"
+                        value="individual"
+                        required
+                      />
+                      <span class="p-contactForm__radioText">個人</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- テキストエリア -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <label for="message" class="p-contactForm__label"
+                    >お問い合わせ内容</label
+                  >
+                  <textarea name="userMessage" id="message" required></textarea>
+                </div>
               </div>
 
-              <div class="pp-contactForm__check">
-                <input type="checkbox" name="" id="" />
-                <label for=""><a>プライバシーポリシー</a>に同意します。</label>
+              <div class="p-contactForm__check">
+                <input
+                  type="checkbox"
+                  name="userPrivacyCheck"
+                  id="privacyCheck"
+                />
+                <label for="privacyCheck"
+                  ><a href="#">プライバシーポリシー</a>に同意します。</label
+                >
               </div>
 
               <div class="p-contactForm__button">
-                <button type="submit">送信</button>
+                <button
+                  type="submit"
+                  class="c-borderButton"
+                  data-bg-color="base"
+                >
+                  送信
+                </button>
               </div>
             </form>
           </div>
