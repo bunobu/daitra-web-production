@@ -2,16 +2,21 @@ import { viewportSwitch } from "./viewportSwitch";
 
 viewportSwitch(375);
 
-const a = document.querySelector("[data-id='hamburger']");
-a.addEventListener("click", () => {
-  let active = a.getAttribute("data-open");
-  if (active === "false") {
-    a.setAttribute("data-open", "true");
-    return;
-  } else {
-    a.setAttribute("data-open", "false");
-  }
-});
+const drawerMenuToggle = () => {
+  const hamburger = document.getElementById("hamburger");
+  const drawerMenu = document.getElementById("drawerMenu");
+  hamburger.addEventListener("click", () => {
+    if (hamburger.getAttribute("data-open") === "true") {
+      hamburger.setAttribute("data-open", "false");
+      drawerMenu.setAttribute("data-show", "false");
+    } else {
+      hamburger.setAttribute("data-open", "true");
+      drawerMenu.setAttribute("data-show", "true");
+    }
+  });
+};
+
+drawerMenuToggle();
 
 // headerの高さ分コンテンツを下げる
 const header = document.getElementById("header");
