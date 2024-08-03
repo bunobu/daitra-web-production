@@ -19,13 +19,19 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+
+  @include g.mq(md) {
+    background-image: var(--_pc-bg);
+  }
 }
 
 .p-contact__inner {
-  padding-block: calc(56 * var(--rem));
+  padding-block: calc(57 * var(--rem));
+  max-width: calc((510 + var(--padding-inline-xs) * 2) * var(--rem));
+  margin-inline: auto;
+
   @include g.mq(md) {
     padding-block: calc(80 * var(--rem));
-    margin-inline: auto;
     max-width: calc((510 + var(--padding-inline-md) * 2) * var(--rem));
   }
 }
@@ -101,7 +107,7 @@
         padding-inline: calc(8 * var(--rem));
         width: 100%;
         justify-content: center;
-        clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 0 50%);
+        clip-path: polygon(0 0, 97% 0, 100% 50%, 97% 100%, 0 100%, 0 50%);
       }
     }
   }
@@ -126,7 +132,7 @@
   textarea {
     appearance: none;
     width: 100%;
-    padding-block: calc(5 * var(--rem));
+    padding-block: calc(6.5 * var(--rem));
     padding-inline: calc(10 * var(--rem));
 
     background-color: rgb(var(--color-base));
@@ -171,19 +177,20 @@
 }
 
 .p-contactForm__radioWrapper {
-  border: 1px solid rgb(var(--color-base));
   display: flex;
   width: fit-content;
 }
 
 .p-contactForm__radioLabel {
+  border: 1px solid rgb(var(--color-base));
+
+  --_border-height: 1;
   position: relative;
-  padding-block: calc(7 * var(--rem));
-  padding-inline: calc(24 * var(--rem));
+  padding-block: calc((6.5 - var(--_border-height)) * var(--rem));
+  padding-inline: calc((24 - var(--_border-height)) * var(--rem));
 
   @include g.mq(md) {
-    --_border-height: 1 * 2;
-    height: calc((40 - var(--_border-height)) * var(--rem));
+    height: calc((40 - var(--_border-height) * 2) * var(--rem));
   }
 }
 
@@ -205,6 +212,7 @@
   margin-block-start: calc(28 * var(--rem));
   width: fit-content;
   margin-inline: auto;
+  align-items: center;
   @include g.mq(md) {
     margin-block-start: calc(32 * var(--rem));
   }
@@ -216,7 +224,6 @@
     background-color: rgb(var(--color-base));
     border: 1px solid rgb(var(--color-primary));
     position: relative;
-    margin-block: calc(1lh - (22 * var(--rem)));
 
     &::before {
       content: "";
@@ -236,7 +243,7 @@
       &::before {
         opacity: 1;
         visibility: visible;
-        transform: rotate(0);
+        transform: translateY(calc(2 * var(--rem))) rotate(0);
       }
     }
   }

@@ -18,8 +18,9 @@
 }
 
 .l-footer__logo {
-  display: inline-block;
+  display: grid;
   width: calc(120 * var(--rem));
+  margin-inline: auto;
   img {
     width: 100%;
   }
@@ -33,7 +34,7 @@
 
 .l-footer__navList {
   display: grid;
-  gap: calc(20 * var(--rem));
+  gap: calc(12 * var(--rem));
   @include g.mq(md) {
     grid-template-columns: auto auto;
     gap: calc(32 * var(--rem));
@@ -46,6 +47,7 @@
     font-size: calc(12 * var(--rem));
     font-weight: var(--font-weight-light);
     line-height: 1.7;
+    display: block;
   }
 }
 
@@ -54,15 +56,26 @@
   display: inline-flex;
   gap: calc(40 * var(--rem));
   grid-template-columns: auto auto auto;
+  @include g.mq(md) {
+    margin-block-start: calc(20 * var(--rem));
+  }
 }
 
 .l-footer__sns {
+  a {
+    display: grid;
+    place-items: center;
+  }
+
+  img {
+    vertical-align: middle;
+  }
 }
 
 .l-footer__copy {
-  margin-block-start: calc(24 * var(--rem));
+  margin-block-start: calc(12 * var(--rem));
   @include g.mq(md) {
-    margin-block-start: calc(28 * var(--rem));
+    margin-block-start: calc(16 * var(--rem));
   }
 
   small {
