@@ -47,7 +47,7 @@
   a {
     display: block;
     &:focus {
-      outline: 2px solid rgb(var(--color-primary));
+      outline-color: var(--focus-style-primary);
     }
   }
 }
