@@ -6,7 +6,6 @@ const body = document.body;
 const bodyFixedAdd = () => {
   const scrollY = window.scrollY;
   const topPosition = scrollY ? parseFloat(scrollY) * -1 : 0;
-  console.log(topPosition);
 
   body.style.cssText = `
     position: fixed;
@@ -18,7 +17,6 @@ const bodyFixedAdd = () => {
 
 const bodyFixedRemove = () => {
   let topPosition = parseFloat(body.style.top) * -1;
-  console.log(topPosition);
 
   body.style.cssText = `
     position: "";
@@ -111,7 +109,6 @@ const anchorSmoothScroll = () => {
       const timerId = setInterval(() => {
         if (Math.floor(distance) === Math.floor(window.scrollY)) {
           clearInterval(timerId);
-          console.log("スクロール完了");
           hamburger.setAttribute("data-open", "false");
           drawerMenu.setAttribute("data-show", "false");
         }
