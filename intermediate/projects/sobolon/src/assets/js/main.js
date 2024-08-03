@@ -1,7 +1,32 @@
 import { viewportSwitch } from "./viewportSwitch";
 
 viewportSwitch(375);
-// headerの高さ分コンテンツを下げる
+
+const body = document.body;
+const bodyFixedAdd = () => {
+  const scrollY = window.scrollY;
+  const topPosition = scrollY ? parseInt(scrollY) * -1 : 0;
+
+  body.style.cssText = `
+    position: fixed;
+    left: 0;
+    top: ${topPosition}px;
+    width: 100%;
+  `;
+};
+
+const bodyFixedRemove = () => {
+  const topPosition = body.style.top;
+
+  body.style.cssText = `
+    position: initial;
+  `;
+
+  const scrollY = topPosition ? parseInt(topPosition) * -1 : 0;
+
+  window.scrollTo(0, scrollY);
+};
+
 const headerHeightMarginAdd = () => {
   const header = document.getElementById("header");
   const headerFixedSpacer = () => {
@@ -28,9 +53,13 @@ const drawerMenuToggle = () => {
     if (hamburger.getAttribute("data-open") === "true") {
       hamburger.setAttribute("data-open", "false");
       drawerMenu.setAttribute("data-show", "false");
+
+      bodyFixedRemove();
     } else {
       hamburger.setAttribute("data-open", "true");
       drawerMenu.setAttribute("data-show", "true");
+
+      bodyFixedAdd();
     }
   });
 };
