@@ -20,10 +20,19 @@
 
 .p-keyword__img {
   width: 100%;
+  max-width: calc(600 * var(--rem));
+  flex-shrink: 0;
+  aspect-ratio: 345 / 230;
+
   @include g.mq(md) {
-    flex-shrink: 0;
     max-width: calc(600 * var(--rem));
     width: 50%;
+    aspect-ratio: 600 / 400;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 

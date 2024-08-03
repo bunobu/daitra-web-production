@@ -8,6 +8,15 @@
   }
 }
 
+.p-message__bgWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .p-message__bg {
   --_sb-bg: url("../img/small/bg-message.jpg");
   --_pc-bg: url("../img/bg-message.jpg");
@@ -19,6 +28,8 @@
   background-repeat: no-repeat;
   inset: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
   @include g.mq(md) {
     background-image: var(--_pc-bg);
     background-position: center;

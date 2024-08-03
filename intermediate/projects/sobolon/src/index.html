@@ -15,13 +15,17 @@
       <!-- >>> mv -->
       <div id="mv" class="p-mv">
         <div class="p-mv__inner l-inner">
-          <div class="p-mv__img">
+          <div class="p-mv__img" data-class="is-in-view">
             <picture>
               <source
                 srcset="assets/img/img-mv.jpg"
                 media="(min-width: 450px)"
               />
-              <img src="assets/img/small/img-mv.png" alt="" />
+              <img
+                src="assets/img/small/img-mv.png"
+                alt=""
+                data-class="is-parallax"
+              />
             </picture>
           </div>
           <div class="p-mv__textBox">
@@ -44,12 +48,13 @@
             <h2 class="c-sectionTitle">Concept</h2>
           </div>
           <div class="p-concept__content">
-            <div class="p-concept__contentImg">
+            <div class="p-concept__contentImg" data-class="is-in-view">
               <img
                 src="assets/img/img-concept.jpg"
                 alt=""
                 width="1200"
                 height="800"
+                data-class="is-parallax"
               />
             </div>
             <div class="p-concept__contentTexts">
@@ -89,8 +94,10 @@
       <!-- <<< feature -->
 
       <!-- >>> message -->
-      <section id="message" class="p-message">
-        <div class="p-message__bg"></div>
+      <section id="message" class="p-message" data-class="is-in-view">
+        <div class="p-message__bgWrapper">
+          <div class="p-message__bg" data-class="is-parallax"></div>
+        </div>
         <div class="p-message__inner l-inner">
           <div class="p-message__content">
             <h2 class="p-message__title">
@@ -176,12 +183,13 @@
       <section id="keyword" class="p-keyword">
         <div class="p-keyword__inner l-inner">
           <div class="p-keyword__content">
-            <div class="p-keyword__img">
+            <div class="p-keyword__img" data-class="is-in-view">
               <img
                 src="assets/img/img-keyword.jpg"
                 alt=""
                 width="1200"
                 height="800"
+                data-class="is-parallax"
               />
             </div>
             <div class="p-keyword__textBox">

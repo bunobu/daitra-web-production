@@ -1,8 +1,12 @@
 import { viewportSwitch } from "./viewportSwitch";
-import { animeLoading } from "./animeLoading";
+import { AnimeParallax } from "./animeParallax";
 
-animeLoading();
 viewportSwitch(375);
+AnimeParallax();
+
+window.addEventListener("resize", () => {
+  AnimeParallax();
+});
 
 const body = document.body;
 const bodyFixedAdd = () => {
