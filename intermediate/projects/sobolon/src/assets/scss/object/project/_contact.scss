@@ -50,6 +50,13 @@
   @include g.mq(md) {
     margin-block-start: calc(64 * var(--rem));
   }
+
+  input,
+  textarea {
+    &:focus {
+      outline-color: var(--focus-style-primary);
+    }
+  }
 }
 
 .p-contactForm__read {

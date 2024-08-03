@@ -97,6 +97,10 @@
   width: calc(30 * var(--rem));
   height: calc(18 * var(--rem));
 
+  &:focus {
+    outline-color: var(--focus-style-primary);
+  }
+
   &[data-open="true"] {
     [data-bar="01"] {
       top: 0;

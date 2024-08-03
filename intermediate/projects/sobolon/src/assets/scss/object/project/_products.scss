@@ -14,9 +14,6 @@
   }
 }
 
-.l-inner {
-}
-
 .p-products__title {
 }
 
@@ -44,6 +41,13 @@
         padding: calc(10 * var(--rem));
         cursor: pointer;
       }
+    }
+  }
+
+  a {
+    display: block;
+    &:focus {
+      outline: 2px solid rgb(var(--color-primary));
     }
   }
 }

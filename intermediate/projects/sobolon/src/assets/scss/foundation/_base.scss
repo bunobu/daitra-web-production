@@ -52,6 +52,8 @@
   // z-index
   --z-index-header: 1000;
   --z-index-drawer: 1100;
+
+  --focus-style-primary: rgb(var(--color-primary));
 }
 
 html,
@@ -78,8 +80,8 @@ body {
 }
 
 a {
-  &[href="#"] {
-    pointer-events: none;
+  &:focus {
+    outline-color: var(--focus-style-primary);
   }
 }
 
