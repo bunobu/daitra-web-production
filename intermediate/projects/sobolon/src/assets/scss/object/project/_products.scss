@@ -36,6 +36,16 @@
 }
 
 .p-productsItem {
+  &:has(> a) {
+    @include g.mq(hover) {
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba(var(--color-primary), 0.1);
+        padding: calc(10 * var(--rem));
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .p-productsItem__wrapper {

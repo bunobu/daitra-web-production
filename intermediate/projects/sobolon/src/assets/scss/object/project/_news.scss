@@ -35,6 +35,16 @@
 .p-newsArticle {
   --_border-color: 224, 224, 224;
   border-bottom: rgb(var(--_border-color)) solid 1px;
+
+  &:has(> a) {
+    @include g.mq(hover) {
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(var(--color-primary), 0.1);
+      }
+    }
+  }
 }
 
 .p-newsArticle__inner {

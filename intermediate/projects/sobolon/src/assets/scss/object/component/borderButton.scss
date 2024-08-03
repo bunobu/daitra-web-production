@@ -9,6 +9,7 @@
   border: none;
   background: none;
   min-width: calc(158 * var(--rem));
+  cursor: pointer;
 
   padding-block: calc((12 - var(--_border-height)) * var(--rem));
   padding-inline: calc(8 * var(--rem));
@@ -22,5 +23,15 @@
 
   &[data-bg-color="base"] {
     background-color: rgb(var(--color-base));
+  }
+
+  @include g.mq(hover) {
+    transition: 0.3s;
+    &:hover {
+      background-color: rgb(var(--color-primary));
+      border-color: rgb(var(--color-primary));
+      color: rgb(var(--color-base));
+      letter-spacing: 0.1em;
+    }
   }
 }

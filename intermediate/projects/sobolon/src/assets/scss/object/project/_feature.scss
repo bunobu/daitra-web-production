@@ -47,6 +47,20 @@
   img {
     width: 100%;
   }
+
+  @include g.mq(hover) {
+    overflow: hidden;
+    img {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+        filter: grayscale(50%);
+      }
+    }
+  }
 }
 
 .p-featureCard__text {

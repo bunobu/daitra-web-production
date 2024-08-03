@@ -24,6 +24,14 @@
   img {
     width: 100%;
   }
+
+  @include g.mq(hover) {
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .l-footer__nav {
@@ -48,6 +56,15 @@
     font-weight: var(--font-weight-light);
     line-height: 1.7;
     display: block;
+    user-select: none;
+  }
+
+  @include g.mq(hover) {
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -65,6 +82,14 @@
   a {
     display: grid;
     place-items: center;
+
+    @include g.mq(hover) {
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 
   img {
