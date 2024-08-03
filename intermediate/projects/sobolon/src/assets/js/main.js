@@ -1,5 +1,7 @@
 import { viewportSwitch } from "./viewportSwitch";
+import { animeLoading } from "./animeLoading";
 
+animeLoading();
 viewportSwitch(375);
 
 const body = document.body;
