@@ -5,36 +5,40 @@ viewportSwitch(375);
 const body = document.body;
 const bodyFixedAdd = () => {
   const scrollY = window.scrollY;
-  const topPosition = scrollY ? parseInt(scrollY) * -1 : 0;
+  const topPosition = scrollY ? parseFloat(scrollY) * -1 : 0;
+  console.log(topPosition);
 
   body.style.cssText = `
     position: fixed;
-    left: 0;
     top: ${topPosition}px;
     width: 100%;
+    overflow: hidden;
   `;
 };
 
 const bodyFixedRemove = () => {
-  const topPosition = body.style.top;
+  let topPosition = parseFloat(body.style.top) * -1;
+  console.log(topPosition);
 
   body.style.cssText = `
-    position: initial;
+    position: "";
+    overflow: auto;
   `;
 
-  const scrollY = topPosition ? parseInt(topPosition) * -1 : 0;
+  window.scrollTo({
+    top: topPosition,
+    left: 0,
+  });
 
-  window.scrollTo(0, scrollY);
+  return topPosition;
 };
 
 const headerHeightMarginAdd = () => {
   const header = document.getElementById("header");
   const headerFixedSpacer = () => {
     const headerHeight = header.offsetHeight;
-    const drawerMenu = document.getElementById("drawerMenu");
     const main = document.getElementById("headerSpacer");
     main.style.marginBlockStart = `${headerHeight}px`;
-    drawerMenu.style.height = `calc(100vh - ${headerHeight}px)`;
   };
 
   const headerResizeObserver = new ResizeObserver(function () {
@@ -46,6 +50,7 @@ const headerHeightMarginAdd = () => {
 
 headerHeightMarginAdd();
 
+let drawerMenuFlag = false;
 const drawerMenuToggle = () => {
   const hamburger = document.getElementById("hamburger");
   const drawerMenu = document.getElementById("drawerMenu");
@@ -53,11 +58,15 @@ const drawerMenuToggle = () => {
     if (hamburger.getAttribute("data-open") === "true") {
       hamburger.setAttribute("data-open", "false");
       drawerMenu.setAttribute("data-show", "false");
+      drawerMenuFlag = false;
 
       bodyFixedRemove();
     } else {
+      const headerHeight = document.getElementById("header").offsetHeight;
+      drawerMenu.style.height = `calc(100dvh - ${headerHeight}px)`;
       hamburger.setAttribute("data-open", "true");
       drawerMenu.setAttribute("data-show", "true");
+      drawerMenuFlag = true;
 
       bodyFixedAdd();
     }
@@ -76,19 +85,39 @@ const anchorSmoothScroll = () => {
       if (href === "#") return;
 
       const target = document.querySelector(href);
-
-      const targetPosition = target.getBoundingClientRect().top;
-
       let currentPosition = window.scrollY;
-
+      const targetPosition = target.getBoundingClientRect().top;
       const headerHeight = document.getElementById("header").offsetHeight;
+      let distance;
 
-      const distance = targetPosition + currentPosition - headerHeight;
+      if (drawerMenuFlag) {
+        const topPosition = bodyFixedRemove();
+        drawerMenuFlag = false;
+        currentPosition = topPosition;
+        distance = targetPosition + currentPosition - headerHeight;
+      } else {
+        distance = targetPosition + currentPosition - headerHeight;
+      }
 
       window.scrollTo({
         top: distance,
         behavior: "smooth",
       });
+
+      if (Math.floor(distance) === Math.floor(window.scrollY)) {
+        return;
+      }
+
+      const timerId = setInterval(() => {
+        if (Math.floor(distance) === Math.floor(window.scrollY)) {
+          clearInterval(timerId);
+          console.log("スクロール完了");
+          hamburger.setAttribute("data-open", "false");
+          drawerMenu.setAttribute("data-show", "false");
+        }
+        // 16ミリ秒は最近のブラウザのリフレッシュレートに合わせた値
+        // 60fpsの場合、1000ms / 60fps = 16.666666666666668ms
+      }, 16);
     });
   });
 };
