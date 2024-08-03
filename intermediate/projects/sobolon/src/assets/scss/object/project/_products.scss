@@ -27,7 +27,7 @@
   margin-block-start: calc(46 * var(--rem));
   display: grid;
   justify-content: center;
-  gap: calc(40 * var(--rem));
+  gap: calc(41 * var(--rem));
   grid-template-columns: repeat(auto-fit, minmax(calc(260 * var(--rem)), 1fr));
   @include g.mq(md) {
     margin-block-start: calc(64 * var(--rem));
@@ -66,7 +66,7 @@
 .p-productsItem__price {
   --_color: 152, 152, 152;
   color: rgb(var(--_color));
-  font-size: calc(16 * var(--rem));
+  font-size: calc(14 * var(--rem));
   font-weight: var(--font-weight-light);
   line-height: 1.7;
 }

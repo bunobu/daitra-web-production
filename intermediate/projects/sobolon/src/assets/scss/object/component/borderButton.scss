@@ -3,13 +3,14 @@
 .c-borderButton {
   display: inline-block;
   --_border-color: var(--color-primary);
+  --_border-height: 1;
   --_color: var(--color-primary);
   --_bg-color: transparent;
   border: none;
   background: none;
   min-width: calc(158 * var(--rem));
 
-  padding-block: calc(12 * var(--rem));
+  padding-block: calc((12 - var(--_border-height)) * var(--rem));
   padding-inline: calc(8 * var(--rem));
   border: 1px solid rgb(var(--_border-color));
   background: var(--_bg-color);

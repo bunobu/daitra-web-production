@@ -54,8 +54,9 @@
   font-size: calc(14 * var(--rem));
   font-weight: var(--font-weight-semibold);
   line-height: 1.7;
-  margin-block-start: calc(24 * var(--rem));
+  margin-block-start: calc(26 * var(--rem));
   @include g.mq(md) {
     font-size: calc(16 * var(--rem));
+    margin-block-start: calc(22 * var(--rem));
   }
 }
