@@ -1,5 +1,16 @@
 import { viewportSwitch } from "./viewportSwitch";
 import { AnimeParallax } from "./animeParallax";
+import { animeLoading } from "./animeLoading";
+
+window.addEventListener("load", () => {
+  animeLoading();
+
+  setTimeout(() => {
+    document.getElementById("loading").dataset.isHidden = "true";
+  }, 3000);
+
+  console.log("load");
+});
 
 viewportSwitch(375);
 AnimeParallax();
@@ -126,3 +137,5 @@ const anchorSmoothScroll = () => {
 };
 
 anchorSmoothScroll();
+
+// return;

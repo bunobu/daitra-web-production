@@ -26,6 +26,7 @@
   --color-base: 255, 255, 255;
   --color-sub: 51, 51, 51;
   --color-primary: 62, 167, 209;
+  --color-accent: 236, 135, 142;
 
   // font
   --font-size-base: 16;
@@ -52,6 +53,7 @@
   // z-index
   --z-index-header: 1000;
   --z-index-drawer: 1100;
+  --z-index-loading: 2000;
 
   --focus-style-primary: rgb(var(--color-primary));
 }

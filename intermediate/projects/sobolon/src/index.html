@@ -8,7 +8,17 @@
     <script src="assets/js/main.js" type="module"></script>
   </head>
   <body>
+    <div id="loading" class="l-loading">
+      <div class="l-loading__bubbleWrapper" data-id="bubbleWrapper">
+        <div class="l-loading__logo" data-id="bubbleLogo">
+          <img src="assets/img/logo.svg" alt="" data-id="bubbleLogoImg" />
+        </div>
+        <div class="l-loading__bubble" data-id="bubble"></div>
+      </div>
+    </div>
+
     {{> header }}
+
     <div id="headerSpacer" class="l-headerSpacer"></div>
 
     <main id="main" class="l-main">
@@ -274,10 +284,14 @@
                   data-required="true"
                   data-label-style="primary"
                 >
-                  <label for="message" class="p-contactForm__label"
+                  <label for="usermessage" class="p-contactForm__label"
                     >お問い合わせ内容</label
                   >
-                  <textarea name="userMessage" id="message" required></textarea>
+                  <textarea
+                    name="userMessage"
+                    id="usermessage"
+                    required
+                  ></textarea>
                 </div>
               </div>
 

@@ -35,7 +35,6 @@ export const AnimeParallax = () => {
                 scrollTrigger: {
                   trigger: el,
                   ease: "power4.out",
-                  markers: true,
                   start: "start center-=100",
                   scrub: 0.3,
                 },
