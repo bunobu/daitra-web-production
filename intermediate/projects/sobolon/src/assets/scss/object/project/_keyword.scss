@@ -1,0 +1,68 @@
+@use "@global" as g;
+
+.p-keyword {
+  padding-block-start: calc(96 * var(--rem));
+  @include g.mq(md) {
+    padding-block-start: calc(160 * var(--rem));
+  }
+}
+
+.p-keyword__inner {
+}
+
+.p-keyword__content {
+  @include g.mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: calc(80 / 1200 * 100%);
+  }
+}
+
+.p-keyword__img {
+  width: 100%;
+  max-width: calc(600 * var(--rem));
+  flex-shrink: 0;
+  aspect-ratio: 345 / 230;
+
+  @include g.mq(md) {
+    max-width: calc(600 * var(--rem));
+    width: 50%;
+    aspect-ratio: 600 / 400;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-keyword__textBox {
+  padding-block-start: calc(32 * var(--rem));
+  line-height: 1.7;
+  @include g.mq(md) {
+    padding-block: 0;
+    margin-block: auto;
+  }
+}
+
+.p-keyword__title {
+  font-size: calc(20 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+  @include g.mq(md) {
+    font-size: calc(22 * var(--rem));
+  }
+  @include g.mq(lg) {
+    font-size: calc(28 * var(--rem));
+  }
+}
+
+.p-keyword__text {
+  font-size: calc(14 * var(--rem));
+  font-weight: var(--font-weight-light);
+  margin-block-start: calc(22 * var(--rem));
+
+  @include g.mq(md) {
+    font-size: calc(16 * var(--rem));
+    margin-block-start: calc(36 * var(--rem));
+  }
+}

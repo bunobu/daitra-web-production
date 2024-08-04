@@ -1,0 +1,141 @@
+@use "@global" as g;
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-header);
+  background-color: rgb(var(--color-base));
+}
+
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: calc(19 * var(--rem));
+  min-height: calc(60 * var(--rem));
+  @include g.mq(md) {
+    padding-block: calc(21 * var(--rem));
+    min-height: calc(70 * var(--rem));
+  }
+}
+
+.l-header__logo {
+  display: grid;
+  place-items: center;
+  width: calc(120 * var(--rem));
+
+  a {
+    display: block;
+    width: 100%;
+    aspect-ratio: 122 / 22;
+
+    @include g.mq(hover) {
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.7;
+        transform: rotateY(360deg);
+      }
+    }
+  }
+
+  img {
+    display: block;
+
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.l-header__nav {
+  display: none;
+  @include g.mq(md) {
+    display: block;
+  }
+}
+
+.l-header__navList {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  inline-size: fit-content;
+  gap: calc(46.5 * var(--rem));
+}
+
+.l-header__navItem {
+  a {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    color: rgb(var(--color-sub));
+
+    font-size: calc(16 * var(--rem));
+    font-weight: var(--font-weight-light);
+    line-height: 1.7;
+
+    @include g.mq(hover) {
+      transition: 0.3s;
+      &:hover {
+        color: rgb(var(--color-primary));
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
+
+.l-header__hamburger {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  width: calc(30 * var(--rem));
+  height: calc(18 * var(--rem));
+
+  &:focus {
+    outline-color: var(--focus-style-primary);
+  }
+
+  &[data-open="true"] {
+    [data-bar="01"] {
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-100%);
+    }
+    [data-bar="02"] {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    [data-bar="03"] {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+  }
+
+  @include g.mq(md) {
+    display: none;
+  }
+}
+
+.l-header__hamburgerBar {
+  display: inline-block;
+  background-color: rgb(var(--color-primary));
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: 0.3s;
+
+  &[data-bar="01"] {
+    top: 0;
+  }
+  &[data-bar="02"] {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[data-bar="03"] {
+    bottom: 0;
+  }
+}

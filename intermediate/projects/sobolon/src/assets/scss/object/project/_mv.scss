@@ -1,0 +1,53 @@
+@use "@global" as g;
+
+.p-mv {
+}
+
+.p-mv__inner {
+  position: relative;
+}
+
+.p-mv__img {
+  width: 100%;
+  aspect-ratio: 345 / 414;
+  @include g.mq(sm) {
+    aspect-ratio: 990 / 660;
+    max-width: calc(990 * var(--rem));
+  }
+  @include g.mq(lg) {
+    margin-inline-start: auto;
+  }
+  img {
+    display: block;
+  }
+}
+
+.p-mv__textBox {
+  margin-block-start: calc(30 * var(--rem));
+  @include g.mq(sm) {
+    background-color: rgb(var(--color-base));
+    margin-block-start: 0;
+    padding-inline: calc(40 * var(--rem));
+    padding-block: calc(80 * var(--rem));
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translate(10%, -10%);
+  }
+  @include g.mq(lg) {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.p-mv__title {
+  font-size: calc(26 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+}
+
+.p-mv__text {
+  margin-block-start: calc(16 * var(--rem));
+  font-size: calc(16 * var(--rem));
+  font-weight: var(--font-weight-light);
+}

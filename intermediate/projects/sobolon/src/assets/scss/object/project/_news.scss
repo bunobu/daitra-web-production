@@ -1,0 +1,116 @@
+@use "@global" as g;
+
+.p-news {
+  padding-block-start: calc(96 * var(--rem));
+  @include g.mq(md) {
+    padding-block-start: calc(160 * var(--rem));
+  }
+}
+
+.p-news__inner {
+  @include g.mq(md) {
+    max-width: calc((1040 + var(--padding-inline-md) * 2) * var(--rem));
+  }
+}
+
+.l-inner {
+}
+
+.p-news__title {
+}
+
+.c-sectionTitle {
+}
+
+.p-news__list {
+  margin-block-start: calc(46 * var(--rem));
+  display: grid;
+  gap: calc(28 * var(--rem));
+  @include g.mq(md) {
+    gap: calc(22.5 * var(--rem));
+    margin-block-start: calc(64 * var(--rem));
+  }
+}
+
+.p-newsArticle {
+  --_border-color: 224, 224, 224;
+  border-bottom: rgb(var(--_border-color)) solid 1px;
+
+  &:has(> a) {
+    @include g.mq(hover) {
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(var(--color-primary), 0.1);
+      }
+    }
+  }
+}
+
+.p-newsArticle__inner {
+  display: block;
+  padding-block-end: calc(27 * var(--rem));
+  @include g.mq(md) {
+    display: flex;
+    gap: calc(40 * var(--rem));
+    align-items: flex-start;
+    padding-block-end: calc(24 * var(--rem));
+  }
+}
+
+.p-newsArticle__img {
+  aspect-ratio: 345 / 212;
+  @include g.mq(md) {
+    flex-shrink: 1;
+    max-width: calc(260 * var(--rem));
+    aspect-ratio: 260 / 160;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.p-newsArticle__textBox {
+  margin-block-start: calc(13 * var(--rem));
+  line-height: 1.7;
+  @include g.mq(md) {
+    flex-grow: 1;
+    margin-block: 0;
+  }
+}
+
+.p-newsArticle__date {
+  display: inline-block;
+  font-size: calc(14 * var(--rem));
+  font-weight: var(--font-weight-light);
+}
+
+.p-newsArticle__title {
+  margin-block-start: calc(10 * var(--rem));
+  font-size: calc(16 * var(--rem));
+  font-weight: var(--font-weight-semibold);
+  @include g.mq(md) {
+    margin-block-start: calc(14 * var(--rem));
+    font-size: calc(18 * var(--rem));
+  }
+}
+
+.p-newsArticle__text {
+  --_color: 136, 136, 136;
+  margin-block-start: calc(14 * var(--rem));
+  color: rgb(var(--_color));
+  font-size: calc(14 * var(--rem));
+  font-weight: var(--font-weight-light);
+  @include g.mq(md) {
+    margin-block-start: calc(10 * var(--rem));
+  }
+}
+
+.p-news__button {
+  margin-block-start: calc(41 * var(--rem));
+  text-align: center;
+  @include g.mq(md) {
+    margin-block-start: calc(44 * var(--rem));
+  }
+}

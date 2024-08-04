@@ -1,0 +1,90 @@
+/* >>> base - サイト共通のスタイル */
+@use "@global" as g;
+
+// font-family
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+
+:root {
+  // 計算式
+
+  // ハーフ・レディングを削除 margin-blockにあてる
+  --leading-trim: calc((1em - 1lh) / 2);
+  // remに変換する
+  --rem: 1rem / var(--font-size-base);
+  // letter-spacingの%をemに変換する
+  --letter-em: 100 * 1em;
+
+  // breakpoint
+  --bp-xs: #{g.$bp-xs};
+  --bp-sm: #{g.$bp-sm};
+  --bp-md: #{g.$bp-md};
+  --bp-lg: #{g.$bp-lg};
+  --bp-xl: #{g.$bp-xl};
+  --bp-2xl: #{g.$bp-2xl};
+
+  // color
+  --color-base: 255, 255, 255;
+  --color-sub: 51, 51, 51;
+  --color-primary: 62, 167, 209;
+  --color-accent: 236, 135, 142;
+
+  // font
+  --font-size-base: 16;
+  --font-family-en: sans-serif;
+  --font-family-ja: "Noto Serif JP", serif;
+  --line-height-base: 1.7;
+
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  // layout
+  --padding-inline-xs: 15;
+  --padding-inline-md: 40;
+
+  --container-width-md: 1200;
+
+  // z-index
+  --z-index-header: 1000;
+  --z-index-drawer: 1100;
+  --z-index-loading: 2000;
+
+  --focus-style-primary: rgb(var(--color-primary));
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+html {
+  font-size: calc(var(--font-size-base) * var(--rem));
+  line-height: var(--line-height-base);
+}
+
+body {
+  color: rgb(var(--color-sub));
+  background-color: rgb(var(--color-base));
+  font-family: var(--font-family-ja);
+  font-weight: var(--font-weight-semibold);
+
+  overflow-wrap: anywhere; /* 収まらない場合に折り返す */
+  word-break: normal; /* 単語の分割はデフォルトに依存 */
+  line-break: strict; /* 禁則処理を厳格に適用 */
+}
+
+a {
+  &:focus {
+    outline-color: var(--focus-style-primary);
+  }
+}
+
+/* <<< base - サイト共通のスタイル */

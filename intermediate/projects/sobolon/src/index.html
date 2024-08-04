@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {{> meta/head-meta }}
+
+    <link rel="stylesheet" href="./assets/scss/style.scss" />
+
+    <script src="assets/js/main.js" type="module"></script>
+  </head>
+  <body>
+    <div id="loading" class="l-loading">
+      <div class="l-loading__bubbleWrapper" data-id="bubbleWrapper">
+        <div class="l-loading__logo" data-id="bubbleLogo">
+          <img
+            src="assets/img/logo.svg"
+            alt="画像:sobolonのロゴ"
+            data-id="bubbleLogoImg"
+            width="120"
+            height="22"
+          />
+        </div>
+        <div class="l-loading__bubble" data-id="bubble"></div>
+      </div>
+    </div>
+
+    {{> header }}
+
+    <div id="headerSpacer" class="l-headerSpacer"></div>
+
+    <main id="main" class="l-main">
+      <!-- >>> mv -->
+      <div id="mv" class="p-mv">
+        <div class="p-mv__inner l-inner">
+          <div class="p-mv__img" data-class="is-in-view">
+            <picture>
+              <source
+                srcset="assets/img/img-mv.jpg"
+                media="(min-width: 450px)"
+              />
+              <img
+                src="assets/img/small/img-mv.png"
+                alt="画像:寝転がった女性がこちらを見つめている"
+                data-class="is-parallax"
+                width="690"
+                height="828"
+              />
+            </picture>
+          </div>
+          <div class="p-mv__textBox">
+            <p class="p-mv__title">
+              “可愛い” で<br class="u-hidden-mobile" />地球を守る！
+            </p>
+            <p class="p-mv__text">
+              海洋マイクロプラスチックを素材とした<br />
+              ハンドメイドアクセサリー「sobolon」
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <<< mv -->
+
+      <!-- >>> concept -->
+      <section id="concept" class="p-concept">
+        <div class="p-concept__inner l-inner">
+          <div class="p-concept__title">
+            <h2 class="c-sectionTitle">Concept</h2>
+          </div>
+          <div class="p-concept__content">
+            <div class="p-concept__contentImg" data-class="is-in-view">
+              <img
+                src="assets/img/img-concept.jpg"
+                alt="画像:草原で女性がマイクロプラスチックを投げている"
+                width="1200"
+                height="800"
+                data-class="is-parallax"
+              />
+            </div>
+            <div class="p-concept__contentTexts">
+              <p class="p-concept__contentTitle">
+                可愛くてステキなのは当たり前。<br />
+                地球にやさしくあるのも当たり前。
+              </p>
+              <p class="p-concept__contentText">
+                「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< concept -->
+
+      <!-- >>> feature -->
+      <section id="feature" class="p-feature">
+        <div class="p-feature__inner l-inner">
+          <div class="p-feature__title">
+            <h2 class="c-sectionTitle">Feature</h2>
+          </div>
+          <div class="p-feature__cardList">
+            {{#each featureList}}
+            <div class="p-feature__card p-featureCard">
+              <div class="p-featureCard__inner">
+                <div class="p-featureCard__img">
+                  <img src="{{img}}" alt="{{alt}}" width="0" height="0" />
+                </div>
+                <p class="p-featureCard__text">{{{text}}}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+      <!-- <<< feature -->
+
+      <!-- >>> message -->
+      <section id="message" class="p-message" data-class="is-in-view">
+        <div class="p-message__bgWrapper">
+          <div class="p-message__bg" data-class="is-parallax"></div>
+        </div>
+        <div class="p-message__inner l-inner">
+          <div class="p-message__content">
+            <h2 class="p-message__title">
+              消費者である私たちが、<br />
+              地球環境のためにできることは何か？
+            </h2>
+            <p class="p-message__text">
+              そんな視点からこのブランドは生まれました。<br />
+              オシャレを楽しむ気持ちを大切にしながらも、<br />
+              ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら…<br />
+              その変化は少しずつ、だけども本質的に、<br
+                class="u-hidden-desktop"
+              />
+              この世界をHappyに変えていくのだと、<br
+                class="u-hidden-mobile"
+              />私たちは考えます。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- <<< message -->
+
+      <!-- >>> products -->
+      <section id="products" class="p-products">
+        <div class="p-products__inner l-inner">
+          <div class="p-products__title">
+            <h2 class="c-sectionTitle">Products</h2>
+          </div>
+          <div class="p-products__list">
+            {{#each productsList}}
+            <article class="p-productsItem">
+              <a href="{{link}}" class="p-productsItem__wrapper">
+                <div class="p-productsItem__img">
+                  <img src="{{img}}" alt="{{alt}}" width="0" height="0" />
+                </div>
+                <div class="p-productsItem__textBox">
+                  <h3 class="p-productsItem__title">{{title}}</h3>
+                  <span class="p-productsItem__price">{{price}}</span>
+                </div>
+              </a>
+            </article>
+            {{/each}}
+          </div>
+          <div class="p-products__button">
+            <button class="c-borderButton">MORE</button>
+          </div>
+        </div>
+      </section>
+      <!-- <<< products -->
+
+      <!-- >>> news -->
+      <section id="news" class="p-news">
+        <div class="p-news__inner l-inner">
+          <div class="p-news__title">
+            <h2 class="c-sectionTitle">News</h2>
+          </div>
+          <div class="p-news__list">
+            {{#each newsList}}
+            <article class="p-newsArticle">
+              <a href="{{link}}" class="p-newsArticle__inner">
+                <div class="p-newsArticle__img">
+                  <img src="{{img}}" alt="{{alt}}" width="0" height="0" />
+                </div>
+                <div class="p-newsArticle__textBox">
+                  <time class="p-newsArticle__date" datetime="{{dateTime}}"
+                    >{{date}}</time
+                  >
+                  <h3 class="p-newsArticle__title">{{title}}</h3>
+                  <p class="p-newsArticle__text">{{text}}</p>
+                </div>
+              </a>
+            </article>
+            {{/each}}
+          </div>
+          <div class="p-news__button">
+            <button class="c-borderButton">MORE</button>
+          </div>
+        </div>
+      </section>
+      <!-- <<< news -->
+
+      <!-- >>> keyword -->
+      <section id="keyword" class="p-keyword">
+        <div class="p-keyword__inner l-inner">
+          <div class="p-keyword__content">
+            <div class="p-keyword__img" data-class="is-in-view">
+              <img
+                src="assets/img/img-keyword.jpg"
+                alt="画像:森の中で女性が空のペットボトルを持っている"
+                width="1200"
+                height="800"
+                data-class="is-parallax"
+              />
+            </div>
+            <div class="p-keyword__textBox">
+              <h2 class="p-keyword__title">
+                合言葉は、 <br />
+                「 “可愛い” で 地球を守る！」
+              </h2>
+              <p class="p-keyword__text">
+                深刻化している環境問題に対して、否定や制限、禁止といった強制的な方法ではなく、明るく幸せな未来を目指して、「可愛い」　「楽しい」の力を信じて、愛につながる選択を世の中に増やしていきます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< keyword -->
+
+      <!-- >>> contact -->
+      <section id="contact" class="p-contact">
+        <div class="p-contact__bg"></div>
+        <div class="p-contact__inner l-inner">
+          <div class="p-contact__title">
+            <h2 class="c-sectionTitle" data-color="secondary">Contact</h2>
+          </div>
+          <div class="p-contact__form">
+            <form action="" class="p-contactForm">
+              <span class="p-contactForm__read">は入力必須項目です</span>
+              <div class="p-contactForm__itemList">
+                <!-- 名前 -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <label for="name" class="p-contactForm__label">お名前</label>
+                  <input type="text" name="userName" id="name" required />
+                </div>
+                <!-- メールアドレス -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <label for="email" class="p-contactForm__label"
+                    >メールアドレス</label
+                  >
+                  <input type="email" name="userEmail" id="email" required />
+                </div>
+                <!-- 法人/個人 -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <span class="p-contactForm__label">法人/個人の選択</span>
+                  <div class="p-contactForm__radioWrapper">
+                    <label class="p-contactForm__radioLabel">
+                      <input
+                        id="corporation"
+                        type="radio"
+                        name="select"
+                        value="corporation"
+                        checked
+                        required
+                      />
+                      <span class="p-contactForm__radioText">法人</span>
+                    </label>
+                    <label class="p-contactForm__radioLabel">
+                      <input
+                        id="individual"
+                        type="radio"
+                        name="select"
+                        value="individual"
+                        required
+                      />
+                      <span class="p-contactForm__radioText">個人</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- テキストエリア -->
+                <div
+                  class="p-contactForm__item"
+                  data-required="true"
+                  data-label-style="primary"
+                >
+                  <label for="usermessage" class="p-contactForm__label"
+                    >お問い合わせ内容</label
+                  >
+                  <textarea
+                    name="userMessage"
+                    id="usermessage"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="p-contactForm__check">
+                <input
+                  type="checkbox"
+                  name="userPrivacyCheck"
+                  id="privacyCheck"
+                />
+                <label for="privacyCheck"
+                  ><a href="#">プライバシーポリシー</a>に同意します。</label
+                >
+              </div>
+
+              <div class="p-contactForm__button">
+                <button
+                  type="submit"
+                  class="c-borderButton"
+                  data-bg-color="base"
+                >
+                  送信
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- <<< contact -->
+    </main>
+
+    {{> footer }}
+  </body>
+</html>
