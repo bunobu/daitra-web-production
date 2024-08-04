@@ -8,7 +8,7 @@
     "dev:lint": "vite && markuplint \"**/*.html\"",
     "build": "vite build && html-beautify dist/**/*.html",
     "preview": "vite preview",
-    "lint:html": "markuplint \"**/*.html\"",
+    "lint:html": "markuplint \"src/*.html\"",
     "lint": "npm run lint:html"
   },
   "devDependencies": {

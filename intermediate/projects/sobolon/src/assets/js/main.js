@@ -17,11 +17,20 @@ window.addEventListener("load", () => {
   }
 });
 
+const imgSetAttributeSize = () => {
+  document.querySelectorAll("img").forEach((img) => {
+    img.setAttribute("width", `${img.naturalWidth}`);
+    img.setAttribute("height", `${img.naturalHeight}`);
+  });
+};
+
+imgSetAttributeSize();
 viewportSwitch(375);
 AnimeParallax();
 
 window.addEventListener("resize", () => {
   AnimeParallax();
+  imgSetAttributeSize();
 });
 
 const body = document.body;
@@ -63,7 +72,6 @@ const headerHeightMarginAdd = () => {
 
   const headerResizeObserver = new ResizeObserver(function () {
     headerFixedSpacer();
-    console.log("headerResizeObserver");
   });
   headerResizeObserver.observe(header);
 };
@@ -129,7 +137,7 @@ const anchorSmoothScroll = () => {
       }
 
       const timerId = setInterval(() => {
-        if (Math.floor(distance) === Math.floor(window.scrollY)) {
+        if (Math.floor(distance) - 1 <= Math.floor(window.scrollY)) {
           clearInterval(timerId);
           hamburger.setAttribute("data-open", "false");
           drawerMenu.setAttribute("data-show", "false");

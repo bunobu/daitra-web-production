@@ -41,12 +41,8 @@
   }
 
   img {
-    --_bg-color: rgb(0, 0, 0);
     display: block;
-    background-color: var(--_bg-color);
-    mask-image: url(../img/logo.svg);
-    mask-repeat: no-repeat;
-    mask-position: center center;
+
     background-size: contain;
     width: 100%;
     height: 100%;
