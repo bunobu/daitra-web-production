@@ -9,10 +9,16 @@
   background-color: rgb(var(--color-base));
   z-index: var(--z-index-loading);
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.8s;
 
   &[data-is-hidden="true"] {
     transform: translateY(-100%);
+    visibility: hidden;
+  }
+
+  &[data-is-first-show="true"] {
+    display: none;
+    opacity: 0;
     visibility: hidden;
   }
 }

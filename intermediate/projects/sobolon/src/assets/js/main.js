@@ -3,13 +3,18 @@ import { AnimeParallax } from "./animeParallax";
 import { animeLoading } from "./animeLoading";
 
 window.addEventListener("load", () => {
-  animeLoading();
+  const loading = document.getElementById("loading");
 
-  setTimeout(() => {
-    document.getElementById("loading").dataset.isHidden = "true";
-  }, 3000);
+  if (sessionStorage.getItem("loadingShow") === "true") {
+    loading.dataset.isFirstShow = "true";
+  } else {
+    animeLoading();
 
-  console.log("load");
+    setTimeout(() => {
+      loading.dataset.isHidden = "true";
+      sessionStorage.setItem("loadingShow", "true");
+    }, 3000);
+  }
 });
 
 viewportSwitch(375);
@@ -137,5 +142,3 @@ const anchorSmoothScroll = () => {
 };
 
 anchorSmoothScroll();
-
-// return;
