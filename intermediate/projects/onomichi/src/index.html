@@ -10,7 +10,91 @@
   <body>
     {{> header}}
 
-    <main class="l-main"></main>
+    <main class="l-main">
+      <div class="p-fv">
+        <div class="p-fv__inner">
+          <div class="p-fv__bg"></div>
+
+          <div class="p-fv__content">
+            <p class="p-fv__subTitle">
+              あなたの見つけたレトロな尾道の一枚を Instagramに投稿しよう
+            </p>
+            <div class="p-fv__title">
+              <picture>
+                <source
+                  srcset="assets/img/text-fv-title.svg"
+                  media="{{breakPoints.md}}"
+                />
+                <img src="assets/img/mobile/text-fv-title.svg" alt="" />
+              </picture>
+            </div>
+          </div>
+
+          <div class="p-fv__imgBox p-fvImgBox">
+            <div class="p-fvImgBox__img" data-img-label="share">
+              <picture>
+                <source
+                  srcset="assets/img/text-fv-share.svg"
+                  media="{{breakPoints.md}}"
+                />
+                <img src="assets/img/mobile/text-fv-share.svg" alt="" />
+              </picture>
+            </div>
+
+            <div class="p-fvImgBox__img" data-img-label="present">
+              <picture>
+                <source
+                  srcset="assets/img/img-fv-present.svg"
+                  media="{{breakPoints.md}}"
+                />
+                <img src="assets/img/mobile/img-fv-present.svg" alt="" />
+              </picture>
+            </div>
+
+            <div class="p-fvImgBox__phoneBox">
+              <div class="p-fvImgBox__phone">
+                <picture>
+                  <source
+                    srcset="assets/img/img-fv-smartphone.png"
+                    media="{{breakPoints.md}}"
+                  />
+                  <img src="assets/img/mobile/img-fv-smartphone.png" alt="" />
+                </picture>
+              </div>
+
+              <div class="p-fvImgBox__card p-fvImgCard">
+                <div class="p-fvImgCard__head">
+                  <p class="p-fvImgCard__title">#見つけて尾道レトロ</p>
+                </div>
+                <div class="p-fvImgCard__body">
+                  <div class="p-fvImgCard__period">
+                    <p class="p-fvImgCard__periodTitle">応募期間</p>
+                    <p class="p-fvImgCard__periodText">
+                      2022/8/1(月)〜9/30(金)
+                    </p>
+                  </div>
+                  <a href="" class="p-fvImgCard__button">応募してみる</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-fvImgBox__img" data-img-label="food">
+              <picture>
+                <source srcset="" media="{{breakPoints.md}}" />
+                <img src="assets/img/mobile/img_fv-food.svg" alt="" />
+              </picture>
+            </div>
+
+            <div class="p-fvImgBox__img" data-img-label="cat">
+              <picture>
+                <source srcset="" media="{{breakPoints.md}}" />
+                <img src="assets/img/mobile/img-fv-cats.svg" alt="" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     {{> footer}}
   </body>

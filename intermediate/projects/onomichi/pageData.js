@@ -1,4 +1,8 @@
-const baseData = {};
+const baseData = {
+  breakPoints: {
+    md: "(min-width: 768px)",
+  },
+};
 
 const pageDate = {
   "/index.html": {
@@ -7,6 +11,7 @@ const pageDate = {
       title: "indexページだよ",
       description: "indexページの説明文だよ",
     },
+    breakPoints: baseData.breakPoints,
   },
   "/about.html": {
     meta: {
