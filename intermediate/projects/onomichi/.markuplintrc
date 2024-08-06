@@ -11,5 +11,13 @@
   },
   "rules": {
     "required-h1": false
-  }
+  },
+  "nodeRules": [
+    {
+      "selector": "img",
+      "rules": {
+        "required-attr": "alt"
+      }
+    }
+  ]
 }

@@ -11,6 +11,19 @@
     {{> header}}
 
     <main class="l-main">
+      <div
+        class="test"
+        style="
+          height: 200px;
+          background-color: lightgray;
+          display: grid;
+          place-items: center;
+        "
+      >
+        fv
+      </div>
+
+      <!-- >>> pv -->
       <div class="p-fv">
         <div class="p-fv__inner">
           <div class="p-fv__bg"></div>
@@ -25,7 +38,11 @@
                   srcset="assets/img/text-fv-title.svg"
                   media="{{breakPoints.md}}"
                 />
-                <img src="assets/img/mobile/text-fv-title.svg" alt="" />
+                <img
+                  src="assets/img/mobile/text-fv-title.svg"
+                  alt=""
+                  loading="eager"
+                />
               </picture>
             </div>
           </div>
@@ -37,7 +54,11 @@
                   srcset="assets/img/text-fv-share.svg"
                   media="{{breakPoints.md}}"
                 />
-                <img src="assets/img/mobile/text-fv-share.svg" alt="" />
+                <img
+                  src="assets/img/mobile/text-fv-share.svg"
+                  alt=""
+                  loading="eager"
+                />
               </picture>
             </div>
 
@@ -47,7 +68,11 @@
                   srcset="assets/img/img-fv-present.svg"
                   media="{{breakPoints.md}}"
                 />
-                <img src="assets/img/mobile/img-fv-present.svg" alt="" />
+                <img
+                  src="assets/img/mobile/img-fv-present.svg"
+                  alt=""
+                  loading="eager"
+                />
               </picture>
             </div>
 
@@ -58,7 +83,11 @@
                     srcset="assets/img/img-fv-smartphone.png"
                     media="{{breakPoints.md}}"
                   />
-                  <img src="assets/img/mobile/img-fv-smartphone.png" alt="" />
+                  <img
+                    src="assets/img/mobile/img-fv-smartphone.png"
+                    alt=""
+                    loading="eager"
+                  />
                 </picture>
               </div>
 
@@ -80,19 +109,229 @@
 
             <div class="p-fvImgBox__img" data-img-label="food">
               <picture>
-                <source srcset="" media="{{breakPoints.md}}" />
-                <img src="assets/img/mobile/img_fv-food.svg" alt="" />
+                <source
+                  srcset="assets/img/img-fv-food.svg"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/img_fv-food.svg"
+                  alt=""
+                  loading="eager"
+                />
               </picture>
             </div>
 
             <div class="p-fvImgBox__img" data-img-label="cat">
               <picture>
-                <source srcset="" media="{{breakPoints.md}}" />
-                <img src="assets/img/mobile/img-fv-cats.svg" alt="" />
+                <source
+                  srcset="assets/img/img-fv-cats.svg"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/img-fv-cats.svg"
+                  alt=""
+                  loading="eager"
+                />
               </picture>
             </div>
           </div>
         </div>
+      </div>
+      <!-- <<< pv -->
+
+      <div
+        class="test"
+        style="
+          height: 200px;
+          background-color: lightgray;
+          display: grid;
+          place-items: center;
+        "
+      >
+        about
+      </div>
+
+      <!-- >>> about -->
+      <section class="p-about">
+        <div class="p-about__inner">
+          <div class="p-about__bgPawPad">
+            <span data-class="img"></span>
+          </div>
+
+          <div class="p-about__imgTop p-aboutImgTop">
+            <div class="p-aboutImgTop__left">
+              <picture>
+                <source
+                  srcset="assets/img/img-about-top-left.png"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/img-about-top-left.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="p-aboutImgTop__right">
+              <picture>
+                <source
+                  srcset="assets/img/img-about-top-right.png"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/img-about-top-right.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <div class="p-about__imgCenter p-aboutImgCenter">
+            <div class="p-aboutImgCenter__left">
+              <picture>
+                <source
+                  srcset="assets/img/bg-about-center-left.png"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/bg-about-center-left.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="p-aboutImgCenter__right">
+              <picture>
+                <source
+                  srcset="assets/img/bg-about-center-right.png"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/bg-about-center-right.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <div class="p-about__imgBottom p-aboutImgBottom">
+            <div class="p-aboutImgBottom__left">
+              <picture>
+                <source
+                  srcset="assets/img/bg-about-hill.png"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/bg-about-hill.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="p-aboutImgBottom__right">
+              <picture>
+                <source
+                  srcset="assets/img/bg-about-gods.png"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/bg-about-gods.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <div class="p-about__content">
+            <div class="p-about__contentInner">
+              <h2 class="p-about__title">
+                <span class="p-about__titleIcon">
+                  <img
+                    src="assets/img/icon-megaphone.svg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </span>
+                <span class="p-about__titleEn">About</span>
+                <span class="p-about__titleJa"> キャンペーンについて</span>
+              </h2>
+
+              <div class="p-about__subTitle">
+                <p>
+                  あなたの心が動いた尾道の瞬間を<br />
+                  ＼ おしえてください！ ／
+                </p>
+              </div>
+
+              <div class="p-about__text">
+                <p>
+                  風情あふれる坂道に、静かに佇むお寺。<br />
+                  路地裏の角をまがれば<br />
+                  気ままにお昼寝する猫に出会え、<br />
+                  ふと振り返れば、美しい瀬戸内の海が。
+                </p>
+                <p>
+                  数々の映画の舞台にもなってきたこの街には<br />
+                  心がほどけるような、<br />
+                  レトロでやさしい風景が広がっています。
+                </p>
+                <p>
+                  あなたの見つけた尾道のなつかしい景色を、<br />
+                  ぜひおしえてください。
+                </p>
+                <p>
+                  尾道観光部（@onomichi_retro）を
+                  フォロー&尾道で撮影した写真を、 ハッシュタグ<span
+                    data-style="bold"
+                    >「#見つけて尾道レトロ」</span
+                  >を つけてInstagramに投稿いただいた方の中から
+                </p>
+                <p data-style="title">尾道のギフトを100名様にプレゼント！</p>
+              </div>
+
+              <a href="" class="p-about__button">参加の仕方はこちら</a>
+            </div>
+            <div class="p-about__contentBottom">
+              <span data-class="downIcon"></span>
+            </div>
+          </div>
+
+          <div class="p-about__gallery p-aboutGallery">
+            <div class="p-aboutGallery__title">
+              <picture>
+                <source
+                  srcset="assets/img/text-about-gallery-title.svg"
+                  media="{{breakPoints.md}}"
+                />
+                <img
+                  src="assets/img/mobile/text-about-gallery-title.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+
+              <div class="p-aboutGallery__slider">
+                <p>スライダーの実装</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <<< about -->
+
+      <div
+        class="test"
+        style="
+          height: 200px;
+          background-color: lightgray;
+          display: grid;
+          place-items: center;
+        "
+      >
+        How to enter
       </div>
     </main>
 

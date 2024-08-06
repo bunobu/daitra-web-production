@@ -1,0 +1,8 @@
+{
+  "variables": {},
+  "html": {
+    "snippets": {
+      "img": "img[loading=lazy src alt]/"
+    }
+  }
+}
