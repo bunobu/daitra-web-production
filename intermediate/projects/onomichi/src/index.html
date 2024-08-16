@@ -323,9 +323,169 @@
       </section>
       <!-- <<< about -->
 
+      <div
+        class="test"
+        style="
+          height: 200px;
+          background-color: lightgray;
+          display: grid;
+          place-items: center;
+        "
+      >
+        How to enter
+      </div>
+
       <!-- >>> apply -->
       <section class="p-apply">
-        <div class="p-apply__inner"></div>
+        <div class="p-apply__inner">
+          <div class="p-apply__bgLeft p-applyBgLeft">
+            <div class="p-applyBgLeft__map">
+              <picture class="">
+                <source
+                  media="{{breakPoints.md}}"
+                  srcset="assets/img/img-apply-map-and-pad.svg"
+                />
+                <img
+                  src="assets/img/mobile/img-map.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="p-applyBgLeft__pad">
+              <img
+                src="assets/img/mobile/img-apply-pawpad-1.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="p-apply__bgRight p-applyBgRight">
+            <div class="p-applyBgRight__cat">
+              <picture class="">
+                <source
+                  media="{{breakPoints.md}}"
+                  srcset="assets/img/img-apply-cat-and-pad.svg"
+                />
+                <img
+                  src="assets/img/mobile/img-cat-and-pad.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="p-applyBgaRight__pad">
+              <img
+                src="assets/img/mobile/img-apply-pawpad-2.svg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <h2 class="p-apply__title">
+            <span class="p-apply__titleIcon">
+              <img src="assets/img/Icon-camera.svg" alt="" loading="lazy" />
+            </span>
+            <span class="p-apply__titleEn">How to Enter</span>
+            <span class="p-apply__titleJa">応募の仕方</span>
+          </h2>
+
+          <div class="p-apply__content">
+            <div class="p-apply__stepList">
+              <div class="p-apply__step p-applyStep">
+                <div class="p-applyStep__head">
+                  <div class="p-applyStep__headBg" data-class="bg-01"></div>
+                  <div class="p-applyStep__headTitle">
+                    <span data-class="text">STEP</span>
+                    <span data-class="number">01</span>
+                  </div>
+                  <div class="p-applyStep__headIcon">
+                    <img
+                      src="assets/img/icon-step-1.svg"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="p-applyStep__body">
+                  <h3 class="p-applyStep__bodyTitle">アカウントをフォロー</h3>
+                  <p class="p-applyStep__bodyText">
+                    Instagramアプリをダウンロードして、<br />
+                    公式アカウント尾道観光部(@onomichi_retro)のInstagramの<br />
+                    アカウントをフォローしてにゃん。
+                  </p>
+                  <a class="p-applyStep__bodyButton">
+                    <span data-class="icon">
+                      <img
+                        src="assets/img/Icon-insta.svg"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </span>
+                    <span data-class="text">onomichi_tabi をフォロー</span>
+                  </a>
+                </div>
+              </div>
+              <div class="p-apply__step p-applyStep">
+                <div class="p-applyStep__head">
+                  <div class="p-applyStep__headBg" data-class="bg-01"></div>
+                  <div class="p-applyStep__headTitle">
+                    <span data-class="text">STEP</span>
+                    <span data-class="number">02</span>
+                  </div>
+                  <div class="p-applyStep__headIcon">
+                    <img
+                      src="assets/img/icon-step-2.svg"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="p-applyStep__body">
+                  <h3 class="p-applyStep__bodyTitle">尾道で撮影</h3>
+                  <p class="p-applyStep__bodyText">
+                    尾道の旅で「レトロ」を感じられる<br />
+                    写真を撮影してほしいんだにゃ。<br />
+                    美しい景色、愛らしい猫、美味しい食べ物や<br />
+                    可愛いお土産など、なんでもOK！
+                  </p>
+                </div>
+              </div>
+              <div class="p-apply__step p-applyStep">
+                <div class="p-applyStep__head">
+                  <div class="p-applyStep__headBg" data-class="bg-01"></div>
+                  <div class="p-applyStep__headTitle">
+                    <span data-class="text">STEP</span>
+                    <span data-class="number">03</span>
+                  </div>
+                  <div class="p-applyStep__headIcon">
+                    <img
+                      src="assets/img/icon-step-3.svg"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div class="p-applyStep__body">
+                  <h3 class="p-applyStep__bodyTitle">
+                    ハッシュタグをつけて投稿！
+                  </h3>
+                  <p class="p-applyStep__bodyText">
+                    ハッシュタグ「＃見つけて尾道レトロ」を<br />
+                    必ずつけて投稿してにゃん！ 投稿して頂いた方の中から<br />
+                    100名様に尾道の豪華な商品をプレゼント！
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a href="" class="p-apply__button">
+              #見つけて尾道レトロ の最新投稿を見る
+            </a>
+          </div>
+        </div>
       </section>
       <!-- <<< apply -->
 
@@ -338,8 +498,12 @@
           place-items: center;
         "
       >
-        How to enter
+        Prizes
       </div>
+
+      <!-- >>> prizes -->
+      <section class="p-prizes"></section>
+      <!-- <<< prizes -->
     </main>
 
     {{> footer}}
