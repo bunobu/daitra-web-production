@@ -8,7 +8,9 @@
     <script src="assets/js/main.js" type="module"></script>
   </head>
   <body>
+    <!-- >>> Header -->
     {{> header}}
+    <!-- <<< Header -->
 
     <main class="l-main">
       <div
@@ -997,10 +999,255 @@
       </div>
 
       <!-- >>> Entry -->
-      <section class="entry"></section>
-      <!-- <<< Entry -->
-    </main>
+      <section class="p-entry">
+        <div class="p-entry__outer">
+          <div class="p-entry__inner">
+            <h2 class="p-entry__title">
+              <span class="p-entry__titleIcon">
+                <img src="assets/img/icon-note.svg" alt="" loading="lazy" />
+              </span>
+              <span class="p-entry__titleEn">Entry Requirements</span>
+              <span class="p-entry__titleJa">参加要項</span>
+            </h2>
 
-    {{> footer}}
+            <div class="p-entry__content">
+              <div class="p-entry__requirement p-entryEequirement">
+                <dl class="p-entryEequirement__item">
+                  <dt class="p-entryEequirement__head">キャンペーン名</dt>
+                  <dd class="p-entryEequirement__body">
+                    <p class="p-entryEequirement__bodyText">
+                      #見つけて尾道レトロキャンペーン
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="p-entry__requirement p-entryEequirement">
+                <dl class="p-entryEequirement__item">
+                  <dt class="p-entryEequirement__head">応募期間</dt>
+                  <dd class="p-entryEequirement__body">
+                    <p class="p-entryEequirement__bodyText">
+                      2022/8/1(月)〜2022/9/30(金)
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="p-entry__requirement p-entryEequirement">
+                <dl class="p-entryEequirement__item">
+                  <dt class="p-entryEequirement__head">内容</dt>
+                  <dd class="p-entryEequirement__body">
+                    <p class="p-entryEequirement__bodyText">
+                      尾道観光部（@onomichi_retro）をフォロー&尾道で撮影した写真を、ハッシュタグ「#見つけて尾道レトロ」をつけてInstagramに投稿いただいた方の中から100名様に尾道のギフトセットやオリジナルグッズをプレゼント！
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="p-entry__requirement p-entryEequirement">
+                <dl class="p-entryEequirement__item">
+                  <dt class="p-entryEequirement__head">対象のお客様</dt>
+                  <dd class="p-entryEequirement__body">
+                    <p class="p-entryEequirement__bodyText">
+                      日本国内在住で、公式アカウント（@onomichi_retro）をフォローのうえ、ハッシュタグをつけて応募された方
+                    </p>
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="p-entry__requirement p-entryEequirement">
+                <dl class="p-entryEequirement__item">
+                  <dt class="p-entryEequirement__head">注意事項</dt>
+                  <dd class="p-entryEequirement__body">
+                    <ul class="p-entryEequirement__bodyList">
+                      <li class="p-entryEequirement__bodyItem">
+                        当選のご連絡はInstagramダイレクトメールで
+                        行いますので、公式アカウント（@jtb_nihonnoshun）を必ずフォローしてください。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        Instagramの投稿を「非公開」設定にされている場合は、本キャンペーンの応募対象外になりますのでご注意ください。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        ご本人が撮影した写真が対象です。
+                        他人の著作権を侵害する写真、公序良俗に反する写真、他人のプライバシーを侵害する写真によるご応募は無効です。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        指定のハッシュタグをつけて画像を投稿した時点で肖像権や著作権、その他一切の関連する権利（以下、「肖像権等」といいます）に対する了承がとれているものと見なします。
+                        投稿写真内で確認できる対象物によって肖像権等の第三者の権利侵害があった場合、当社は一切責任を負いません。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        投稿された写真は＠onomichi_retroにリポスト投稿する場合もあります。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        発表は当選者の方への連絡をもって代えさせていただきます。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        ご応募は日本国内在住の方に限ります。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        ご送信いただいた個人情報は当社が当選者への賞品の発送、本キャンペーンに関する諸連絡に利用するほか、商品やサービスの参考とするために個人を特定しない統計情報の形で利用させていただきます。
+                      </li>
+                      <li class="p-entryEequirement__bodyItem">
+                        応募者または当選者の個人情報は当社が管理します。応募者または当選者の個人情報を応募者または当選者の同意なしに業務委託先以外の第三者に開示・提供することはありません。（法令等により開示を求められた場合を除く）なお、ご送信いただいた個人情報は当社の個人情報保護方針に基づき安全かつ適切に管理いたします。詳しくは当社ホームページにて、プライバシーポリシーをご確認ください。
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-entry__bgBottom"></div>
+      </section>
+      <!-- <<< Entry -->
+
+      <div
+        class="test"
+        style="
+          height: 200px;
+          background-color: lightgray;
+          display: grid;
+          place-items: center;
+        "
+      >
+        Contact
+      </div>
+
+      <!-- >>> Contact -->
+      <section class="p-contact">
+        <div class="p-contact__inner">
+          <div class="p-contact__head">
+            <h2 class="p-contact__title">
+              <span class="p-contact__titleIcon">
+                <img src="assets/img/icon-contact.svg" alt="" loading="lazy" />
+              </span>
+              <span class="p-contact__titleEn">Contact</span>
+              <span class="p-contact__titleJa">お問い合わせ</span>
+            </h2>
+
+            <span class="p-contact__subTitle">
+              本キャンペーンに関するお問い合わせは以下のフォームからお願いします。
+            </span>
+          </div>
+
+          <div class="p-contact__formWrapper">
+            <form action="#" class="p-contact__form p-contactForm">
+              <div class="p-contactForm__inputWrapper">
+                <div class="p-contactForm__input">
+                  <label
+                    class="p-contactForm__label"
+                    for="yourName"
+                    data-is-required="true"
+                  >
+                    <span data-class="name">お名前</span>
+                    <span data-class="tag">必須</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="yourName"
+                    required
+                    placeholder="山田太郎"
+                  />
+                </div>
+
+                <div class="p-contactForm__input">
+                  <label
+                    class="p-contactForm__label"
+                    for="yourEmail"
+                    data-is-required="true"
+                  >
+                    <span data-class="name">メールアドレス</span>
+                    <span data-class="tag">必須</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="yourEmail"
+                    required
+                    placeholder="info@example.com"
+                  />
+                </div>
+
+                <div class="p-contactForm__input">
+                  <label
+                    class="p-contactForm__label"
+                    for="selectContent"
+                    data-is-required="true"
+                  >
+                    <span data-class="name">お問い合わせ内容</span>
+                    <span data-class="tag">必須</span>
+                  </label>
+
+                  <select name="selectContent" id="selectContent" required>
+                    <option>選択してください</option>
+                  </select>
+                </div>
+
+                <div class="p-contactForm__input">
+                  <label class="p-contactForm__label" for="selectContent">
+                    <span data-class="name">メールマガジン</span>
+                  </label>
+
+                  <div class="p-contactForm__radioWrapper">
+                    <div class="p-contactForm__radio">
+                      <input type="radio" name="mailMagazine" id="hope" />
+                      <label for="hope">希望する</label>
+                    </div>
+                    <div class="p-contactForm__radio">
+                      <input type="radio" name="mailMagazine" id="doNotWish" />
+                      <label for="doNotWish">希望しない</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-contactForm__input">
+                  <label
+                    class="p-contactForm__label"
+                    for="yourMessage"
+                    data-is-required="true"
+                  >
+                    <span data-class="name">メッセージ</span>
+                    <span data-class="tag">必須</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    id="yourMessage"
+                    required
+                    placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"
+                  ></textarea>
+                </div>
+
+                <div class="p-contactForm__input"></div>
+              </div>
+
+              <div class="p-contactForm__check">
+                <input type="checkbox" name="" id="" required />
+                <label for=""><a>プライバシーポリシー</a>に合意する</label>
+              </div>
+
+              <button type="submit" class="p-contactForm__submit">
+                上記の内容を送信する
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- <<< Contact -->
+
+      <div
+        class="test"
+        style="
+          height: 200px;
+          background-color: lightgray;
+          display: grid;
+          place-items: center;
+        "
+      >
+        Footer
+      </div>
+
+      <!-- >>> Footer -->
+      {{> footer}}
+      <!-- <<< Footer -->
+    </main>
   </body>
 </html>
