@@ -10,15 +10,24 @@
   --rem: 1rem / var(--font-size-base);
 
   // color
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-red: #ff0000;
-  --color-blue: #0000ff;
+  --color-primary: #9ed0e0;
+  --color-sub: #67b0c7;
+  --color-sub--light: #e9f6f8;
+  --color-sub--dark: #cce1e4;
+  --color-accent-a: #ce2073;
+  --color-accent-b: #ffee56;
+  --color-brown: #4a3636;
+  --color-gray: #ccc;
+  --color-gray-right: #f5f5f5;
+  --color-gray-white: #fff;
 
   // font
-  --font-size-base: 16;
-  --font-family-en: sans-serif;
-  --font-family-ja: sans-serif;
+  --font-size-mobile-base: 12;
+  --font-size-desktop-base: 16;
+  --font-family-en-main: "Courgette", cursive;
+  --font-family-en-sub: "Josefin Sans", sans-serif;
+  --font-family-ja-main: "Noto Sans", sans-serif;
+  --font-family-ja-accent: "Kiwi Maru", serif;
   --line-height-base: 1.5;
 
   --font-weight-thin: 100;
@@ -30,12 +39,14 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
+  --font-weight-mobile-base: var(--font-weight-regular);
+  --font-weight-desktop-base: var(--font-weight-regular);
 
   // layout
-  --padding-inline-xs: 15;
-  --padding-inline-md: 30;
+  --padding-inline-mobile: 20;
+  --padding-inline-desktop: 24;
 
-  --container-width-md: 1000;
+  --container-width-desktop: 1024;
 }
 
 html,
@@ -45,28 +56,22 @@ body {
 }
 
 html {
-  font-size: calc(var(--font-size-base) * 1px);
+  font-size: calc(var(--font-size-mobile-base) * 1px);
   line-height: var(--line-height-base);
+  @include g.mq(md) {
+    font-size: calc(var(--font-size-desktop-base) * 1px);
+  }
 }
 
 body {
-  color: var(--color-black);
-  background-color: var(--color-white);
-  font-family: sans-serif;
-  font-size: calc(50 * var(--rem));
+  color: var(--color-brown);
+  background-color: var(--color-sub--light);
+  font-family: var(--font-family-ja-main);
 
   // テキストの改行設定
   overflow-wrap: anywhere; /* 収まらない場合に折り返す */
   word-break: normal; /* 単語の分割はデフォルトに依存 */
   line-break: strict; /* 禁則処理を厳格に適用 */
-}
-
-p {
-  line-height: 3rlh;
-
-  @media (min-width: #{--bp-md}) {
-    color: red;
-  }
 }
 
 /* <<< base - サイト共通のスタイル */
