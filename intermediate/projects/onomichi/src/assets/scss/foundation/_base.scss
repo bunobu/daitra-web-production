@@ -2,13 +2,6 @@
 @use "@global" as g;
 
 :root {
-  // 計算式
-
-  // ハーフ・レディングを削除 margin-blockにあてる
-  --leading-trim: calc((1em - 1lh) / 2);
-  // remに変換する
-  --rem: 1rem / var(--font-size-base);
-
   // color
   --color-primary: #9ed0e0;
   --color-sub: #67b0c7;
@@ -19,7 +12,7 @@
   --color-brown: #4a3636;
   --color-gray: #ccc;
   --color-gray-right: #f5f5f5;
-  --color-gray-white: #fff;
+  --color-white: #fff;
 
   // font
   --font-size-mobile-base: 12;
@@ -47,6 +40,16 @@
   --padding-inline-desktop: 24;
 
   --container-width-desktop: 1024;
+
+  // 計算式
+
+  // ハーフ・レディングを削除 margin-blockにあてる
+  --leading-trim: calc((1em - 1lh) / 2);
+  // remに変換する
+  --rem: 1rem / var(--font-size-mobile-base);
+  @include g.mq(md) {
+    --rem: 1rem / var(--font-size-desktop-base);
+  }
 }
 
 html,
@@ -67,6 +70,7 @@ body {
   color: var(--color-brown);
   background-color: var(--color-sub--light);
   font-family: var(--font-family-ja-main);
+  font-weight: var(--font-weight-regular);
 
   // テキストの改行設定
   overflow-wrap: anywhere; /* 収まらない場合に折り返す */

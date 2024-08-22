@@ -1,1 +1,135 @@
 @use "@global" as g;
+
+.l-header {
+  width: 100%;
+  background-color: var(--color-white);
+  min-height: calc(64 * var(--rem));
+  height: 1px;
+}
+
+.l-header__inner {
+  width: 100%;
+  height: 100%;
+  padding-block: calc(12 * var(--rem));
+  padding-inline: calc(var(--padding-inline-mobile) * var(--rem));
+}
+
+.l-header__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.l-header__logo {
+  width: calc(210 * var(--rem));
+  line-height: 1;
+}
+
+.header__hamburger {
+  margin-inline-start: auto;
+  @include g.mq(xl) {
+    display: none;
+  }
+}
+
+.c-hamburger {
+  border: none;
+  background: none;
+  width: calc(38 * var(--rem));
+  height: calc(28 * var(--rem));
+  position: relative;
+}
+
+.c-hamburger__line {
+  display: inline-block;
+  width: 100%;
+  height: calc(3 * var(--rem));
+  background-color: var(--color-brown);
+  position: absolute;
+  left: 0;
+  border-radius: 9999px;
+
+  &[data-line="1"] {
+    top: 0;
+    background-color: transparent;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: calc((25.6 / 32) * 100%);
+      background-color: var(--color-brown);
+      position: absolute;
+      left: 0;
+      border-radius: 9999px;
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: calc((4.8 / 32) * 100%);
+      background-color: var(--color-brown);
+      position: absolute;
+      right: 0;
+      border-radius: 9999px;
+    }
+  }
+
+  &[data-line="2"] {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &[data-line="3"] {
+    bottom: 0;
+  }
+}
+
+.l-header__nav {
+  display: none;
+  @include g.mq(xl) {
+    display: block;
+    margin-inline-start: auto;
+  }
+}
+
+.l-header__apply {
+  display: none;
+  @include g.mq(xl) {
+    --_border-px-size: 2;
+    display: inline-block;
+    min-width: calc(132 * var(--rem));
+    padding-inline: calc((24 - var(--_border-px-size)) * var(--rem));
+    padding-block: calc((6 - var(--_border-px-size)) * var(--rem))
+      calc((8 - var(--_border-px-size)) * var(--rem));
+    border-radius: calc(60 * var(--rem));
+    border: 2px solid var(--color-brown);
+    background: var(--color-white);
+    box-shadow: 0px 4px 0px 0px var(--color-brown);
+    color: var(--color-brown);
+    font-size: calc(14 * var(--rem));
+    font-weight: var(--font-weight-bold);
+    line-height: 1.6;
+    margin-left: calc(16 * var(--rem));
+  }
+}
+
+.l-headerNav {
+}
+
+.l-headerNav__list {
+  display: flex;
+  gap: calc(12 * var(--rem));
+}
+
+.headerNav__item {
+  a {
+    display: grid;
+    place-items: center;
+    color: var(--color-brown);
+    font-family: "Noto Sans JP";
+    font-size: calc(12 * var(--rem));
+    font-weight: var(--font-weight-regular);
+    line-height: 1.6;
+  }
+}
